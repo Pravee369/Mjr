@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.container1 {
+    width: 100%;
+    margin-left: 2rem;
+    margin-top: 2rem;
+  
+}
+
+.container1 .auction-form {
+    width: 100%;
+}
+
+.container1 .auction-form .form-input1,
+.container1 .auction-form .form-input-upload {
+    margin-top: 1rem;
+    width: 100%;
+    display: flex;
+}
+
+.container1 .auction-form .form-input1 .input-group {
+    display: flex;
+    gap: 1rem;
+}
+
+.container1 .auction-form .form-input1 .input-group .input1 {
+    width: 48%;
+}
+
+
+.container1 .auction-form .form-input1 .input-group .input1 input {
+    padding: 0.5rem 0.6rem;
+    border-radius: 5px;
+    border: 0.5px solid rgba(16, 15, 15, 0.195);
+}
+
+.container1 .auction-form .form-input1 .label {
+    width: 25%;
+    padding-top: 0.5rem;
+}
+
+.container1 .auction-form .form-input1 .label label {
+    font-size: 1rem;
+    color: rgba(0, 0, 0, 0.783);
+    font-weight: 600;
+    width: 100%;
+    padding-top: 0.1rem;
+}
+
+.container1 .auction-form .form-input-upload label {
+    font-size: 1rem;
+    color: rgba(0, 0, 0, 0.783);
+    font-weight: 600;
+    width: 25%;
+    padding-top: 1rem;
+}
+
+.container1 .auction-form .form-input1 .input {
+    width: 60%;
+}
+
+.container1 .auction-form .form-input1 .input input {
+    padding: 0.5rem 0.6rem;
+    width: 100%;
+    border-radius: 5px;
+    border: 0.5px solid rgba(16, 15, 15, 0.195);
+}
+
+.container1 .auction-form .form-input-upload input {
+    padding: 0.4rem 0.6rem;
+    width: 40%;
+    border-radius: 5px;
+    /* display: none; */
+}
+
+@media only screen and (min-width: 730px) and (max-width: 850px) {
+    .container1 .auction-form .form-input1 .label {
+        width: 28%;
+    }
+
+    .container1 .auction-form .form-input1 .input {
+        width: 70%;
+    }
+
+    .container1 .auction-form .form-input-upload label {
+        width: 30%;
+    }
+
+    .container1 .auction-form .form-input-upload input {
+        width: 60%;
+
+    }
+}
+
+@media only screen and (min-width: 575px) and (max-width: 730px) {
+    .container1 .auction-form .form-input1 .label {
+        width: 35%;
+    }
+
+    .container1 .auction-form .form-input1 .input {
+        width: 60%;
+    }
+
+    .container1 .auction-form .form-input-upload label {
+        width: 40%;
+
+    }
+
+    .container1 .auction-form .form-input-upload input {
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .container1 .auction-form {
+        padding: 0.5rem 0.5rem;
+        margin: 0.5rem 1rem;
+    }
+
+    .container1 .auction-form .form-input1,
+    .container1 .auction-form .form-input-upload {
+        margin-bottom: 1.5rem;
+        width: 100%;
+        display: flex;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .container1 .auction-form .form-input-upload {
+        margin-bottom: 0.3rem;
+    }
+
+    .container1 .auction-form .form-input1 .label {
+        width: 100%;
+        color: rgba(0, 0, 0, 0.5);
+    }
+
+    .container1 .auction-form .form-input1 .input {
+        width: 100%;
+        padding-left: 0.2rem;
+    }
+
+    .container1 .auction-form .form-input-upload label {
+        width: 100%;
+    }
+
+    .container1 .auction-form .form-input-upload input {
+        width: 80%;
+    }
+}
+
+.container1 .auction-form .form-input-upload input[type="file"]::before {
+    content: 'Upload file';
+    background-color: rgba(0, 0, 0, 0.431);
+    padding: 10px 10px;
+    border-radius: 20px;
+    color: white;
+    font-size: 14px;
+    line-height: 3em !important;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    margin-top: 0px;
+    margin-right: 10px;
+}
+
+.container1 .auction-form .form-input-upload input[type="file"]::file-selector-button {
+    display: none;
+}
+.container1 .submit-button{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container1 .submit-button button{
+    background: white;
+    padding: 10px 18px;
+    border: solid 2px black;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: 0.5s;
+    
+}
+.container1 .submit-button button:hover{
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    scale: 1.02;
+    cursor: pointer;
+    border: none;
+}
+
+/* Ensures the dropdown looks similar to text inputs */
+.container1 .auction-form .form-input1 .input select {
+    padding: 0.5rem 0.6rem;
+    height : 42px;
+    width: 100%;
+    border-radius: 5px;
+    border: 0.5px solid rgba(16, 15, 15, 0.195);
+}
+
+/* On selection, change the color */
+.container1 .auction-form .form-input1 .input select:focus,
+.container1 .auction-form .form-input1 .input select:valid {
+    border: 0.5px solid rgba(16, 15, 15, 0.195);
+    color: #000;
+}

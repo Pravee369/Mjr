@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+
+.organOrg .top_bar {
+    width: 100%;
+    z-index: 1000;
+    background-color: #EEE0C9;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    padding: 0rem; 
+    padding-top: -1.4rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 0rem; 
+}
+
+.organOrg .top_bar .profile {
+    font-size: 2.2rem;
+    padding-left: 0.5rem;
+}
+
+.organOrg .top_bar .content {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.2rem; 
+    align-items: center;
+    margin:0px;
+    padding:10px;
+}
+
+.organOrg .top_bar .content a,.organOrg .top_bar .content NavLink {
+    text-decoration: none;
+    color: #6C0345;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.organOrg .approvedRequests {
+    padding: 0.5rem;
+    padding-left: 1.5rem;
+}
+
+.organOrg .approvedRequests .heading {
+    color: #365E32;
+}
+
+.organOrg .approvedRequests .no_requests {
+    font-size: 1.5rem;
+    padding: 1rem;
+    padding-left: 3rem;
+    font-weight: 600;
+}

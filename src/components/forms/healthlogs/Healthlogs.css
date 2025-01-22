@@ -1,0 +1,63 @@
+/* Healthlogs.css */
+
+/* General styling for the table container */
+.table-container {
+    overflow-x: auto;
+    margin: 1rem;
+    padding: 1rem;
+    background-color: #f8f9fa; /* Light background color */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    
+}
+
+/* Styling for the table */
+.table {
+    margin-bottom: 1rem;
+}
+
+/* Styling for the table header */
+.table thead {
+    background-color: #00d5ffd1; /* Bootstrap primary color */
+    color: white;
+}
+
+.table th {
+    padding: 0.75rem;
+    text-align: center;
+    border-bottom: 2px solid #0095b3; /* Darker shade of primary color */
+}
+
+/* Styling for table cells */
+.table td {
+    padding: 0.75rem;
+    text-align: center;
+    border: 1px solid #dee2e6; /* Light border color */
+}
+
+/* Add a border to the table */
+.table-bordered {
+    border: 1px solid #dee2e6;
+}
+
+/* Optional: Style the table rows */
+.table tbody tr:nth-child(odd) {
+    background-color: #e9ecef; /* Light grey background */
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: #ffffff; /* White background */
+}
+
+/* Hover effect for table rows */
+.table tbody tr:hover {
+    background-color: #f1f1f1; /* Slightly darker grey on hover */
+}
+
+/* Header styling */
+h2 {
+    font-size: 1.5rem;
+    font-weight: normal;
+    color: #A0937D; /* Dark text color */
+    margin-bottom: 1rem;
+}

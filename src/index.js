@@ -4,11 +4,17 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
+import 'bootstrap/dist/js/bootstrap.bundle.min.js'; // Import Bootstrap JavaScript
+
+import UserLoginContextStore from './components/contexts/UserLoginContextStore';
+
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+  <UserLoginContextStore>
     <App />
-  </React.StrictMode>
+  </UserLoginContextStore>
 );
 
 // If you want to start measuring performance in your app, pass a function

@@ -1,0 +1,102 @@
+/* Existing styles */
+.virtual-health-container1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    background-color: #fff;
+    margin-top: 3rem;
+}
+
+.content {
+    max-width: 50%;
+    margin-top: 5rem;
+}
+
+.content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.content p {
+    font-size: 1rem;
+    margin-bottom: 30px;
+    color: #666;
+}
+
+.consultButton {
+    background-color: #3b82f6;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.consultButton:hover {
+    background-color: #2563eb;
+}
+
+.imageContainer {
+    max-width: 50%;
+}
+
+.healthcareImage {
+    width: 100%;
+    height: auto;
+}
+
+/* Responsive styles */
+@media (max-width: 800px){
+    .content h1 {
+            font-size: 1.5rem;
+    }
+    .content p {
+        font-size: 1rem;
+    }
+}
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .content {
+        max-width: 100%;
+    }
+    .content h1{
+        font-size: 1rem;
+    }
+    .imageContainer {
+        display: none;
+    }
+
+    /* .container {
+        background-image: url('./image.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        object-fit: cover;
+        overflow: hidden;
+    } */
+    .consultButton{
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .content h1 {
+        font-size: 2rem;
+    }
+
+    .content p {
+        font-size: 0.875rem;
+    }
+
+    .consultButton {
+        padding: 8px 16px;
+        font-size: 0.875rem;
+    }
+}

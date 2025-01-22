@@ -1,0 +1,28 @@
+.alarms{
+    width: 100%;
+    padding-top: 1rem;
+    margin-left: 2rem;
+    margin-top: 1rem;
+}
+.alarms .time-input{
+    display: flex;
+    
+}
+.alarms .time-input .inp1{
+    width: 30%;
+    margin-right: 1rem;
+}
+.alarms .time-input .inp2{
+    width: 60%;
+}
+.alarms .time-input .inp1 input,
+.alarms .time-input .inp2 input{
+    padding: 0.5rem;
+    border-radius: 5px;
+    width: 90%;
+}
+.btn
+{
+    background-color: #EEE0C9;
+    color:black;
+}
