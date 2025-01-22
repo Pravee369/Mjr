@@ -6,7 +6,7 @@ const MongoClient = require("mongodb").MongoClient;
 const twilio = require("twilio");
 const verifyToken = require("./APIs/middlewares/verifyToken");
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT ;
 
 // Middleware to parse JSON bodies
 app.use(bodyParser.json());
@@ -27,7 +27,7 @@ const twilioNumber = process.env.TWILIO_NUMBER; // Replace with your Twilio numb
 const formatPhoneNumber = (phoneNumber) => {
   // Assuming phone numbers are provided in the local format, e.g., 898507XXXX
   // Add the country code (e.g., +91 for India)
-  const countryCode = '+91'; // Change this to the appropriate country code if needed
+  const countryCode = process.env.COUNTRY_CODE; // Change this to the appropriate country code if needed
   if (!phoneNumber.startsWith('+')) {
     return `${countryCode}${phoneNumber}`;
   }
