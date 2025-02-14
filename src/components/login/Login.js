@@ -1,222 +1,160 @@
-// import React,{useContext,useEffect} from 'react'
-// import {useForm} from 'react-hook-form'
-// import {useNavigate} from 'react-router-dom'
-// import { loginContext } from '../contexts/loginContext'
-// import './Login.css'
-
-// function Login() {
-
-
-//   let [currentUser,error,userLoginStatus,loginUser,logoutUser]=useContext(loginContext)
-
-//   //  //navigate
-//    const navigate = useNavigate();
- 
-//    //use form hook
-//    let {
-//      register,
-//      handleSubmit,
-//      formState: { errors },
-//    } = useForm();
-
-
-
-//    //user login
-//    const handleUserLogin=(userCredObj)=>{
-//     console.log(userCredObj)
-//     loginUser(userCredObj)
-//    }
-
-
-//    useEffect(()=>{
-//     if(userLoginStatus==true){
-//       navigate(`/user-profile/${JSON.parse((localStorage.getItem('user'))).username}`)
-//     }
-//    },[userLoginStatus])
-
-  
-
-//   return (
-//     <div className="add-user mt-0">
-     
-//       {/* form submission error */}
-//       {error!=undefined &&  error.length !== 0 && (
-//         <p className="display-3 text-danger text-center">{error}</p>
-//       )}
-//       {/* add user form */}
-//       <div className="row">
-         
-//         <div className="col-11 col-sm-8 col-md-6 mx-auto">
-//           <form 
-//           onSubmit={handleSubmit(handleUserLogin)}
-//           >
-//             {/* username */}
-//             <div className="mb-3">
-//               <label htmlFor="name" className="text-white">Email Id</label>
-//               <input
-//                 type="text"
-//                 id="username"
-//                 className="form-control"
-//                 placeholder="e.g. John"
-//                 {...register("username", { required: true })}
-//                 required
-//               />
-//               {/* validation errors for name */}
-//               {errors.username?.type === "required" && (
-//                 <p className="text-danger fw-bold fs-5">
-//                   * Email Id is required
-//                 </p>
-//               )}
-//             </div>
-//             {/* password */}
-//             <div className="mb-3">
-//               <label htmlFor="name" className="text-white">Password</label>
-//               <input
-//                 type="password"
-//                 placeholder="*********"
-//                 id="password"
-//                 className="form-control"
-//                  {...register("password", { required: true })}
-//                 required
-//               />
-//               {/* validation errors for name */}
-//               {errors.password?.type === "required" && (
-//                 <p className="text-danger fw-bold fs-5">
-//                   * Password is required
-//                 </p>
-//               )}
-
-              
-//             </div>
-            
-           
-           
-           
-//             {/* submit button */}
-//             <button type="submit" className="btn btn-primary text-dark">
-//               Login
-//             </button>
-//           </form>
-//         </div>
-//       </div>
-//     </div>
-//   )
-// }
-
-// export default Login
-
-
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 import { loginContext } from "../contexts/loginContext";
 import "./Login.css";
 
 function Login() {
-  let [currentUser, error, userLoginStatus, loginUser, logoutUser] =
-    useContext(loginContext);
+  let [currentUser, error, userLoginStatus, loginUser] = useContext(loginContext);
 
-  //  //navigate
   const navigate = useNavigate();
+  const [otpSent, setOtpSent] = useState(false);
+  const [otp, setOtp] = useState("");
+  const [mobile, setMobile] = useState("");
+  const [timer, setTimer] = useState(60);
+  const [resendDisabled, setResendDisabled] = useState(true);
 
-  //use form hook
-  let {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm();
-
-  //user login
-  const handleUserLogin = (userCredObj) => {
-    console.log(userCredObj);
-    loginUser(userCredObj);
-  };
+  let { register, handleSubmit, formState: { errors } } = useForm();
 
   useEffect(() => {
-    if (userLoginStatus == true) {
+    if (userLoginStatus === true) {
       let user = JSON.parse(localStorage.getItem("user"));
-      console.log('User retrieved is :',user)
-      let userName=user.name;
-      // let sentenceWithUnderscores = userName.replace(/ /g, "_");
-      if(user.category=='Organization')
-      {
-        navigate(`/Organization/${user.organizationType}/${userName}`)
+      let token = localStorage.getItem("token");
+      
+      if (user?.mobile) {
+        setMobile(user.mobile);
+        sendOtp(user.mobile, token);
       }
-      else
-      navigate(`/${user.category}/${userName}`);
     }
   }, [userLoginStatus]);
 
-  return (
+  useEffect(() => {
+    if (otpSent && timer > 0) {
+      const interval = setInterval(() => {
+        setTimer((prev) => prev - 1);
+      }, 1000);
+      return () => clearInterval(interval);
+    } else if (timer === 0) {
+      setResendDisabled(false);
+    }
+  }, [otpSent, timer]);
+
+  const sendOtp = (phone, token) => {
+    axios
+      .post(
+        "http://localhost:3000/otp-auth/send-otp",
+        { phone },
+        { headers: { Authorization: `Bearer ${token}` } }
+      )
+      .then((res) => {
+        console.log("OTP sent successfully:", res);
+        setOtpSent(true);
+        setTimer(60);
+        setResendDisabled(true);
+      })
+      .catch((err) => {
+        console.error("Error sending OTP:", err);
+      });
+  };
+
+  const handleVerifyOtp = () => {
+
+    if (timer <= 0) {
+      alert("OTP has expired. Please request a new one.");
+      setOtp("")
+      return;
+    }
+    let token = localStorage.getItem("token");
+    axios
+      .post(
+        "http://localhost:3000/otp-auth/verify-otp",
+        { phone: mobile, otp },
+        { headers: { Authorization: `Bearer ${token}` } }
+      )
+      .then((res) => {
+        if (res.data.success) {
+          console.log("OTP Verified Successfully");
+          let user = JSON.parse(localStorage.getItem("user"));
+          let userName = user.name;
+          
+          if (user.category === "Organization") {
+            navigate(`/Organization/${user.organizationType}/${userName}`);
+          } else {
+            navigate(`/${user.category}/${userName}`);
+          }
+        } else {
+          alert("Invalid OTP. Please try again.");
+        }
+      })
+      .catch((err) => {
+        console.error("Error verifying OTP:", err);
+      });
+  };
+
+  return userLoginStatus === true ? (
+    otpSent ? (
+      <div className="otp-bg">
+      <div className="otp-verification">
+        <h3 className="text-white">Enter OTP</h3>
+        <label htmlFor="otp" className="text-white p-1" >OTP</label>
+        <input
+          type="text"
+          id="otp"
+          value={otp}
+          onChange={(e) => setOtp(e.target.value)}
+          required
+          
+        />
+        <button className="btn text-white bg-danger m-2" onClick={handleVerifyOtp}>
+          Confirm
+        </button>
+        <p className="text-white lead">OTP expires in: {timer} seconds</p>
+        <button className="btn text-white bg-danger border border-danger" onClick={() => {sendOtp(mobile, localStorage.getItem("token")); setOtp("")}} disabled={resendDisabled}>
+          Resend OTP
+        </button>
+      </div>
+      </div>
+    ) : (
+      <p>Sending OTP...</p>
+    )
+  ) : (
     <div className="login">
       <div className="wrapper">
         <div className="add-user mt-0">
           <div className="title-text">
             <div className="title">Account Login</div>
           </div>
-          {/* form submission error */}
-          {error != undefined && error.length !== 0 && (
+          {error && error.length !== 0 && (
             <p className="text-danger text-center">
               <b>{error}</b>
             </p>
           )}
-          {/* add user form */}
-          <div className="">
-            <div className="">
-              <form onSubmit={handleSubmit(handleUserLogin)}>
-                {/* username */}
-                {/*<div className="mb-3">*/}
-                {/*<label htmlFor="name" className="text-white">
-                    Email Id
-                  </label>*/}
-                <div className="field">
-                  <input
-                    type="email"
-                    id="username"
-                    className=""
-                    placeholder="Email Id"
-                    {...register("username", { required: true })}
-                    required
-                  />
-                </div>
-                {/* validation errors for name */}
-                {errors.username?.type === "required" && (
-                  <p className="text-danger fw-bold fs-5">
-                    * Email Id is required
-                  </p>
-                )}
-
-                {/*</div>*/}
-                {/* password */}
-                {/*<div className="mb-3">*/}
-                {/*<label htmlFor="name" className="text-white">
-                  Password
-                </label>*/}
-                <div className="field">
-                  <input
-                    type="password"
-                    placeholder="Password"
-                    id="password"
-                    className=""
-                    {...register("password", { required: true })}
-                    required
-                  />
-                </div>
-                {/* validation errors for name */}
-                {errors.password?.type === "required" && (
-                  <p className="text-danger fw-bold fs-5">
-                    * Password is required
-                  </p>
-                )}
-                {/*</div>*/}
-
-                {/* submit button */}
-                <div className="field btn">
-                  <div className="btn-layer"></div>
-                  <input type="submit" value="Login" />
-                </div>
-              </form>
-            </div>
+          <div>
+            <form onSubmit={handleSubmit(loginUser)}>
+              <div className="field">
+                <input
+                  type="email"
+                  placeholder="Email Id"
+                  {...register("username", { required: true })}
+                  required
+                />
+              </div>
+              {errors.username && <p className="text-danger fw-bold fs-5">* Email Id is required</p>}
+              <div className="field">
+                <input
+                  type="password"
+                  placeholder="Password"
+                  {...register("password", { required: true })}
+                  required
+                />
+              </div>
+              {errors.password && <p className="text-danger fw-bold fs-5">* Password is required</p>}
+              <div className="field btn">
+                <div className="btn-layer"></div>
+                <input type="submit" value="Login" />
+              </div>
+            </form>
           </div>
         </div>
       </div>

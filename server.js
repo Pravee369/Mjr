@@ -6,6 +6,7 @@ const MongoClient = require("mongodb").MongoClient;
 const twilio = require("twilio");
 const verifyToken = require("./APIs/middlewares/verifyToken");
 
+
 const port = process.env.PORT ;
 
 // Middleware to parse JSON bodies
@@ -25,8 +26,7 @@ const twilioNumber = process.env.TWILIO_NUMBER; // Replace with your Twilio numb
 
 
 const formatPhoneNumber = (phoneNumber) => {
-  // Assuming phone numbers are provided in the local format, e.g., 898507XXXX
-  // Add the country code (e.g., +91 for India)
+  
   const countryCode = process.env.COUNTRY_CODE; // Change this to the appropriate country code if needed
   if (!phoneNumber.startsWith('+')) {
     return `${countryCode}${phoneNumber}`;
@@ -123,6 +123,7 @@ const healthlogApp = require("./APIs/healthlogApi");
 const bloodBanks=require("./APIs/bloodBanksApi");
 const organBanks=require("./APIs/organBanksApi");
 const equipRenters=require("./APIs/equipRentersApi");
+const { otpAuth } = require('./APIs/otpAuth');
 
 
 app.use("/user-api", userApp);
@@ -131,6 +132,7 @@ app.use("/healthlog-api", healthlogApp);
 app.use("/blood-banks",bloodBanks);
 app.use("/organ-banks",organBanks);
 app.use("/equipment-renters",equipRenters);
+app.use('/otp-auth', otpAuth);
 
 // Page refresh handling
 app.use('/*', (req, res, next) => {

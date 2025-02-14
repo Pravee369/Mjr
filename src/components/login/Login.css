@@ -1,22 +1,3 @@
-/* .add-user
-{
-    padding-top:100px;
-    background:-webkit-linear-gradient(left, #1A1A19, #31511E, #74990f);
-    position: relative;
-    overflow: hidden;
-    height:100vh;
-}
-
-form
-{
-    border:cornsilk;
-}
-.btn{
-    border:none;
-    background-color: #EEE0C9;
-}
- */
-
  .login{
     display: flex;
         height: 100vh;
@@ -103,3 +84,18 @@ form
     transition: all 0.3s ease;
 }
   
+.otp-verification
+{
+    height: 100vh;
+    max-width: 100%;
+    place-items: center;
+    margin-top: 60px;
+}
+
+.otp-bg
+{
+    background: -webkit-linear-gradient(left, #1A1A19, #31511E, #74990f); 
+    display :flex;
+    flex-direction: column;
+    justify-content: center;  
+}

@@ -113,4 +113,24 @@ bloodBank.put(
   })
 );
 
+
+bloodBank.get(
+  "/get-blood-requests",
+  verifyToken,
+  expressAsyncHandler(async (request, response) => {
+    console.log("Blood Bank Get api");
+
+    const healthlogCollectionObj = request.app.get("bloodBanksCollection");
+    let allhealthlogs;
+
+    try {
+      allhealthlogs = await healthlogCollectionObj.find().toArray();
+      console.log("All the requested blood:", allhealthlogs);
+      response.status(200).send(allhealthlogs)
+    } catch (error) {
+      console.error("Error fetching requested blood from the database:", error);
+      return response.status(500).send({ message: "Internal server error in blood banks" });
+    }}))
+
+
 module.exports = bloodBank;

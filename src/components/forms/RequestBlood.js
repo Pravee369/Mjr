@@ -1,6 +1,6 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { useForm } from 'react-hook-form';
-import axios from 'axios';
+import axios, { formToJSON } from 'axios';
 import { loginContext } from '../contexts/loginContext';
 import './Form.css'
 
@@ -8,6 +8,7 @@ function RequestBlood() {
 
   const { register, handleSubmit,reset } = useForm();
   let [currentUser,error,userLoginStatus,loginUser,logoutUser]=useContext(loginContext)
+  let [myRequests,setMyRequests] = useState([])
 
   const submitForm = (data) => {
     console.log(data);
@@ -15,7 +16,7 @@ function RequestBlood() {
     data["username"]=currentUser.username;
     data["mobile"] = currentUser.mobile;
     data["approved"] = "NO";
-    data["approvedBy"] = null;
+    data["approvedBy"] = "";
     data["patientName"] = currentUser.name;
     
     let token = localStorage.getItem('token'); 
@@ -39,6 +40,37 @@ function RequestBlood() {
         console.log(error);
       });
   };
+
+
+  useEffect(()=>
+    {
+
+      let token = localStorage.getItem('token'); 
+        if (!token) {
+            console.error('No token found');
+            return;
+        }
+    axios.get('http://localhost:3000/blood-banks/get-blood-requests',
+      {
+        headers: {
+            "Authorization": `Bearer ${token}`,
+        }
+    }
+    )
+      .then(response => {
+        console.log(response.data)
+        const userRequests = response.data.filter(
+          item => item.username === currentUser.username
+        );
+        setMyRequests(userRequests)
+        //console.log(userRequests.data);
+        //reset(); 
+      })
+      .catch(error => {
+        console.log(error);
+      });
+
+    },[])
 
   return (
    
@@ -147,9 +179,59 @@ function RequestBlood() {
             </div>
           </form>
         </div>
+
+
+        {/* requests made by me  */}
+
+        <p className="lead mt-3">  Check whether required blood found or not </p>
+
+   <div className="row row-cols-1 row-cols-md-3 g-4">
+     {myRequests.map((obj, index) => (
+      <div className="col" key={index}>
+      <div className="card h-100 shadow-sm">
+        {/* Card Header */}
+        <div className="card-header text-center bg-primary text-white">
+          <h5 className="card-title mb-0">{obj.bloodGroup}</h5>
+        </div>
+
+        {/* Card Body */}
+        <div className="card-body text-center">
+          <p
+            className="card-text"
+            style={{
+              fontWeight: "bold",
+              color: obj.approved === "YES"? "green" : "red",
+            }}
+          >
+            {obj.approved === "YES" ? "Approved" : "Not Approved"}
+          </p>
+          {obj.approved ==="YES" ? (
+            <p className="text-success">Approved by: {obj.approvedBy}</p>
+          ) : (
+            <p className="text-danger">
+              Unfortunately, not approved by anyone.
+            </p>
+          )}
+        </div>
+
+        {/* Card Footer */}
+        <div
+          className="card-footer text-center"
+          style={{
+            backgroundColor: obj.approved==="YES" ? "lightgreen" : "lightcoral",
+            fontWeight: "bold",
+          }}
+        >
+          {obj.approved ==="YES" ? "Request Approved" : "Pending Approval"}
+        </div>
+      </div>
+    </div>
+  ))}
+</div>
+
       </div>
    
-  );
-}
+  )}
+
 
 export default RequestBlood;

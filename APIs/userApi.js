@@ -98,6 +98,36 @@ userApp.post('/login-user',expressAsyncHandler(async(req,res)=>
    }
 }))
 
+userApp.get("/filter", async (req, res) => {
+   const userCollection = req.app.get("userCollection");
+   const { category, specialization } = req.query;
 
+   let filter = {};
+
+   if (category === "Doctor") {
+       filter = { category: "Doctor" };
+       if (specialization) {
+           filter.specialization = specialization; // Only doctors have specialization
+       }
+   } else if (category) {
+       filter = { category: "Organization", organizationType: category };
+       if(category==="Clinic")
+       {
+         filter["specialization"] = specialization;
+       }
+      //  if (specialization) {
+      //      filter["specialization"] = specialization; // Ensure organizations with specialization are filtered
+      //  }
+   }
+
+   try {
+       const results = await userCollection.find(filter).toArray();
+       console.log(results)
+       res.status(200).json(results);
+   } catch (error) {
+       console.error(error);
+       res.status(500).json({ message: "Error fetching data" });
+   }
+});
 
 module.exports = userApp;

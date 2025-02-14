@@ -88,7 +88,7 @@ const Sidebar = () => {
 
   const navigate = useNavigate();
   return (
-    <div className={classes}>
+    <div className={classes} >
       <div style={{ width: isOpen ? "250px" : "50px" }} className="sidebar">
         <div className="top_section">
           <div style={{ marginLeft: "0px" }} className="bars p-2">
