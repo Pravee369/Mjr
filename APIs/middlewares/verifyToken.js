@@ -18,7 +18,8 @@ const verifyToken = (request, response, next) => {
     
     //verify token using secret key
     try {
-      jwt.verify(token, process.env.SECRET_KEY);
+      const decoded = jwt.verify(token, process.env.SECRET_KEY);
+      request.user = decoded;
       next();
     } catch (err) {  //if token expired
       console.log(err.message);
