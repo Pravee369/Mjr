@@ -124,7 +124,7 @@ const bloodBanks=require("./APIs/bloodBanksApi");
 const organBanks=require("./APIs/organBanksApi");
 const equipRenters=require("./APIs/equipRentersApi");
 const { otpAuth } = require('./APIs/otpAuth');
-
+const profile = require('./APIs/profileApi');
 
 app.use("/user-api", userApp);
 app.use("/doc-api", docApp);
@@ -133,6 +133,7 @@ app.use("/blood-banks",bloodBanks);
 app.use("/organ-banks",organBanks);
 app.use("/equipment-renters",equipRenters);
 app.use('/otp-auth', otpAuth);
+app.use("/profile-api", profile);
 
 // Page refresh handling
 app.use('/*', (req, res, next) => {

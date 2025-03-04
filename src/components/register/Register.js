@@ -348,6 +348,7 @@ function Register() {
   } = useForm();
   const navigate = useNavigate();
   const password = watch("password", "");
+  const confirmPassword = watch("confirmPassword", "");
 
   useEffect(() => {
     // Unregister unused fields when category changes
@@ -365,6 +366,7 @@ function Register() {
     } else if (category === "Doctor") {
       unregister([
         "regNo",
+        "age",
         "organizationType",
       ]);
     } else if (category === "Organization") {
@@ -380,9 +382,15 @@ function Register() {
       ]);
     }
   }, [category, unregister]);
-
+  
   const addNewUser = (newUser) => {
     newUser["category"] = category;
+    if (password !== confirmPassword) {
+      setError("Passwords do not match");
+      return;
+    }
+
+    setError("");
     console.log(newUser);
     axios
       .post("http://localhost:3000/user-api/register-user", newUser)
@@ -405,7 +413,11 @@ function Register() {
           <div className="title">{category} Signup</div>
         </div>
         <div className="form-container">
+        {error && <p className="error-message-top">{error}</p>}
           <div className="slide-controls">
+            <input type="radio" name="slide" id="patient" defaultChecked />
+            <input type="radio" name="slide" id="doctor" />
+            <input type="radio" name="slide" id="organization" />
             <label
               htmlFor="patient"
               className="slide patient"
@@ -427,6 +439,7 @@ function Register() {
             >
               Organization
             </label>
+            <div className="slider-tab"></div>
           </div>
           <div className="form-inner">
             <form
@@ -448,25 +461,13 @@ function Register() {
                   placeholder="Create Password"
                   {...register("password", { required: "Password is required" })}
                 />
-                {errors.password && (
-                  <p className="error-message">{errors.password.message}</p>
-                )}
               </div>
               <div className="field">
                 <input
                   type="password"
                   placeholder="Confirm Password"
-                  {...register("confirmPassword", {
-                    required: "Please confirm your password",
-                    validate: (value) =>
-                      value === password || "Passwords do not match",
-                  })}
+                  {...register("confirmPassword", { required: "Please confirm your password" })}
                 />
-                {errors.confirmPassword && (
-                  <p className="error-message">
-                    {errors.confirmPassword.message}
-                  </p>
-                )}
               </div>
               {category === "Patient" && (
                 <>
@@ -490,6 +491,9 @@ function Register() {
                     <select
                       {...register("gender", { required: true })}
                       defaultValue=""
+                      onChange={(e) => {
+                        e.target.style.color = e.target.value ? "#000" : "#999";
+                      }}
                       style={{ color: "#999" }}
                     >
                       <option value="" disabled hidden>
@@ -533,6 +537,9 @@ function Register() {
                     <select
                       {...register("gender", { required: true })}
                       defaultValue=""
+                      onChange={(e) => {
+                        e.target.style.color = e.target.value ? "#000" : "#999";
+                      }}
                       style={{ color: "#999" }}
                     >
                       <option value="" disabled hidden>
@@ -583,10 +590,11 @@ function Register() {
                       required
                     />
                   </div>
-                  <div className="field">
+                  <div class="form-input-upload-man">
                     <input
                       id="images"
                       type="file"
+                      placeholder="upload"
                       {...register("photo")}
                     />
                   </div>
@@ -623,6 +631,9 @@ function Register() {
                     <select
                       {...register("organizationType", { required: true })}
                       defaultValue=""
+                      onChange={(e) => {
+                        e.target.style.color = e.target.value ? "#000" : "#999";
+                      }}
                       style={{ color: "#999" }}
                     >
                       <option value="" disabled hidden>
@@ -641,7 +652,7 @@ function Register() {
                   </div>
                 </>
               )}
-
+              
               <div className="field btn">
                 <input type="submit" value="Signup" />
               </div>
@@ -654,4 +665,3 @@ function Register() {
 }
 
 export default Register;
-

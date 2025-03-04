@@ -255,6 +255,7 @@ import RootLayoutOrg from './components/organisations/rootLayout/RootLayout';
 import RequestBlood from './components/forms/RequestBlood';
 import RequestOrgan from './components/forms/RequestOrgan';
 import RentEquipment from './components/forms/RentEquipment';
+import Profile from './components/profile/Profile';
 
 function App() {
   const user = JSON.parse(localStorage.getItem('user'));
@@ -265,11 +266,12 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/profile" element={<Profile />} />
         {user && (
-          <Route
-            path={`/Doctor/${user.name}`}
-            element={<DoctorProfile />}
-          ></Route>
+          <Route 
+           path={`/Doctor/${user.name}`} 
+           element={<DoctorProfile />}
+           ></Route>
         )}
         {user && (
           <Route path='Organization' element={<RootLayoutOrg />}>

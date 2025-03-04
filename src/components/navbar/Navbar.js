@@ -123,7 +123,20 @@ function Navbar() {
                   </NavLink>
                 </li>
               ) : (
+                <>
                 <li className="nav-item">
+                <NavLink
+                    className="nav-link active chakra-petch-regular"
+                    active 
+                    aria-current="page"
+                    to="/profile"
+                    style={({ isActive }) => {
+                      return isActive ? activeLink : inactiveLink;
+                    }}
+                  >
+                    Profile
+                  </NavLink></li>
+                  <li className="nav-item">
                   <NavLink
                     className="nav-link chakra-petch-regular"
                     to="/login"
@@ -134,7 +147,7 @@ function Navbar() {
                   >
                     Logout
                   </NavLink>
-                </li>
+                </li></>
               )}
   
               {/* <li className="nav-item">
