@@ -297,8 +297,8 @@
 /* html, */
 .register{
   display: flex;
-  height: 125vh;
-  width: 100%;
+  height: 100%;
+  width: 100%; 
   place-items: center;
   align-items: flex-start;
   justify-content:center;
@@ -314,7 +314,8 @@
 
 /* The main wrapper around the form */
 .wrapper {
-  margin-top: 100px;
+  margin-top: 75px;
+  margin-bottom: 30px;
   overflow: hidden;
   width: 500px;
   /* height: 100%; */
@@ -655,4 +656,12 @@ form .btn input[type="submit"] {
 
 .form-input-upload-man input[type="file"]::file-selector-button {
   display: none;
+}
+
+.error-message-top {
+  color: red;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
 }
