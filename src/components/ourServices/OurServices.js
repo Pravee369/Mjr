@@ -2,6 +2,10 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { MdNotificationsActive } from 'react-icons/md';
 import { RiHealthBookFill } from 'react-icons/ri';
+import { FaHandHoldingMedical } from "react-icons/fa";
+import { FaHandHoldingWater } from "react-icons/fa";
+import { FaCartPlus } from "react-icons/fa";
+import { FaClock } from "react-icons/fa";
 import './OurServices.css';
 
 const OurServices = () => {
@@ -16,27 +20,45 @@ const services = [
     title: "Upload Prescriptions",
     description:
       "Upload your prescriptions to avoid the hassle of carrying physical documents and keep your medical records organized and easily accessible. This ensures you have a secure, digital copy whenever you need it, simplifying your healthcare management.",
-    path: (user)?`/user-profile/${JSON.parse(localStorage.getItem('user')).username}/prescriptions`:"/login",
+    path: (user)?`/${user.name}/prescriptions`:"/login",
   },
   {
     icon: <MdNotificationsActive />, // Replace with the actual icon or image
     title: "Alarms",
     description:
       "Set alarms for doctor appointments and pill times to ensure you never miss a critical healthcare task.",
-    path: (user)?`/user-profile/${JSON.parse(localStorage.getItem('user')).username}/alarms`:"/login",
+    path: (user)?`/${user.name}/alarms`:"/login",
   },
   {
     icon: <RiHealthBookFill />, // Replace with the actual icon or image
     title: "Health Logging",
     description:
       "Upload health attributes like blood pressure and cholesterol levels to maintain a comprehensive digital health record. This enables easy monitoring and better tracking of your health trends.",
-    path:(user)?`/user-profile/${JSON.parse(localStorage.getItem('user')).username}/healthlogs`:"/login",
+    path:(user)?`/${user.name}/uploadlogs`:"/login",
   },
   {
     icon: "📊", // Replace with the actual icon or image
     title: "Tracking",
     description: "Track and save your medical history and health data",
-    path:(user)? `/user-profile/${JSON.parse(localStorage.getItem('user')).username}`:"/login",
+    path:(user)? `/${user.name}/seelogs`:"/login",
+  },
+  {
+    icon: <FaHandHoldingMedical />, // Replace with the actual icon or image
+    title: "Organ Banks",
+    description: "Hope for a second chance—connect with potential organ donors and find the gift of life",
+    path:(user)? `/${user.name}/requestorgan`:"/login",
+  },
+  {
+    icon: <FaHandHoldingWater /> , // Replace with the actual icon or image
+    title: "Blood Banks",
+    description: "Urgently need blood? Find donors and receive the gift of life.",
+    path:(user)? `/${user.name}/requestblood`:"/login",
+  },
+  {
+    icon: <FaCartPlus /> , // Replace with the actual icon or image
+    title: "Equipment Renters for Hospitals, Clinics",
+    description: "Need medical equipment? Find rentals for your healthcare needs easily.",
+    path:(user)? `/${user.name}/rentequipment`:"/login",
   },
 ];
 

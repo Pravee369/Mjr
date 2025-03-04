@@ -1,0 +1,17 @@
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.user-profile{
+    width: 100%;
+}
+.user-profile .user-profile-content{
+    margin-top: 50px;
+    width: 75%;
+}
+.user-profile .sidebar{
+    /* width: 20%; */
+    margin-top: 25px;
+}

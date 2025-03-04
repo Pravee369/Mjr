@@ -232,7 +232,7 @@ import RootLayout from './RootLayout';
 import Home from './components/home/Home';
 import Register from './components/register/Register';
 import Login from './components/login/Login';
-import UserProfile from './components/userProfile/UserProfile';
+import HealthProfile from './components/healthProfile/HealthProfile';
 import General from './components/forms/General';
 import Diabetes from './components/forms/Diabetes';
 import Heartattack from './components/forms/Heartattack';
@@ -284,20 +284,27 @@ function App() {
         )}
 
         {user && (
-          <Route path={`/Patient/${user.name}`} element={<UserProfile />}>
-            <Route path="general" element={<General />} />
-            <Route path="diabetes" element={<Diabetes />} />
-            <Route path="heartattack" element={<Heartattack />} />
-            <Route path="eyesight" element={<Eyesight />} />
-            <Route path="cancer" element={<Cancer />} />
-            <Route path="prescriptions" element={<Prescription />} />
-            <Route path="alarms" element={<Alarm />} />
-            <Route path="healthlogs" element={<Healthlogs />} />
-            <Route path="requestblood" element={<RequestBlood />} />
-            <Route path="requestorgan" element={<RequestOrgan />} />
-            <Route path="rentequipment" element={<RentEquipment />} />
+          <Route path={`/Patient/${user.name}`} element={<Home />}>
           </Route>
         )}
+
+        { user && ( <Route path={`${user.name}/requestblood`} element={<RequestBlood />} />) }
+        { user && ( <Route path={`/${user.name}/requestorgan`} element={<RequestOrgan />} /> ) }
+        { user && ( <Route path={`${user.name}/rentequipment`} element={<RentEquipment />} /> )}
+        { user && ( <Route path={`/${user.name}/prescriptions`} element={<Prescription />} /> )}
+        { user && ( <Route path={`${user.name}/alarms`} element={<Alarm />} /> )}
+        { user && ( <Route path={`/${user.name}/seelogs`} element={<Healthlogs />} /> )}
+        {user && (
+          <Route path={`/${user.name}/uploadlogs`} element={<HealthProfile />}>
+            <Route path={`/${user.name}/uploadlogs/general`} element={<General />} />
+            <Route path={`/${user.name}/uploadlogs/diabetes`}element={<Diabetes />} />
+            <Route path={`/${user.name}/uploadlogs/heartattack`} element={<Heartattack />} />
+            <Route path={`/${user.name}/uploadlogs/eyesight`} element={<Eyesight />} />
+            <Route path={`/${user.name}/uploadlogs/cancer`} element={<Cancer />} />
+           
+          </Route>
+        )}
+
       </Route>
     )
   );

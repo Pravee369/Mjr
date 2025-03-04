@@ -14,7 +14,6 @@ const Sidebar = () => {
 
   let para = useParams();
   let user = JSON.parse(localStorage.getItem("user"));
-  console.log('User retrieved is :',user)
   let userName=user.name;
   const [isOpen, setIsOpen] = useState(true);
   const toggle = () =>
@@ -68,18 +67,28 @@ const Sidebar = () => {
     //   icon: <AiFillFile />,
     // },
     {
-      path: `/Patient/${userName}/requestblood`,
-      name: "Request Blood",
+      path: `/${userName}/uploadlogs/general`,
+      name: "General",
       icon: <AiFillFile />,
     },
     {
-      path: `/Patient/${userName}/requestorgan`,
-      name: "Request Organs",
+      path: `/${userName}/uploadlogs/diabetes`,
+      name: "Diabetes",
       icon: <AiFillFile />,
     },
     {
-      path: `/Patient/${userName}/rentEquipment`,
-      name: "Rent Equipment",
+      path: `/${userName}/uploadlogs/eyesight`,
+      name: "Eyesight",
+      icon: <AiFillFile />,
+    },
+    {
+      path: `/${userName}/uploadlogs/cancer`,
+      name: "Cancer",
+      icon: <AiFillFile />,
+    },
+    {
+      path: `/${userName}/uploadlogs/heartattack`,
+      name: "Heart Attack",
       icon: <AiFillFile />,
     }
   ];
