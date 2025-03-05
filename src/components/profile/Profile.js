@@ -103,7 +103,7 @@ const Profile = () => {
                   alt="Profile"
                   className="profile-photo"
                 />
-                {editable && (
+                {editable && preview!==defaultProfile && (
                   <button
                     onClick={handleDeletePhoto}
                     className="delete-photo-btn"
