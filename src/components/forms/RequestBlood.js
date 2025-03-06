@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import { useForm } from 'react-hook-form';
 import axios, { formToJSON } from 'axios';
 import { loginContext } from '../contexts/loginContext';
+import BloodBanksApproval from '../organisations/bloodBanks/bloodBanksApproval/BloodBanksApproval';
 import './Form.css'
 
 function RequestBlood() {
@@ -9,6 +10,7 @@ function RequestBlood() {
   const { register, handleSubmit,reset } = useForm();
   let [currentUser,error,userLoginStatus,loginUser,logoutUser]=useContext(loginContext)
   let [myRequests,setMyRequests] = useState([])
+  const user = JSON.parse(localStorage.getItem('user'));
 
   const submitForm = (data) => {
     console.log(data);
@@ -183,8 +185,10 @@ function RequestBlood() {
 
         {/* requests made by me  */}
 
-        <p className="lead mt-3">  Check whether required blood found or not </p>
-
+   {myRequests.length !==0 ?
+   (
+   <div>
+   <h3 className="lead mt-3">  Check whether required blood found or not </h3>
    <div className="row row-cols-1 row-cols-md-3 g-4">
      {myRequests.map((obj, index) => (
       <div className="col" key={index}>
@@ -227,7 +231,20 @@ function RequestBlood() {
       </div>
     </div>
   ))}
+
 </div>
+
+</div>) :
+(<h3>You did not make any blood requests</h3>)}
+
+
+{  user.category==="Organization" && user.organizationType==="Blood Bank" &&
+
+  <div> 
+    <BloodBanksApproval/>
+  </div>
+
+}
 
       </div>
    

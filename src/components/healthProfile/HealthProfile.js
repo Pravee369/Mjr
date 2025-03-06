@@ -16,4 +16,4 @@ function HealthProfile() {
   )
 }
 
-export default HealthProfile
+export default HealthProfile  

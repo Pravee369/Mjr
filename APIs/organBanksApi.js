@@ -2,15 +2,15 @@ const express = require("express");
 const expressAsyncHandler = require("express-async-handler");
 const jwt = require("jsonwebtoken");
 const verifyToken = require("./middlewares/verifyToken");
-const organBankApi = express.Router();
+const organBank = express.Router();
 const { ObjectId } = require("mongodb");
 
 // Body parser
-organBankApi.use(express.json());
+organBank.use(express.json());
 const multer = require("multer");
 const upload = multer();
 
-organBankApi.post(
+organBank.post(
   "/send-organ-request",
   upload.none(),
   verifyToken,
@@ -32,7 +32,7 @@ organBankApi.post(
   })
 );
 
-organBankApi.get(
+organBank.get(
   "/get-required-organ",
   verifyToken,
   expressAsyncHandler(async (request, response) => {
@@ -74,7 +74,7 @@ organBankApi.get(
   })
 );
 
-organBankApi.put(
+organBank.put(
   "/update-organ-request/:id", // Route with ID parameter
   verifyToken,
   expressAsyncHandler(async (req, res) => {
@@ -113,4 +113,24 @@ organBankApi.put(
   })
 );
 
-module.exports = organBankApi;
+
+organBank.get(
+  "/get-organ-requests",
+  verifyToken,
+  expressAsyncHandler(async (request, response) => {
+    console.log("organ Bank Get api");
+
+    const healthlogCollectionObj = request.app.get("organBanksCollection");
+    let allhealthlogs;
+
+    try {
+      allhealthlogs = await healthlogCollectionObj.find().toArray();
+      console.log("All the requested organ:", allhealthlogs);
+      response.status(200).send(allhealthlogs)
+    } catch (error) {
+      console.error("Error fetching requested organ from the database:", error);
+      return response.status(500).send({ message: "Internal server error in organ banks" });
+    }}))
+
+
+module.exports = organBank;

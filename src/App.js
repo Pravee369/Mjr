@@ -256,6 +256,8 @@ import RequestBlood from './components/forms/RequestBlood';
 import RequestOrgan from './components/forms/RequestOrgan';
 import RentEquipment from './components/forms/RentEquipment';
 import Profile from './components/profile/Profile';
+import BookAppointment from "./components/appointment/BookAppointment.js";
+import HomeFilter from './components/homeFilter/HomeFilter.js';
 
 function App() {
   const user = JSON.parse(localStorage.getItem('user'));
@@ -306,7 +308,8 @@ function App() {
            
           </Route>
         )}
-
+         { user && ( <Route path={`${user.name}/bookappointment`} element={< BookAppointment />} />) }
+         { user && ( <Route path={`${user.name}/searchFilter`} element={< HomeFilter />} />) }
       </Route>
     )
   );

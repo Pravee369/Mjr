@@ -38,7 +38,7 @@ function Healthlogs() {
         const keys = Object.keys(filteredLogs[0]).filter(key => !excludedKeys.includes(key));
     
         return (
-            <div key={type} className="table-container">
+            <div key={type} className="table-container mt-5">
                 <h2>{type.charAt(0).toUpperCase() + type.slice(1)}</h2>
                 <table className="table">
                     <thead className="bg-success text-white">

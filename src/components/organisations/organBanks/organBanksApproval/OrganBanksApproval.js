@@ -173,23 +173,15 @@ function OrganBanksApproval() {
           </div>
         </div>
       </div>
-      <div className="top_bar">
+      {/* <div className="top_bar">
         <div className="profile">
           <CgProfile />
         </div>
-        <div className="content">
-          <a href="#pendingRequests">Pending Requests</a>
-          <a href="#approvedRequests">Approved Requests</a>
-          <NavLink
-            className="nav-link"
-            to="/login"
-            onClick={logoutUser}
-          >
-            Logout
-          </NavLink>
-        </div>
+        
       </div>
-      {/* Requested */}
+      Requested */}
+
+      <h3>  Requests to you </h3>
       <div className="p-4" id="pendingRequests" style={{ width: "100%" }}>
         <div className="row" style={{ width: "100%" }}>
           {requestedApprovals.map((curObj, index) => {
@@ -265,8 +257,10 @@ function OrganBanksApproval() {
         </div>
       </div>
 
+      <h3>  Requests approved by you </h3>
+
       <div id="approvedRequests" className="approvedRequests">
-        <h2 className="heading">Approved requests</h2>
+     
         <div className="row" style={{ width: "100%" }}>
           <div>
             {acceptedRequests.length === 0 && (

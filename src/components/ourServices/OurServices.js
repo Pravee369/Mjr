@@ -5,7 +5,7 @@ import { RiHealthBookFill } from 'react-icons/ri';
 import { FaHandHoldingMedical } from "react-icons/fa";
 import { FaHandHoldingWater } from "react-icons/fa";
 import { FaCartPlus } from "react-icons/fa";
-import { FaClock } from "react-icons/fa";
+import { FaCalendarAlt } from "react-icons/fa";
 import './OurServices.css';
 
 const OurServices = () => {
@@ -60,6 +60,13 @@ const services = [
     description: "Need medical equipment? Find rentals for your healthcare needs easily.",
     path:(user)? `/${user.name}/rentequipment`:"/login",
   },
+  {
+    icon: <FaCalendarAlt /> , // Replace with the actual icon or image
+    title: "Appointment booking",
+    description: "Looking for an appointment? Find and book a doctor hassle-free",
+    path:(user)? `/${user.name}/searchFilter`:"/login",
+  },
+
 ];
 
 

@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.0d540b5a.css",
-    "main.js": "/static/js/main.98a7f767.js",
+    "main.css": "/static/css/main.2e78e35a.css",
+    "main.js": "/static/js/main.5c856644.js",
     "static/js/453.fdf53576.chunk.js": "/static/js/453.fdf53576.chunk.js",
     "static/media/having_regular_health_checkups.jpg": "/static/media/having_regular_health_checkups.cdcb605fa58b699c8811.jpg",
     "static/media/manage_stress.jpg": "/static/media/manage_stress.2a98602c8f6adc1ffecb.jpg",
-    "static/media/bannerImage.png": "/static/media/bannerImage.3c84f9fae2d95fb1f7ed.png",
+    "static/media/homePageImg.png": "/static/media/homePageImg.3032bcde6df835b3d863.png",
     "static/media/logo.png": "/static/media/logo.b7233f6514fe49d4e81e.png",
     "static/media/get_regular_exercise.jpg": "/static/media/get_regular_exercise.cb2451a43817335fd023.jpg",
     "static/media/prioritising_sleep.jpg": "/static/media/prioritising_sleep.cb9d5522a3a9683bb5b9.jpg",
     "static/media/stay_hydrated.jpg": "/static/media/stay_hydrated.1357e0ecd07d507b70b6.jpg",
     "static/media/eat_balanced_diet.jpg": "/static/media/eat_balanced_diet.4b5fc01a82d6e5259de3.jpg",
     "index.html": "/index.html",
-    "main.0d540b5a.css.map": "/static/css/main.0d540b5a.css.map",
-    "main.98a7f767.js.map": "/static/js/main.98a7f767.js.map",
+    "main.2e78e35a.css.map": "/static/css/main.2e78e35a.css.map",
+    "main.5c856644.js.map": "/static/js/main.5c856644.js.map",
     "453.fdf53576.chunk.js.map": "/static/js/453.fdf53576.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0d540b5a.css",
-    "static/js/main.98a7f767.js"
+    "static/css/main.2e78e35a.css",
+    "static/js/main.5c856644.js"
   ]
 }

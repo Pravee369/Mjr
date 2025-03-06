@@ -1,13 +1,17 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState , useEffect} from 'react'
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import { loginContext } from '../contexts/loginContext';
+import OrganBanksApproval from '../organisations/organBanks/organBanksApproval/OrganBanksApproval';
 import './Form.css'
 
-function RequestBlood() {
+function RequestOrgan() {
 
   const { register, handleSubmit,reset } = useForm();
   let [currentUser,error,userLoginStatus,loginUser,logoutUser]=useContext(loginContext)
+  let [myRequests,setMyRequests] = useState([])
+
+  const user = JSON.parse(localStorage.getItem('user'));
 
   const submitForm = (data) => {
     console.log(data);
@@ -39,6 +43,36 @@ function RequestBlood() {
         console.log(error);
       });
   };
+
+  useEffect(()=>
+    {
+
+      let token = localStorage.getItem('token'); 
+        if (!token) {
+            console.error('No token found');
+            return;
+        }
+    axios.get('http://localhost:3000/organ-banks/get-organ-requests',
+      {
+        headers: {
+            "Authorization": `Bearer ${token}`,
+        }
+    }
+    )
+      .then(response => {
+        console.log(response.data)
+        const userRequests = response.data.filter(
+          item => item.username === currentUser.username
+        );
+        setMyRequests(userRequests)
+        //console.log(userRequests.data);
+        //reset(); 
+      })
+      .catch(error => {
+        console.log(error);
+      });
+
+    },[])
 
   return (
    
@@ -161,9 +195,70 @@ function RequestBlood() {
             </div>
           </form>
         </div>
+
+          {/* requests made by me  */}
+
+       {myRequests.length !==0 ? 
+       
+       (<div>
+       <h3 className="lead mt-3">  Check whether requested organ found or not </h3>
+
+<div className="row row-cols-1 row-cols-md-3 g-4">
+  {myRequests.map((obj, index) => (
+   <div className="col" key={index}>
+   <div className="card h-100 shadow-sm">
+     {/* Card Header */}
+     <div className="card-header text-center bg-primary text-white">
+       <h5 className="card-title mb-0">{obj.organRequired}</h5>
+     </div>
+
+     {/* Card Body */}
+     <div className="card-body text-center">
+       <p
+         className="card-text"
+         style={{
+           fontWeight: "bold",
+           color: obj.approved === "YES"? "green" : "red",
+         }}
+       >
+         {obj.approved === "YES" ? "Approved" : "Not Approved"}
+       </p>
+       {obj.approved ==="YES" ? (
+         <p className="text-success">Approved by: {obj.approvedBy}</p>
+       ) : (
+         <p className="text-danger">
+           Unfortunately, not approved by anyone.
+         </p>
+       )}
+     </div>
+
+     {/* Card Footer */}
+     <div
+       className="card-footer text-center"
+       style={{
+         backgroundColor: obj.approved==="YES" ? "lightgreen" : "lightcoral",
+         fontWeight: "bold",
+       }}
+     >
+       {obj.approved ==="YES" ? "Request Approved" : "Pending Approval"}
+     </div>
+   </div>
+ </div>
+))}
+</div>
+</div>):(<h3>You did not make any organ requests yet !!</h3>)}
+
+{  user.category==="Organization" && user.organizationType==="Organ Bank" &&
+
+  <div> 
+    <OrganBanksApproval/>
+  </div>
+
+}
+
       </div>
    
   );
 }
 
-export default RequestBlood;
+export default RequestOrgan;

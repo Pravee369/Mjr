@@ -59,8 +59,8 @@ const Prescription = () => {
     };
 
     return (
-        <div className="m-5">
-            <input type="file" onChange={onFileChange} className="form-control " ref={fileInputRef} />
+        <div className="mt-5">
+            <input type="file" onChange={onFileChange} className="form-control mt-5" ref={fileInputRef} />
             <button onClick={onFileUpload} className="btn btn-success mt-3 btn-rounded">Upload</button>
             <h3 className="mt-5 mb-1">Uploaded Documents</h3>
             <div className="mb-2">

@@ -40,7 +40,7 @@ function GeneralForm() {
 
   return (
    
-      <div className="container1">
+      <div className="container1 ">
         <div className="auction-form">
           <form onSubmit={handleSubmit(submitForm)}>
             <div className="form-input1">

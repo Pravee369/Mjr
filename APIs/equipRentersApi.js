@@ -113,4 +113,22 @@ equipmentRenter.put(
   })
 );
 
+
+equipmentRenter.get(
+  "/get-rent-requests",
+  verifyToken,
+  expressAsyncHandler(async (request, response) => {
+    console.log("equipment renter Get api");
+
+    const healthlogCollectionObj = request.app.get("equipmentRentersCollection");
+    let allhealthlogs;
+
+    try {
+      allhealthlogs = await healthlogCollectionObj.find().toArray();
+      console.log("All the requested equipment rent:", allhealthlogs);
+      response.status(200).send(allhealthlogs)
+    } catch (error) {
+      console.error("Error fetching requested equipment rent from the database:", error);
+      return response.status(500).send({ message: "Internal server error in equipment renters" });
+    }}))
 module.exports = equipmentRenter;

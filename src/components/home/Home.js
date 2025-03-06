@@ -1,21 +1,28 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import VirtualHealthcare from './../virtualHealthCare/VirtualHealthCare';
 import OurServices from './../ourServices/OurServices';
 import ArticleSection from './../articles/ArticleSection';
-import HomeFilter from '../homeFilter/HomeFilter';
-
-// import Description from './../description/Description';
 import './Home.css'
+
 
 const Home = () => {
 
+  const servicesRef = useRef(null);
+
+  const scrollToServices = () => {
+    if (servicesRef.current) {
+      servicesRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+ 
   console.log("home file")
   return (
     <div className='homepagecontent'>
-      <div><VirtualHealthcare/></div>
+      <div><VirtualHealthcare onAvailClick={scrollToServices}/></div>
       
-      <OurServices/>
-      <HomeFilter/>
+
+      <div id="services" ref={servicesRef}><OurServices/></div>
+     
 
       <ArticleSection/>
       {/* <Description/> */}
