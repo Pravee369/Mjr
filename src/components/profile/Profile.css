@@ -1,0 +1,102 @@
+/* profile.css */
+.profile-container {
+    max-width: 600px;
+    margin: 40px auto;
+    margin-top: 100px;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+}
+
+.profile-header {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #4A4A4A;
+    margin-bottom: 20px;
+}
+
+.profile-photo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.profile-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ddd;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.delete-photo-btn {
+    margin-top: 8px;
+    background-color: #d4bd91;
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.delete-photo-btn:hover {
+    background-color: #cc0000;
+}
+
+.profile-details p {
+    font-size: 16px;
+    margin: 10px 0;
+    color: #333;
+}
+
+.profile-details strong {
+    color: #555;
+    font-weight: bold;
+}
+
+.profile-details input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-top: 5px;
+}
+
+.edit-btn, .save-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.edit-btn {
+    background-color: #38e3e9;
+    color: black;
+}
+
+.edit-btn:hover {
+    background-color: #217dbb;
+    color : white;
+}
+
+.save-btn {
+    background-color: #b2f060;
+    color: black;
+}
+
+.save-btn:hover {
+    background-color: #1e8449;
+    color : white;
+}

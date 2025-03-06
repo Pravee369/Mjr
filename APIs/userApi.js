@@ -18,38 +18,40 @@ userApp.use(exp.json())
 
 //register user PUBLIC ROUTE
 console.log("user api file")
-userApp.post("/register-user",expressAsyncHandler(async(req,res)=>
-{
-   console.log("its userapi register")
-   console.log("uyjgbj",req.body)
-   //get userCollection
-   const userCollectionObj=req.app.get("userCollection")
 
-   //get user from client
-   //const newUser = JSON.parse(req.body)
-   const newUser=req.body;
-   console.log("dfghjkl",newUser)
-   //verify user already  exist or not
-   const userOfdb = await userCollectionObj.findOne({username:newUser.username})
-
-   if(userOfdb!==null)
-   {
-    res.status(200).send({message:"User already exist ..Please Login"})
+userApp.post("/register-user", multerObj.single("photo"), async (req, res) => {
+   console.log("Received user registration request");
+ 
+   try {
+     const userCollectionObj = req.app.get("userCollection");
+     const newUser = req.body;
+ 
+     // Check if user already exists
+     const existingUser = await userCollectionObj.findOne({ username: newUser.username });
+     if (existingUser) {
+       return res.status(200).send({ message: "User already exists. Please log in." });
+     }
+ 
+     // Hash the password
+     newUser.password = await bcryptjs.hash(newUser.password, 6);
+     console.log("Uploaded file:", req.file);
+     // If an image was uploaded, store its path
+     if (req.file) {
+       newUser.photo = req.file.path; // Store only the file path
+     } else {
+       newUser.photo = ""; // Default empty path
+     }
+ 
+     // Insert new user into the database
+     await userCollectionObj.insertOne(newUser);
+ 
+     res.status(201).send({ message: "User created successfully" });
+     console.log("User registered:", newUser);
+   } catch (error) {
+     console.error("Error registering user:", error);
+     res.status(500).send({ message: "Error registering user" });
    }
-
-   else
-   {
-      let hashedpw = await bcryptjs.hash(newUser.password,6);
-      newUser.password = hashedpw;
-      //newUser.image=req.file.path;
-      //insert user
-      await userCollectionObj.insertOne(newUser);
-
-      res.status(201).send({message:"User created"})
-      console.log("user added")
-   }
-
-}))
+ });
 
 
 //userlogin
