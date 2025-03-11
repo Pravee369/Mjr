@@ -4,7 +4,7 @@ const bcryptjs = require("bcryptjs")
 const jwt = require("jsonwebtoken")
 const userApp = exp.Router();
 const verifyToken=require("./middlewares/verifyToken")
-
+const { ObjectId } = require("mongodb");
 const expressAsyncHandler = require('express-async-handler')
 
 //import multerObj
@@ -131,5 +131,42 @@ userApp.get("/filter", async (req, res) => {
        res.status(500).json({ message: "Error fetching data" });
    }
 });
+
+
+userApp.get("/alldoctorsandhospitals", async (req, res) => {
+  const userCollection = req.app.get("userCollection");
+  try {
+    // Fetch doctors
+    const doctors = await userCollection.find({ category: "Doctor" }).toArray();
+
+    // Fetch hospitals
+    const hospitals = await userCollection.find({ category: "Organization" , organizationType:"Hospital" }).toArray();
+
+    // Return both doctors and hospitals in separate arrays
+    res.status(200).json({ doctors, hospitals });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: "Error fetching data" });
+  }
+});
+
+
+
+userApp.get("/doctor/:id", async (req, res) => {
+  const userCollection = req.app.get("userCollection")
+  console.log("Received ID:", req.params.id);
+  try {
+    const doctor = await userCollection.findOne({ _id: new ObjectId(req.params.id) });
+    if (!doctor) {
+      return res.status(404).json({ message: "Doctor not found" });
+    }
+    console.log(doctor.name)
+    res.status(200).json(doctor);
+  } catch (error) {
+    res.status(500).json({ message: "Error fetching doctor details", error });
+  }
+});
+
+
 
 module.exports = userApp;

@@ -1,15 +1,45 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import defaultProfile from "../../images/default-profile.png";
+import "./HomeFilter.css"
+import { useNavigate } from "react-router-dom";
 
 const HomeFilter = () => {
   const [category, setCategory] = useState("");
   const [specialization, setSpecialization] = useState("");
   const [results, setResults] = useState([]);
+  const [doctors, setDoctors] = useState([]);
+  const [hospitals,setHospitals]=useState([])
+  const [indexd, setIndexd] = useState(0);
+  const [indexh, setIndexh] = useState(0);
+  const [loading, setLoading] = useState(true)
 
   const categories = ["Doctor", "Clinic", "Hospital"];
   const specializations = ["Cardiology", "Dermatology", "Neurology", "Orthopedics",
                            "Gynoecology","Pediatrics","Dentist","Psychiatry"];
 
+   
+   const [error, setError] = useState(null);
+
+   let navigate = useNavigate()
+   
+   useEffect(() => {
+   const fetchData = async () => {
+     try {
+         const response = await axios.get("http://localhost:3000/user-api/alldoctorsandhospitals");
+         console.log(response)
+         setDoctors(response.data.doctors || [] );
+         setHospitals(response.data.hospitals || [])
+         } catch (err) {
+         setError("Error fetching data");
+         } finally {
+          setLoading(false);
+         }
+         };
+         fetchData();
+       }, []);
+ 
   useEffect(() => {
     if (category || specialization) {
       axios
@@ -23,7 +53,25 @@ const HomeFilter = () => {
     }
   }, [category, specialization]);
 
+
+                          
+  if(loading) return <p>loading...</p>
+  if (error) return <p>{error}</p>;
+                      
+// Group doctors into sets of 3
+const groupedDoctors = [];
+for (let i = 0; i < doctors.length; i += 3) {
+ groupedDoctors.push(doctors.slice(i, i + 3));
+}
+   
+const groupedHospitals=[]
+for (let i = 0; i < hospitals.length; i += 3) {
+ groupedHospitals.push(hospitals.slice(i, i + 3));
+}
+
+
   return (
+
     <div className="m-4 p-4 bg-gray-100 rounded-lg shadow-lg text-center">
       <h2 className="text-xl sm:text-2xl font-bold text-gray-700 mb-4">Filter Health Services</h2>
 
@@ -69,9 +117,106 @@ const HomeFilter = () => {
 
       {/* Default message when no filters are applied */}
       {results.length === 0 && !category && !specialization && (
-        <p className="text-gray-500 text-center text-sm sm:text-base">
+       
+       <div className="flex flex-col items-center w-full">
+         <div className="relative w-full max-w-5xl p-4">
+
+         <p className="text-gray-500 text-center text-sm sm:text-base">
          Locate the best doctors and healthcare facilities quickly with customized search options
         </p>
+
+          {/* for doctors */}
+           {/* Left Arrow */}
+           {indexd > 0 && (
+             <button
+               className="btn bg-grey"
+               onClick={() => setIndexd(indexd - 1)}
+             >
+               <ChevronLeft size={24} />
+             </button>
+           )}
+   
+           {/* Cards Wrapper */}
+           <div className="flex justify-center">
+             <div className="row row-cols-sm-1 row-cols-md-3">
+               {groupedDoctors.length > 0 &&
+                 groupedDoctors[indexd]?.map((doctor, i) => (
+                   <div
+                     key={i}
+                     className="p-4 border rounded-lg shadow-lg text-center bg-white"
+                     onClick={() => navigate(`/doctor/${doctor._id}`)}
+                   >
+                     <img
+                       src={doctor.photo && doctor.photo !== "" ? doctor.photo : defaultProfile}
+                       alt="Doctor Profile"
+                       className="rounded-full object-cover"
+                     />
+                     <h3 className="text-lg font-bold">{doctor.name}</h3>
+                     <p className="text-sm text-gray-600">{doctor.specialization}</p>
+                     <p className="text-sm font-medium text-gray-700">
+                       {doctor.experience} years experience
+                     </p>
+                   </div>
+                 ))}
+             </div>
+           </div>
+   
+           {/* Right Arrow */}
+           {indexd < groupedDoctors.length - 1 && (
+             <button
+               className="btn bg-gray"
+               onClick={() => setIndexd(indexd + 1)}
+             >
+               <ChevronRight size={24} />
+             </button>
+           )}
+           
+          <br></br>
+          <p className="text-gray-500 text-center text-sm sm:text-base">Find your hospital</p>
+
+           {/* for hospitals */}
+           {indexh > 0 && (
+             <button
+               className="btn bg-grey"
+               onClick={() => setIndexh(indexh - 1)}
+             >
+               <ChevronLeft size={24} />
+             </button>
+           )}
+   
+           {/* Cards Wrapper */}
+           <div className="flex justify-center">
+             <div className="row row-cols-sm-1 row-cols-md-3">
+               {groupedHospitals.length > 0 &&
+                 groupedHospitals[indexh]?.map((hospital, i) => (
+                   <div
+                     key={i}
+                     className="p-4 border rounded-lg shadow-lg text-center bg-white"
+                  
+                   >
+                     
+                     <h3 className="text-lg font-bold">{hospital.name}</h3>
+                     <p className="text-sm text-gray-600">{hospital.location}</p>
+                    
+                   </div>
+                 ))}
+             </div>
+           </div>
+   
+           {/* Right Arrow */}
+           {indexh < groupedHospitals.length - 1 && (
+             <button
+               className="btn bg-gray"
+               onClick={() => setIndexh(indexh + 1)}
+             >
+               <ChevronRight size={24} />
+             </button>
+           )}
+
+         </div>
+       </div>
+        
+
       )}
 
       {/* Responsive Grid for Small Cards */}

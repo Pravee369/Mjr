@@ -258,6 +258,7 @@ import RentEquipment from './components/forms/RentEquipment';
 import Profile from './components/profile/Profile';
 import BookAppointment from "./components/appointment/BookAppointment.js";
 import HomeFilter from './components/homeFilter/HomeFilter.js';
+import DoctorDetails from "./components/doctorDetails/DoctorDetails.js"
 
 function App() {
   const user = JSON.parse(localStorage.getItem('user'));
@@ -269,6 +270,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/doctor/:id" element={<DoctorDetails />} />
         {user && (
           <Route 
            path={`/Doctor/${user.name}`} 
