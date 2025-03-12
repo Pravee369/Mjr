@@ -255,13 +255,13 @@ import RootLayoutOrg from './components/organisations/rootLayout/RootLayout';
 import RequestBlood from './components/forms/RequestBlood';
 import RequestOrgan from './components/forms/RequestOrgan';
 import RentEquipment from './components/forms/RentEquipment';
-import Profile from './components/profile/Profile';
 import BookAppointment from "./components/appointment/BookAppointment.js";
 import HomeFilter from './components/homeFilter/HomeFilter.js';
 import DoctorDetails from "./components/doctorDetails/DoctorDetails.js"
 
 function App() {
   const user = JSON.parse(localStorage.getItem('user'));
+  let userName = user?.name?.replace(/\s+/g, "-") || "Guest";
 
   const browserRouter = createBrowserRouter(
     createRoutesFromElements(
@@ -269,49 +269,49 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/profile" element={<Profile />} />
         <Route path="/doctor/:id" element={<DoctorDetails />} />
         {user && (
           <Route 
-           path={`/Doctor/${user.name}`} 
+           path={`/Doctor/${userName}`} 
            element={<DoctorProfile />}
            ></Route>
         )}
         {user && (
           <Route path='Organization' element={<RootLayoutOrg />}>
-            <Route path={`Laboratory/${user.name}`} element={<LabsProfile/>}/>
-            <Route path={`Blood Bank/${user.name}`} element={<BloodBanksProfile/>}/>
-            <Route path={`Organ Bank/${user.name}`} element={<OrganBanksProfile/>}/>
-            <Route path={`Pharmacy/${user.name}`} element={<PharmaciesProfile/>}/>
-            <Route path={`Hospital/${user.name}`} element={<HospitalsProfile/>}/>
-            <Route path={`Clinic/${user.name}`} element={<ClinicsProfile/>}/>
-            <Route path={`Equipment Renter/${user.name}`} element={<EquipRentersProfile/>}/>
+            <Route path={`Laboratory/${userName}`} element={<LabsProfile/>}/>
+            <Route path={`Blood Bank/${userName}`} element={<BloodBanksProfile/>}/>
+            <Route path={`Organ Bank/${userName}`} element={<OrganBanksProfile/>}/>
+            <Route path={`Pharmacy/${userName}`} element={<PharmaciesProfile/>}/>
+            <Route path={`Hospital/${userName}`} element={<HospitalsProfile/>}/>
+            <Route path={`Clinic/${userName}`} element={<ClinicsProfile/>}/>
+            <Route path={`Equipment Renter/${userName}`} element={<EquipRentersProfile/>}/>
           </Route>
         )}
 
         {user && (
-          <Route path={`/Patient/${user.name}`} element={<Home />}>
+          <Route path={`/Patient/${userName}`} element={<Home />}>
           </Route>
         )}
 
-        { user && ( <Route path={`${user.name}/requestblood`} element={<RequestBlood />} />) }
-        { user && ( <Route path={`/${user.name}/requestorgan`} element={<RequestOrgan />} /> ) }
-        { user && ( <Route path={`${user.name}/rentequipment`} element={<RentEquipment />} /> )}
-        { user && ( <Route path={`/${user.name}/prescriptions`} element={<Prescription />} /> )}
-        { user && ( <Route path={`${user.name}/alarms`} element={<Alarm />} /> )}
-        { user && ( <Route path={`/${user.name}/seelogs`} element={<Healthlogs />} /> )}
+        
+        { user && ( <Route path={`${userName}/requestblood`} element={<RequestBlood />} />) }
+        { user && ( <Route path={`/${userName}/requestorgan`} element={<RequestOrgan />} /> ) }
+        { user && ( <Route path={`${userName}/rentequipment`} element={<RentEquipment />} /> )}
+        { user && ( <Route path={`/${userName}/prescriptions`} element={<Prescription />} /> )}
+        { user && ( <Route path={`${userName}/alarms`} element={<Alarm />} /> )}
+        { user && ( <Route path={`/${userName}/seelogs`} element={<Healthlogs />} /> )}
         {user && (
-          <Route path={`/${user.name}/uploadlogs`} element={<HealthProfile />}>
-            <Route path={`/${user.name}/uploadlogs/general`} element={<General />} />
-            <Route path={`/${user.name}/uploadlogs/diabetes`}element={<Diabetes />} />
-            <Route path={`/${user.name}/uploadlogs/heartattack`} element={<Heartattack />} />
-            <Route path={`/${user.name}/uploadlogs/eyesight`} element={<Eyesight />} />
-            <Route path={`/${user.name}/uploadlogs/cancer`} element={<Cancer />} />
+          <Route path={`/${userName}/uploadlogs`} element={<HealthProfile />}>
+            <Route path={`/${userName}/uploadlogs/general`} element={<General />} />
+            <Route path={`/${userName}/uploadlogs/diabetes`}element={<Diabetes />} />
+            <Route path={`/${userName}/uploadlogs/heartattack`} element={<Heartattack />} />
+            <Route path={`/${userName}/uploadlogs/eyesight`} element={<Eyesight />} />
+            <Route path={`/${userName}/uploadlogs/cancer`} element={<Cancer />} />
            
           </Route>
         )}
-         { user && ( <Route path={`${user.name}/bookappointment`} element={< BookAppointment />} />) }
-         { user && ( <Route path={`${user.name}/searchFilter`} element={< HomeFilter />} />) }
+         { user && ( <Route path={`${userName}/bookappointment`} element={< BookAppointment />} />) }
+         { user && ( <Route path={`${userName}/searchFilter`} element={< HomeFilter />} />) }
       </Route>
     )
   );

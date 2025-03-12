@@ -1,12 +1,37 @@
-import React, { useContext } from 'react'
+import React, { useState, useContext, useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
 import { loginContext } from '../contexts/loginContext'
 import './Navbar.css'
 import logo from '../../images/logo.png'
+import defaultProfile from "../../images/default-profile.png";
+import Profile from "../profile/Profile";
+import GetVerified from '../getVerified/GetVerified';
 
 function Navbar() {
 
    let [currentUser,error,userLoginStatus,loginUser,logoutUser]=useContext(loginContext)
+   const [preview, setPreview] = useState(defaultProfile);
+   const [showModal, setShowModal] = useState(false);
+   const [modalContent, setModalContent] = useState(null);
+
+   useEffect(() => {
+       if (currentUser && currentUser.photo) {
+          setPreview(currentUser.photo);
+        }
+     }, [currentUser]);
+
+     useEffect(() => {
+      if (showModal) {
+          document.body.classList.add('no-scroll');
+      } else {
+          document.body.classList.remove('no-scroll');
+      }
+  }, [showModal]);
+
+   const toggleModal = (content = null) => {
+      setModalContent(content);
+      setShowModal(!!content);
+   };
 
    const activeLink = {
       color: "#ffaa00",
@@ -21,16 +46,16 @@ function Navbar() {
        backgroundColor:"#EEE0C9"
     };
     return (
-      
+
         <div className="navigation ">
         <nav className="navbar navbar-expand-sm p-0 m-0">
           <a className="navbar-brand" href="#">
             <img
-              src={logo}
-              width="40px"
-              height="40px"
-              alt=""
-            />
+             src={logo}
+             width="40px"
+             height="40px"
+             alt=""
+             />
           </a>
           
           <button
@@ -48,125 +73,88 @@ function Navbar() {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
 
             <ul className="navbar-nav ms-auto mb-0 mb-lg-0">
-              <li className="nav-item">
-                <NavLink
-                  className="nav-link active chakra-petch-regular"
-                  active 
-                  aria-current="page"
-                  to="/"
-                  style={({ isActive }) => {
-                    return isActive ? activeLink : inactiveLink;
-                  }}
-                >
-                  Home
-                </NavLink>
-              </li>
-              {/* <li className="nav-item">
-               {userLoginStatus && currentUser.userType=="admin" && 
-                <NavLink  
-                   to="/post-event" className="nav-link" 
-                   style={({ isActive }) => {
-                     return isActive ? activeLink : inactiveLink;
-                   }}> 
-                   Post Event 
-                </NavLink>}
-            </li> */}
-            {/* <li className="nav-item">
-               {userLoginStatus && 
-               <NavLink  
-                  to="/user-profile" className="nav-link"
-                  style={({ isActive }) => {
-                     return isActive ? activeLink : inactiveLink;
-                   }}
-               > 
-               Your Profile 
-               </NavLink>}
-            </li> */}
-{/*             
-            <li className="nav-item">
-               {userLoginStatus && currentUser.userType=="admin" && 
-               <NavLink  
-                  to="/registrations" className="nav-link"
-                  style={({ isActive }) => {
-                     return isActive ? activeLink : inactiveLink;
-                   }}
-               > 
-               Registrations 
-               </NavLink>}
-            </li> */}
-
-
-            {userLoginStatus===false &&
-              <li className="nav-item">
-                <NavLink
-                  className="nav-link chakra-petch-regular"
-                  to="/register"
-                  style={({ isActive }) => {
-                    return isActive ? activeLink : inactiveLink;
-                  }}
-                >
-                  SignUp
-                </NavLink>
-              </li>}
-             
-  
-              {!userLoginStatus ?
-                (<li className="nav-item">
-                  <NavLink
-                    className="nav-link chakra-petch-regular"
+            {userLoginStatus===false ? (
+              <>
+                <li className="nav-item">
+                  <NavLink className="nav-link active chakra-petch-regular"
+                    to="/" 
+                    style={({ isActive }) => (isActive ? activeLink : inactiveLink)}>
+                    Home
+                  </NavLink>
+                </li>
+                <li className="nav-item">
+                  <NavLink className="nav-link chakra-petch-regular"
+                    to="/register"
+                    style={({ isActive }) => (isActive ? activeLink : inactiveLink)}>
+                    SignUp
+                  </NavLink>
+                </li>
+                <li className="nav-item">
+                  <NavLink className="nav-link chakra-petch-regular"
                     to="/login"
-                    style={({ isActive }) => {
-                      return isActive ? activeLink : inactiveLink;
-                    }}
-                  >
+                    style={({ isActive }) => (isActive ? activeLink : inactiveLink)}>
                     Login
                   </NavLink>
                 </li>
-              ) : (
-                <>
+              </>
+            ) : (
+              <>
                 <li className="nav-item">
-                <NavLink
-                    className="nav-link active chakra-petch-regular"
-                    active 
-                    aria-current="page"
-                    to="/profile"
-                    style={({ isActive }) => {
-                      return isActive ? activeLink : inactiveLink;
-                    }}
-                  >
-                    Profile
-                  </NavLink></li>
-                  <li className="nav-item">
-                  <NavLink
-                    className="nav-link chakra-petch-regular"
-                    to="/login"
-                    style={({ isActive }) => {
-                      return isActive ? activeLink : inactiveLink;
-                    }}
-                    onClick={logoutUser}
-                  >
-                    Logout
+                  <NavLink className="nav-link active chakra-petch-regular nav-bar-button"
+                    to="/" 
+                    style={({ isActive }) => (isActive ? activeLink : inactiveLink)}>
+                    Home
                   </NavLink>
-                </li></>
-              )}
-  
-              {/* <li className="nav-item">
-                <NavLink
-                  className="nav-link"
-                  to="/aboutus"
-                  style={({ isActive }) => {
-                    return isActive ? activeLink : inactiveLink;
-                  }}
-                >
-                  Aboutus
-                </NavLink>
-              </li> */}
+                </li>
+                <li className="nav-item dropdown">
+                  <a className="nav-link dropdown-toggle d-flex align-items-center"
+                    href="#" 
+                    id="navbarDropdown" 
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <img src={preview} alt="Profile" className="profile-photo rounded-circle"
+                      style={{ width: "40px", height: "40px", objectFit: "cover" }} />
+                  </a>
+                  <ul className="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                    <li>
+                      <button className="dropdown-item" onClick={() => toggleModal('profile')}>
+                        Profile
+                      </button>
+                    </li>
+                    {currentUser.category==="Doctor" && 
+                      <li>
+                        <button className="dropdown-item" onClick={() => toggleModal('getVerified')}>
+                          Get Verified
+                        </button>
+                      </li>
+                    }
+                    <li>
+                      <button className="dropdown-item" onClick={logoutUser}>
+                        Logout
+                      </button>
+                    </li>
+                  </ul>
+                </li>
+              </>
+            )}
             </ul>
           </div>
-          </nav>
-        </div>
-      
+        </nav>
+
+        {showModal && (
+          <div className="modal-container" onClick={() => toggleModal(null)}>
+            <div className="modal-box" onClick={(e) => e.stopPropagation()}>
+              <button className="close-btn" onClick={() => toggleModal(null)}>✖</button>
+              <div className="modal-content">
+                {modalContent === 'profile' && <Profile />}
+                {modalContent === 'getVerified' && <GetVerified />}
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
     );
   }
 
-export default Navbar
+export default Navbar;

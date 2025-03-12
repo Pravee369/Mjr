@@ -13,6 +13,7 @@ const OurServices = () => {
   const navigate = useNavigate();
   
   const user=JSON.parse(localStorage.getItem('user'));
+  let userName = user?.name?.replace(/\s+/g, "-") || "Guest";
 
 const services = [
   {
@@ -20,51 +21,51 @@ const services = [
     title: "Upload Prescriptions",
     description:
       "Upload your prescriptions to avoid the hassle of carrying physical documents and keep your medical records organized and easily accessible. This ensures you have a secure, digital copy whenever you need it, simplifying your healthcare management.",
-    path: (user)?`/${user.name}/prescriptions`:"/login",
+    path: (user)?`/${userName}/prescriptions`:"/login",
   },
   {
     icon: <MdNotificationsActive />, // Replace with the actual icon or image
     title: "Alarms",
     description:
       "Set alarms for doctor appointments and pill times to ensure you never miss a critical healthcare task.",
-    path: (user)?`/${user.name}/alarms`:"/login",
+    path: (user)?`/${userName}/alarms`:"/login",
   },
   {
     icon: <RiHealthBookFill />, // Replace with the actual icon or image
     title: "Health Logging",
     description:
       "Upload health attributes like blood pressure and cholesterol levels to maintain a comprehensive digital health record. This enables easy monitoring and better tracking of your health trends.",
-    path:(user)?`/${user.name}/uploadlogs`:"/login",
+    path:(user)?`/${userName}/uploadlogs`:"/login",
   },
   {
     icon: "📊", // Replace with the actual icon or image
     title: "Tracking",
     description: "Track and save your medical history and health data",
-    path:(user)? `/${user.name}/seelogs`:"/login",
+    path:(user)? `/${userName}/seelogs`:"/login",
   },
   {
     icon: <FaHandHoldingMedical />, // Replace with the actual icon or image
     title: "Organ Banks",
     description: "Hope for a second chance—connect with potential organ donors and find the gift of life",
-    path:(user)? `/${user.name}/requestorgan`:"/login",
+    path:(user)? `/${userName}/requestorgan`:"/login",
   },
   {
     icon: <FaHandHoldingWater /> , // Replace with the actual icon or image
     title: "Blood Banks",
     description: "Urgently need blood? Find donors and receive the gift of life.",
-    path:(user)? `/${user.name}/requestblood`:"/login",
+    path:(user)? `/${userName}/requestblood`:"/login",
   },
   {
     icon: <FaCartPlus /> , // Replace with the actual icon or image
     title: "Equipment Renters for Hospitals, Clinics",
     description: "Need medical equipment? Find rentals for your healthcare needs easily.",
-    path:(user)? `/${user.name}/rentequipment`:"/login",
+    path:(user)? `/${userName}/rentequipment`:"/login",
   },
   {
     icon: <FaCalendarAlt /> , // Replace with the actual icon or image
     title: "Appointment booking",
     description: "Looking for an appointment? Find and book a doctor hassle-free",
-    path:(user)? `/${user.name}/searchFilter`:"/login",
+    path:(user)? `/${userName}/searchFilter`:"/login",
   },
 
 ];

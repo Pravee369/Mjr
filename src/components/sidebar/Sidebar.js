@@ -14,7 +14,7 @@ const Sidebar = () => {
 
   let para = useParams();
   let user = JSON.parse(localStorage.getItem("user"));
-  let userName=user.name;
+  let userName=user.name.replace(/\s+/g, "-");
   const [isOpen, setIsOpen] = useState(true);
   const toggle = () =>
     setIsOpen(!isOpen);

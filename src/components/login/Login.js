@@ -76,7 +76,7 @@ function Login() {
         if (res.data.success) {
           console.log("OTP Verified Successfully");
           let user = JSON.parse(localStorage.getItem("user"));
-          let userName = user.name;
+          let userName = user.name.replace(/\s+/g, "-");
           
           if (user.category === "Organization") {
             navigate(`/Organization/${user.organizationType}/${userName}`);

@@ -1,12 +1,10 @@
 /* profile.css */
 .profile-container {
-    max-width: 600px;
+    width: 600px;
     margin: 40px auto;
-    margin-top: 100px;
+    margin-bottom: 0px;
     padding: 20px;
-    background: #f9f9f9;
     border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     font-family: 'Arial', sans-serif;
 }
 
@@ -82,21 +80,27 @@
 }
 
 .edit-btn {
-    background-color: #38e3e9;
-    color: black;
+    background-color: #0056b3;
+    color: white;
 }
 
 .edit-btn:hover {
-    background-color: #217dbb;
-    color : white;
+    background-color: #007bff;
+}
+
+.edit-btn:active {
+    background-color: #004494; 
 }
 
 .save-btn {
-    background-color: #b2f060;
-    color: black;
+    background-color: #28a745;
+    color: white;
 }
 
 .save-btn:hover {
-    background-color: #1e8449;
-    color : white;
+    background-color: #218838;
+}
+
+.save-btn:active {
+    background-color: #1e7e34;
 }
