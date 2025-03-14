@@ -6,6 +6,7 @@ import logo from '../../images/logo.png'
 import defaultProfile from "../../images/default-profile.png";
 import Profile from "../profile/Profile";
 import GetVerified from '../getVerified/GetVerified';
+import defaultOrganizationIcon from "../../images/default-organization-icon.png";
 
 function Navbar() {
 
@@ -13,10 +14,15 @@ function Navbar() {
    const [preview, setPreview] = useState(defaultProfile);
    const [showModal, setShowModal] = useState(false);
    const [modalContent, setModalContent] = useState(null);
+   let userName = currentUser?.name?.replace(/\s+/g, "-") || "Guest";
 
    useEffect(() => {
-       if (currentUser && currentUser.photo) {
-          setPreview(currentUser.photo);
+       if (currentUser) {
+          if(currentUser.photo){
+            setPreview(currentUser.photo);
+          } else if(currentUser.category==="Organization") {
+            setPreview(defaultOrganizationIcon);
+          }
         }
      }, [currentUser]);
 
@@ -129,10 +135,17 @@ function Navbar() {
                         </button>
                       </li>
                     }
+                    {currentUser.category==="Organization" && currentUser.organizationType==="Hospital" &&
+                      <li>
+                        <NavLink className="dropdown-item" to={`Organization/Hospital/${userName}/verifications`}>
+                          Verifications
+                        </NavLink>
+                      </li>
+                    }
                     <li>
-                      <button className="dropdown-item" onClick={logoutUser}>
-                        Logout
-                      </button>
+                    <NavLink className="dropdown-item" to="/login" onClick={logoutUser}>
+                      Logout
+                    </NavLink>
                     </li>
                   </ul>
                 </li>
@@ -145,7 +158,7 @@ function Navbar() {
         {showModal && (
           <div className="modal-container" onClick={() => toggleModal(null)}>
             <div className="modal-box" onClick={(e) => e.stopPropagation()}>
-              <button className="close-btn" onClick={() => toggleModal(null)}>✖</button>
+              <button className="close-button" onClick={() => toggleModal(null)}>✖</button>
               <div className="modal-content">
                 {modalContent === 'profile' && <Profile />}
                 {modalContent === 'getVerified' && <GetVerified />}
