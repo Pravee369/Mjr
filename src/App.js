@@ -226,7 +226,7 @@
 // export default App;
 
 
-import React from 'react';
+import React, { useContext } from 'react';
 import { createBrowserRouter, RouterProvider, createRoutesFromElements, Route } from 'react-router-dom';
 import RootLayout from './RootLayout';
 import Home from './components/home/Home';
@@ -258,9 +258,14 @@ import RentEquipment from './components/forms/RentEquipment';
 import BookAppointment from "./components/appointment/BookAppointment.js";
 import HomeFilter from './components/homeFilter/HomeFilter.js';
 import DoctorDetails from "./components/doctorDetails/DoctorDetails.js"
+import { loginContext } from './components/contexts/loginContext.js';
 
 function App() {
-  const user = JSON.parse(localStorage.getItem('user'));
+
+    let [currentUser,error,userLoginStatus,loginUser,logoutUser]=useContext (loginContext)
+    
+      const user = JSON.parse(localStorage.getItem('user')) || {}
+  
   let userName = user?.name?.replace(/\s+/g, "-") || "Guest";
 
   const browserRouter = createBrowserRouter(
@@ -270,6 +275,9 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="/doctor/:id" element={<DoctorDetails />} />
+        <Route path="/appointment/:id" element={<BookAppointment />} />
+         
+        
         {user && (
           <Route 
            path={`/Doctor/${userName}`} 

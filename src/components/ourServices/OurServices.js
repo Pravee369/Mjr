@@ -14,7 +14,7 @@ const OurServices = () => {
   
   const user=JSON.parse(localStorage.getItem('user'));
   let userName = user?.name?.replace(/\s+/g, "-") || "Guest";
-
+  if(user)console.log(user.name)
 const services = [
   {
     icon: "📄", // Replace with the actual icon or image

@@ -73,6 +73,7 @@ MongoClient.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true 
     const bloodBanksCollection = db.collection("bloodBanksRequest");
     const organBanksCollection = db.collection("organBanksRequest");
     const equipmentRentersCollection = db.collection("equipmentRentersRequest");
+    const appointmentsCollection = db.collection("appointments")
     app.set("userCollection", userCollection);
     app.set("docCollection", docCollection);
     app.set("alarmCollection", alarmCollection);
@@ -80,6 +81,7 @@ MongoClient.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true 
     app.set("bloodBanksCollection",bloodBanksCollection);
     app.set("organBanksCollection",organBanksCollection);
     app.set("equipmentRentersCollection",equipmentRentersCollection);
+    app.set("appointmentsCollection",appointmentsCollection);
     console.log("db connection success");
 
     // Start checking alarms
@@ -125,6 +127,7 @@ const organBanks=require("./APIs/organBanksApi");
 const equipRenters=require("./APIs/equipRentersApi");
 const { otpAuth } = require('./APIs/otpAuth');
 const profile = require('./APIs/profileApi');
+const aptment = require("./APIs/appointmentApi");
 
 app.use("/user-api", userApp);
 app.use("/doc-api", docApp);
@@ -134,6 +137,7 @@ app.use("/organ-banks",organBanks);
 app.use("/equipment-renters",equipRenters);
 app.use('/otp-auth', otpAuth);
 app.use("/profile-api", profile);
+app.use("/appointment-api",aptment);
 
 // Page refresh handling
 app.use('/*', (req, res, next) => {

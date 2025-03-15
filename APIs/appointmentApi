@@ -1,0 +1,78 @@
+const express = require("express");
+const expressAsyncHandler = require("express-async-handler");
+const jwt = require("jsonwebtoken");
+const verifyToken = require("./middlewares/verifyToken");
+const { ObjectId } = require("mongodb");
+const aptment = express.Router();
+
+// Body parser
+aptment.use(express.json());
+const multer = require("multer");
+const upload = multer();
+console.log("aptment api file")
+
+aptment.post("/check", async (req, res) => {
+  console.log("Received request for availability check");
+
+  const userCollection = req.app.get("userCollection");
+  const appointmentCollection = req.app.get("appointmentsCollection");
+
+  try {
+    const { doctorId, date } = req.body;
+    console.log("Checking for doctorId:", doctorId, "on date:", date);
+
+    if (!doctorId || !date) {
+      return res.status(400).json({ error: "Missing doctorId or date" });
+    }
+
+    // Ensure doctorId is valid
+    const objectIdDoctor = new ObjectId(doctorId);
+
+    // Fetch doctor's maxPatients from users collection
+    const doctor = await userCollection.findOne({ _id: objectIdDoctor });
+    console.log(doctor.category)
+
+    console.log("Fetched doctor:", doctor);
+
+    if (!doctor || doctor.category.toLowerCase() !== "doctor") {
+      return res.status(404).json({ error: "Doctor not found" });
+    }
+
+    let maxPatients = 50;
+
+    // Count existing appointments for this doctor on the selected date
+    const bookedAppointments = await appointmentCollection.countDocuments({ doctorId, date });
+
+    if (bookedAppointments >= maxPatients) {
+      return res.json({ available: false });
+    }
+
+    // Generate token number
+    const token = bookedAppointments + 1;
+    const reportTime = `Expected at ${9 + token}:00 AM`;
+
+    // Save appointment in DB
+   // await appointmentCollection.insertOne({ doctorId, date, token });
+
+    res.json({ available: true, token, reportTime });
+
+  } catch (error) {
+    console.error("Error checking availability:", error);
+    res.status(500).json({ error: "Internal server error" });
+  }
+});
+
+aptment.post("/book", async (req, res) => {
+  const appointmentCollection = req.app.get("appointmentsCollection");
+  try {
+    const { doctorId, date ,token} = req.body;
+     await appointmentCollection.insertOne({ doctorId, date, token });
+     res.status(200).json({message:"okay appointment confirmed"})
+   }
+   catch (error) {
+    console.error("Error confirming appointment:", error);
+    res.status(500).json({ error: "Internal server error" });
+  }
+})
+  
+  module.exports =aptment;

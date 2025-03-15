@@ -75,14 +75,11 @@ function Login() {
       .then((res) => {
         if (res.data.success) {
           console.log("OTP Verified Successfully");
-          let user = JSON.parse(localStorage.getItem("user"));
-          let userName = user.name.replace(/\s+/g, "-");
-          
-          if (user.category === "Organization") {
-            navigate(`/Organization/${user.organizationType}/${userName}`);
-          } else {
-            navigate(`/${user.category}/${userName}`);
-          }
+          // let user = JSON.parse(localStorage.getItem("user"));
+          // let userName;
+          // if(user) userName = user.name.replace(/\s+/g, "-") ;
+          // else userName=""
+          navigate("/");
         } else {
           alert("Invalid OTP. Please try again.");
         }
