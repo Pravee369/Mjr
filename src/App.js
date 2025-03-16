@@ -258,7 +258,11 @@ import RentEquipment from './components/forms/RentEquipment';
 import BookAppointment from "./components/appointment/BookAppointment.js";
 import HomeFilter from './components/homeFilter/HomeFilter.js';
 import DoctorDetails from "./components/doctorDetails/DoctorDetails.js"
+<<<<<<< HEAD
 import { loginContext } from './components/contexts/loginContext.js';
+=======
+import Verifications from "./components/verifications/Verifications.js";
+>>>>>>> 9187cfe1408ac59e3e61608ec1e9a99f9a154c41
 
 function App() {
 
@@ -291,6 +295,7 @@ function App() {
             <Route path={`Organ Bank/${userName}`} element={<OrganBanksProfile/>}/>
             <Route path={`Pharmacy/${userName}`} element={<PharmaciesProfile/>}/>
             <Route path={`Hospital/${userName}`} element={<HospitalsProfile/>}/>
+            <Route path={`Hospital/${userName}/verifications`} element={<Verifications />}/>
             <Route path={`Clinic/${userName}`} element={<ClinicsProfile/>}/>
             <Route path={`Equipment Renter/${userName}`} element={<EquipRentersProfile/>}/>
           </Route>

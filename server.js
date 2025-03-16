@@ -73,7 +73,11 @@ MongoClient.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true 
     const bloodBanksCollection = db.collection("bloodBanksRequest");
     const organBanksCollection = db.collection("organBanksRequest");
     const equipmentRentersCollection = db.collection("equipmentRentersRequest");
+<<<<<<< HEAD
     const appointmentsCollection = db.collection("appointments")
+=======
+    const verificationsCollection = db.collection("verificationsCollection");
+>>>>>>> 9187cfe1408ac59e3e61608ec1e9a99f9a154c41
     app.set("userCollection", userCollection);
     app.set("docCollection", docCollection);
     app.set("alarmCollection", alarmCollection);
@@ -81,7 +85,11 @@ MongoClient.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true 
     app.set("bloodBanksCollection",bloodBanksCollection);
     app.set("organBanksCollection",organBanksCollection);
     app.set("equipmentRentersCollection",equipmentRentersCollection);
+<<<<<<< HEAD
     app.set("appointmentsCollection",appointmentsCollection);
+=======
+    app.set("verificationsCollection", verificationsCollection);
+>>>>>>> 9187cfe1408ac59e3e61608ec1e9a99f9a154c41
     console.log("db connection success");
 
     // Start checking alarms
@@ -127,7 +135,11 @@ const organBanks=require("./APIs/organBanksApi");
 const equipRenters=require("./APIs/equipRentersApi");
 const { otpAuth } = require('./APIs/otpAuth');
 const profile = require('./APIs/profileApi');
+<<<<<<< HEAD
 const aptment = require("./APIs/appointmentApi");
+=======
+const verifications = require('./APIs/verificationApi');
+>>>>>>> 9187cfe1408ac59e3e61608ec1e9a99f9a154c41
 
 app.use("/user-api", userApp);
 app.use("/doc-api", docApp);
@@ -137,7 +149,11 @@ app.use("/organ-banks",organBanks);
 app.use("/equipment-renters",equipRenters);
 app.use('/otp-auth', otpAuth);
 app.use("/profile-api", profile);
+<<<<<<< HEAD
 app.use("/appointment-api",aptment);
+=======
+app.use("/verifications-api", verifications);
+>>>>>>> 9187cfe1408ac59e3e61608ec1e9a99f9a154c41
 
 // Page refresh handling
 app.use('/*', (req, res, next) => {
