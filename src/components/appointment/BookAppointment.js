@@ -6,6 +6,7 @@ import "./BookAppointment.css";
 const AppointmentBooking = () => {
   const location = useLocation();
   const doctor = location.state?.doctor;
+  
 
   const [selectedDate, setSelectedDate] = useState(null);
   const [selectedMonth, setSelectedMonth] = useState(new Date().getMonth());
@@ -14,6 +15,9 @@ const AppointmentBooking = () => {
   const [tokenNumber, setTokenNumber] = useState(null);
   const [expectedReportTime, setExpectedReportTime] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
+  const user = JSON.parse(localStorage.getItem('user')) || {}
+  let userName = user?.name?.replace(/\s+/g, "-") || "Guest";
+  console.log(userName)
 
   const today = new Date();
   
@@ -78,6 +82,8 @@ const AppointmentBooking = () => {
           doctorId: doctor._id,
           date: formattedDate,
           token: tokenNumber,
+          userName:userName,
+          expectedReportTime : expectedReportTime,
         });
         alert("Appointment confirmed!");
       } catch (error) {

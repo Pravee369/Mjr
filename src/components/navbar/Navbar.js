@@ -112,6 +112,15 @@ function Navbar() {
                     Home
                   </NavLink>
                 </li>
+                {currentUser.category==="Doctor" && 
+                  <li>
+                    <NavLink className="nav-link chakra-petch-regular nav-bar-button"
+                    to="/appointments"
+                    style={({ isActive }) => (isActive ? activeLink : inactiveLink)}>
+                    Appointments
+                  </NavLink>
+                  </li>
+                }
                 <li className="nav-item dropdown">
                   <a className="nav-link dropdown-toggle d-flex align-items-center"
                     href="#" 
@@ -149,6 +158,7 @@ function Navbar() {
                     </li>
                   </ul>
                 </li>
+
               </>
             )}
             </ul>

@@ -17,7 +17,7 @@ const HomeFilter = () => {
 
   const categories = ["Doctor", "Clinic", "Hospital"];
   const specializations = ["Cardiology", "Dermatology", "Neurology", "Orthopedics",
-                           "Gynoecology","Pediatrics","Dentist","Psychiatry"];
+                           "Gynoecology","Pediatrics","Dentist","Psychiatry","Nephrology"];
 
    
    const [error, setError] = useState(null);
@@ -255,6 +255,7 @@ for (let i = 0; i < hospitals.length; i += 3) {
       <div
         key={index}
         className="card border rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 bg-white m-2 p-2"
+        
       >
         <h2 className="font-semibold text-lg text-gray-800">{item.name}</h2>
         
@@ -262,6 +263,7 @@ for (let i = 0; i < hospitals.length; i += 3) {
           <div className="card-body text-center mt-2">
             <p className="text-gray-600 font-medium">{item.specialization}</p>
             <p className="text-gray-500 text-sm">{item.experience} years of experience</p>
+            <a href="" onClick={() => navigate(`/doctor/${item._id}`)}> click here to know more </a>
           </div>
         )}
         

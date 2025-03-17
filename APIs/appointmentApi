@@ -11,6 +11,7 @@ const multer = require("multer");
 const upload = multer();
 console.log("aptment api file")
 
+
 aptment.post("/check", async (req, res) => {
   console.log("Received request for availability check");
 
@@ -65,8 +66,9 @@ aptment.post("/check", async (req, res) => {
 aptment.post("/book", async (req, res) => {
   const appointmentCollection = req.app.get("appointmentsCollection");
   try {
-    const { doctorId, date ,token} = req.body;
-     await appointmentCollection.insertOne({ doctorId, date, token });
+    const { doctorId, date ,token,userName,expectedReportTime} = req.body;
+    console.log(expectedReportTime)
+     await appointmentCollection.insertOne({ doctorId, date, token,userName,expectedReportTime });
      res.status(200).json({message:"okay appointment confirmed"})
    }
    catch (error) {
@@ -75,4 +77,21 @@ aptment.post("/book", async (req, res) => {
   }
 })
   
+
+aptment.get("/getApts", async(req,res) => 
+  {
+  const appointmentCollection = req.app.get("appointmentsCollection");
+  try {
+    const { doctorId, date } = req.query;  // Use query parameters for GET request
+
+    if (!doctorId || !date) {
+      return res.status(400).json({ error: "Missing doctorId or date" });
+    }
+    const apts = await appointmentCollection.find({ doctorId: doctorId, date: date }).toArray();  // Convert cursor to array
+    res.status(200).json(apts);
+  } catch (error) {
+    console.error("Error getting appointments:", error);
+    res.status(500).json({ error: "Internal server error" });
+  }
+})
   module.exports =aptment;
