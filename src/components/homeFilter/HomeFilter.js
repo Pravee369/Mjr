@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+import { loginContext } from '../contexts/loginContext'
 import axios from "axios";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import defaultProfile from "../../images/default-profile.png";
@@ -6,6 +7,8 @@ import "./HomeFilter.css"
 import { useNavigate } from "react-router-dom";
 
 const HomeFilter = () => {
+  let [currentUser] = useContext(loginContext);
+  let userName = currentUser?.name?.replace(/\s+/g, "-") || "Guest";
   const [category, setCategory] = useState("");
   const [specialization, setSpecialization] = useState("");
   const [results, setResults] = useState([]);
@@ -28,8 +31,31 @@ const HomeFilter = () => {
    const fetchData = async () => {
      try {
          const response = await axios.get("http://localhost:3000/user-api/alldoctorsandhospitals");
-         console.log(response)
-         setDoctors(response.data.doctors || [] );
+        let doctorsData = response.data.doctors || [];
+
+          const doctorsWithVerification = await Promise.all(
+            doctorsData.map(async (doctor) => {
+              try {
+                const verificationResponse = await axios.get(
+                  `http://localhost:3000/verifications-api/user-verification/${doctor.username}`
+                );
+
+                console.log(`Verification response for ${doctor.username}:`, verificationResponse.data);
+
+                return {
+                  ...doctor,
+                  verificationStatus: verificationResponse.data.status === "approved" ? "verified" : "unverified",
+                  verifiedAt: verificationResponse.data.status === "approved" ? verificationResponse.data.hospitalName : null
+                };
+              } catch (error) {
+                console.error(`Error fetching verification for ${doctor.username}:`, error);
+                return { ...doctor, verificationStatus: "unverified" };
+              }
+            })
+          );
+          
+          setDoctors(doctorsWithVerification);
+          console.log("Doctors Data with Verification:", doctorsWithVerification);
          setHospitals(response.data.hospitals || [])
          } catch (err) {
          setError("Error fetching data");
@@ -144,7 +170,7 @@ for (let i = 0; i < hospitals.length; i += 3) {
                    <div
                      key={i}
                      className="p-4 border rounded-lg shadow-lg text-center bg-white"
-                     onClick={() => navigate(`/doctor/${doctor._id}`)}
+                     onClick={() => navigate(`/${userName}/searchFilter/doctor/${doctor._id}`)}
                    >
                      <img
                        src={doctor.photo && doctor.photo !== "" ? doctor.photo : defaultProfile}
@@ -152,6 +178,11 @@ for (let i = 0; i < hospitals.length; i += 3) {
                        className="rounded-full object-cover"
                      />
                      <h3 className="text-lg font-bold">{doctor.name}</h3>
+                     {doctor.verificationStatus === "verified" && (
+                        <p className="text-green-600 font-semibold text-sm">
+                          ✅ Verified doctor at {doctor.verifiedAt}
+                        </p>
+                      )}
                      <p className="text-sm text-gray-600">{doctor.specialization}</p>
                      <p className="text-sm font-medium text-gray-700">
                        {doctor.experience} years experience
@@ -192,7 +223,7 @@ for (let i = 0; i < hospitals.length; i += 3) {
                    <div
                      key={i}
                      className="p-4 border rounded-lg shadow-lg text-center bg-white"
-                  
+                     onClick={() => navigate(`/${userName}/searchFilter/hospital/${hospital._id}`)}
                    >
                      
                      <h3 className="text-lg font-bold">{hospital.name}</h3>

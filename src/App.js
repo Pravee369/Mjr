@@ -261,6 +261,7 @@ import DoctorDetails from "./components/doctorDetails/DoctorDetails.js"
 import { loginContext } from './components/contexts/loginContext.js';
 import Verifications from "./components/verifications/Verifications.js";
 import GetAppointment from './components/appointment/GetAppointment.js';
+import HospitalDetails from './components/hospitalDetails/HospitalDetails.js';
 
 function App() {
 
@@ -276,7 +277,6 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/doctor/:id" element={<DoctorDetails />} />
         <Route path="/appointment/:id" element={<BookAppointment />} />
         <Route path="/appointments"  element={<GetAppointment />} />
         
@@ -322,7 +322,10 @@ function App() {
           </Route>
         )}
          { user && ( <Route path={`${userName}/bookappointment`} element={< BookAppointment />} />) }
-         { user && ( <Route path={`${userName}/searchFilter`} element={< HomeFilter />} />) }
+         { user && ( <Route path={`/${userName}/searchFilter`} element={< HomeFilter />} />) }
+         { user && ( <Route path={`/${userName}/searchFilter/doctor/:id`} element= {<DoctorDetails />}/>) }
+         { user && ( <Route path={`/${userName}/searchFilter/hospital/:id`} element= {<HospitalDetails />}/>) }
+        
       </Route>
     )
   );

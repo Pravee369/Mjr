@@ -9,12 +9,12 @@ function Verifications() {
   const [requests, setRequests] = useState([]);
   const [selectedRequest, setSelectedRequest] = useState(null);
   const [filter, setFilter] = useState("pending");
+  const [confirmAction, setConfirmAction] = useState(null);
 
   useEffect(() => {
     async function fetchRequests() {
       try {
         const response = await axios.get(`/verifications-api/verification-requests/${hospitalEmailId}`);
-        console.log("Fetched Requests:", response.data);
         setRequests(response.data || []);
       } catch (error) {
         console.error("Error fetching requests:", error);
@@ -23,7 +23,9 @@ function Verifications() {
     fetchRequests();
   }, [hospitalEmailId]);
 
-  const handleAction = async (requestId, status) => {
+  const handleAction = async () => {
+    if (!confirmAction) return;
+    const { requestId, status } = confirmAction;
     try {
       await axios.put(`/verifications-api/update-status/${requestId}`, { status });
       setRequests((prevRequests) =>
@@ -31,7 +33,7 @@ function Verifications() {
           req._id === requestId ? { ...req, status } : req
         )
       );
-      setSelectedRequest(null);
+      setConfirmAction(null);
       document.body.classList.remove("modal-open");
     } catch (error) {
       console.error("Error updating request status:", error);
@@ -45,6 +47,7 @@ function Verifications() {
 
   const closeModal = () => {
     setSelectedRequest(null);
+    setConfirmAction(null);
     document.body.classList.remove("modal-open");
   };
 
@@ -92,7 +95,7 @@ function Verifications() {
                           className="approve-btn"
                           onClick={(e) => {
                             e.stopPropagation();
-                            handleAction(req._id, "approved");
+                            setConfirmAction({ requestId: req._id, status: "approved" });
                           }}
                         >
                           Approve
@@ -101,7 +104,7 @@ function Verifications() {
                           className="reject-btn"
                           onClick={(e) => {
                             e.stopPropagation();
-                            handleAction(req._id, "rejected");
+                            setConfirmAction({ requestId: req._id, status: "rejected" });
                           }}
                         >
                           Reject
@@ -142,6 +145,21 @@ function Verifications() {
           </div>
         </>
       )}
+
+      {confirmAction && (
+        <>
+          <div className="modal-overlay" onClick={closeModal}></div>
+          <div className="confirmation-modal">
+            <h3>Confirm {confirmAction.status === "approved" ? "Approval" : "Rejection"}</h3>
+            <p>Are you sure you want to {confirmAction.status === "approved" ? "approve" : "reject"} this request?</p>
+            <div className="confirmation-buttons">
+              <button className="confirm-btn" onClick={handleAction}>Yes</button>
+              <button className="cancel-btn" onClick={closeModal}>No</button>
+            </div>
+          </div>
+        </>
+      )}
+
     </div>
   );
 }

@@ -110,3 +110,63 @@
   overflow: hidden;
   height: 100vh;
 }
+
+.logout-modal {
+  text-align: center;
+  font-family: "Chakra Petch", sans-serif;
+  padding: 20px;
+}
+
+.logout-modal h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.logout-modal p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.logout-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.logout-buttons .btn {
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.btn-secondary {
+  background: #6c757d;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background: #5a6268;
+}
+
+.btn-danger {
+  background: #dc3545;
+  color: white;
+}
+
+.btn-danger:hover {
+  background: #c82333;
+}
+
+@media (max-width: 480px) {
+  .logout-buttons {
+      flex-direction: column;
+      gap: 8px;
+  }
+}

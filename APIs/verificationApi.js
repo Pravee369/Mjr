@@ -74,6 +74,7 @@ verificationApp.post("/request-verification", async (req, res) => {
     const newRequest = {
     doctorEmail,
     hospitalEmailId,
+    hospitalName: hospital.name,
     doctorName: doctor.name,
     doctorMobile: doctor.mobile,
     doctorGender: doctor.gender,
