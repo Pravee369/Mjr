@@ -167,6 +167,32 @@ userApp.get("/doctor/:id", async (req, res) => {
   }
 });
 
+userApp.get("/hospital/:id", async (req, res) => {
+  const userCollection = req.app.get("userCollection")
+  console.log("Received ID:", req.params.id);
+  try {
+    const hospital = await userCollection.findOne({ _id: new ObjectId(req.params.id) });
+    if (!hospital) {
+      return res.status(404).json({ message: "Hospital not found" });
+    }
+    res.status(200).json(hospital);
+  } catch (error) {
+    res.status(500).json({ message: "Error fetching hospital details", error });
+  }
+});
 
+userApp.get("/get-doctor-id/:doctorEmail", async(req, res) => {
+  const userCollection = req.app.get("userCollection");
+  const { doctorEmail } = req.params;
+  try{
+    const doctor = await userCollection.findOne({ username: doctorEmail});
+    if(!doctor) {
+      return res.status(404).json({ message: "Doctor not found" });
+    }
+    res.status(200).json(doctor);
+  } catch (error) {
+    res.status(500).json({ message: "Error fetching doctor details", error });
+  }
+});
 
 module.exports = userApp;

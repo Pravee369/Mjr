@@ -76,19 +76,21 @@ function GetVerified(){
   if (!verificationRequest) {
     statusMessage = "You haven't made any verification requests yet.";
   } else {
-    switch (verificationRequest.status) {
-      case "pending":
-        statusMessage = "Your verification request is currently pending approval from the hospital.";
-        break;
-      case "approved":
-        statusMessage = "Your verification request has been approved!";
-        break;
-      case "rejected":
-        statusMessage = "Your verification request was rejected. You can submit a new request.";
-        break;
-      default:
-        statusMessage = "Unknown request status. Please contact support.";
-    }
+      const hospitalName = verificationRequest.hospitalName || "the hospital";
+
+      switch (verificationRequest.status) {
+        case "pending":
+          statusMessage = `Your verification request to ${hospitalName} is currently pending approval.`;
+          break;
+        case "approved":
+          statusMessage = `Your verification request to ${hospitalName} has been approved!`;
+          break;
+        case "rejected":
+          statusMessage = `Your verification request to ${hospitalName} was rejected. You can submit a new request.`;
+          break;
+        default:
+          statusMessage = `Unknown request status for ${hospitalName}. Please contact support.`;
+      }
   }
 
   return (

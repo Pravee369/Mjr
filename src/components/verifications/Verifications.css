@@ -201,3 +201,65 @@ body.modal-open {
 .requests-table tbody tr:hover {
   background-color: #f2f2f2;
 }
+
+
+.confirmation-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  z-index: 1001;
+  width: 350px;
+}
+
+.confirmation-modal h3 {
+  font-size: 20px;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.confirmation-modal p {
+  font-size: 16px;
+  color: #34495e;
+  margin-bottom: 15px;
+}
+
+.confirmation-buttons {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.confirm-btn {
+  background: #28a745;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 6px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.confirm-btn:hover {
+  background: #218838;
+}
+
+.cancel-btn {
+  background: #dc3545;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 6px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cancel-btn:hover {
+  background: #c82333;
+}
