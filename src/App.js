@@ -261,6 +261,12 @@ import DoctorDetails from "./components/doctorDetails/DoctorDetails.js"
 import { loginContext } from './components/contexts/loginContext.js';
 import Verifications from "./components/verifications/Verifications.js";
 import GetAppointment from './components/appointment/GetAppointment.js';
+import BloodBanksApproval from './components/organisations/bloodBanks/bloodBanksApproval/BloodBanksApproval.js';
+import OrganBanksApproval from './components/organisations/organBanks/organBanksApproval/OrganBanksApproval.js';
+import OrganBanksPending from './components/organisations/organBanks/organBanksApproval/OrganBanksPending.js';
+import BloodBanksPending from './components/organisations/bloodBanks/bloodBanksApproval/BloodBanksPending.js';
+import EquipRentersApproval from './components/organisations/equipRenters/equipRentersApproval/equipRentersApproval.js';
+import EquipRentersPending from './components/organisations/equipRenters/equipRentersApproval/EquipRentersPending.js';
 
 function App() {
 
@@ -289,8 +295,12 @@ function App() {
         {user && (
           <Route path='Organization' element={<RootLayoutOrg />}>
             <Route path={`Laboratory/${userName}`} element={<LabsProfile/>}/>
-            <Route path={`Blood Bank/${userName}`} element={<BloodBanksProfile/>}/>
-            <Route path={`Organ Bank/${userName}`} element={<OrganBanksProfile/>}/>
+            <Route path={`Blood Bank/approval/${userName}`} element={<BloodBanksApproval/>}/>
+            <Route path={`Blood Bank/pending/${userName}`} element={<BloodBanksPending/>}/>
+            <Route path={`Organ Bank/approval/${userName}`} element={<OrganBanksApproval/>}/>
+            <Route path={`Organ Bank/pending/${userName}`} element={<OrganBanksPending/>}/>
+            <Route path={`Equip Rent/approval/${userName}`} element={<EquipRentersApproval/>}/>
+            <Route path={`Equip Rent/pending/${userName}`} element={<EquipRentersPending/>}/>
             <Route path={`Pharmacy/${userName}`} element={<PharmaciesProfile/>}/>
             <Route path={`Hospital/${userName}`} element={<HospitalsProfile/>}/>
             <Route path={`Hospital/${userName}/verifications`} element={<Verifications />}/>

@@ -2,7 +2,6 @@ import React, { useContext,useEffect,useState } from 'react'
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import { loginContext } from '../contexts/loginContext';
-import EquipRentersApproval from '../organisations/equipRenters/equipRentersApproval/EquipRentersApproval';
 import './Form.css'
 
 function RentEquipment() {
@@ -163,7 +162,7 @@ function RentEquipment() {
 
   { myRequests.length !==0 ? 
   (
-    <div>
+    <div classname="mt-5">
       <h3 className="lead mt-3">  Check whether required blood found or not </h3>
      <div className="row row-cols-1 row-cols-md-3 g-4">
        {myRequests.map((obj, index) => (
@@ -209,18 +208,7 @@ function RentEquipment() {
        </div>
       </div>
     ) :
-  ( <h3>You did not made any equipment requests</h3> ) 
-  
-  }
-
-   
-        { user.category==="Organization" && user.organizationType==="Equipment Renter" &&
-        
-          (<div> 
-            < EquipRentersApproval />
-          </div>
-        )
-        }
+  ( <h2 className="text-secondary">You did not made any equipment requests</h2> ) }
 </div> )}
 
 export default RentEquipment;

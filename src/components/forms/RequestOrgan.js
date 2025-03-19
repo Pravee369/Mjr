@@ -200,7 +200,7 @@ function RequestOrgan() {
 
        {myRequests.length !==0 ? 
        
-       (<div>
+       (<div classname="mt-5">
        <h3 className="lead mt-3">  Check whether requested organ found or not </h3>
 
 <div className="row row-cols-1 row-cols-md-3 g-4">
@@ -247,16 +247,7 @@ function RequestOrgan() {
 ))}
 </div>
 </div>):(<h3>You did not make any organ requests yet !!</h3>)}
-
-{  user.category==="Organization" && user.organizationType==="Organ Bank" &&
-
-  <div> 
-    <OrganBanksApproval/>
-  </div>
-
-}
-
-      </div>
+</div>
    
   );
 }

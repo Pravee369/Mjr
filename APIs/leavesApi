@@ -1,0 +1,43 @@
+const express = require("express");
+const expressAsyncHandler = require("express-async-handler");
+const jwt = require("jsonwebtoken");
+const verifyToken = require("./middlewares/verifyToken");
+const { ObjectId } = require("mongodb");
+const leaveApp = express.Router();
+
+// Body parser
+leaveApp.use(express.json());
+const multer = require("multer");
+const upload = multer();
+console.log("leave api file")
+
+leaveApp.post("/doctor-leaves", async (req, res) => {
+    const leavesCollection = req.app.get("leavesCollection");
+    try {
+      const { date,doctorId} = req.body;
+     
+       await leavesCollection.insertOne({ doctorId,date});
+       res.status(200).json({message:"okay appointment confirmed"})
+     }
+     catch (error) {
+      console.error("Error confirming appointment:", error);
+      res.status(500).json({ error: "Internal server error" });
+    }
+  })
+  
+
+  leaveApp.get("update-leaves",async(req,res) =>
+  {
+    const leavesCollection = req.app.get("leavesCollection");
+    try {
+      const { doctorId} = req.body;
+       const doctorLeaves=leavesCollection.find({doctorId}).toArray()
+       res.status(200).json(doctorLeaves)
+     }
+     catch (error) {
+      console.error("Error confirming appointment:", error);
+      res.status(500).json({ error: "Internal server error" });
+    }
+  })
+
+module.exports=leaveApp;

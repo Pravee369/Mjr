@@ -112,6 +112,7 @@ function Navbar() {
                     Home
                   </NavLink>
                 </li>
+                
                 {currentUser.category==="Doctor" && 
                   <li>
                     <NavLink className="nav-link chakra-petch-regular nav-bar-button"
@@ -121,6 +122,68 @@ function Navbar() {
                   </NavLink>
                   </li>
                 }
+
+                {  currentUser.category==="Organization" && currentUser.organizationType==="Organ Bank" && 
+                <li>
+                 <NavLink className="nav-link chakra-petch-regular nav-bar-button"
+                 to={`/Organization/Organ Bank/pending/${userName}`}
+                 style={({ isActive }) => (isActive ? activeLink : inactiveLink)}>
+                 Pending Requests
+                </NavLink>
+               </li>
+                }
+
+               {  currentUser.category==="Organization" && currentUser.organizationType==="Organ Bank" && 
+                <li>
+                 <NavLink className="nav-link chakra-petch-regular nav-bar-button"
+                 to={`/Organization/Organ Bank/approval/${userName}`}
+                 style={({ isActive }) => (isActive ? activeLink : inactiveLink)}>
+                 Approvals
+                </NavLink>
+               </li>   
+                }
+
+                {  currentUser.category==="Organization" && currentUser.organizationType==="Blood Bank" &&
+                <li>
+                 <NavLink className="nav-link chakra-petch-regular nav-bar-button"
+                 to={`/Organization/Blood Bank/pending/${userName}`}
+                 style={({ isActive }) => (isActive ? activeLink : inactiveLink)}>
+                  Pending Requests
+                </NavLink>
+               </li>
+                }
+
+               {  currentUser.category==="Organization" && currentUser.organizationType==="Blood Bank" &&         
+                <li>
+                 <NavLink className="nav-link chakra-petch-regular nav-bar-button"
+                 to={`/Organization/Blood Bank/approval/${userName}`}
+                 style={({ isActive }) => (isActive ? activeLink : inactiveLink)}>
+                 Approvals
+                </NavLink>
+               </li>
+               }
+
+               {  currentUser.category==="Organization" && currentUser.organizationType==="Equipment Renter" &&         
+                <li>
+                 <NavLink className="nav-link chakra-petch-regular nav-bar-button"
+                 to={`/Organization/Equip Rent/pending/${userName}`}
+                 style={({ isActive }) => (isActive ? activeLink : inactiveLink)}>
+                 Pending Requests
+                </NavLink>
+               </li>
+               }
+
+
+               {  currentUser.category==="Organization" && currentUser.organizationType==="Equipment Renter" &&         
+                <li>
+                 <NavLink className="nav-link chakra-petch-regular nav-bar-button"
+                 to={`/Organization/Equip Rent/approval/${userName}`}
+                 style={({ isActive }) => (isActive ? activeLink : inactiveLink)}>
+                 Approvals
+                </NavLink>
+               </li>
+               }
+
                 <li className="nav-item dropdown">
                   <a className="nav-link dropdown-toggle d-flex align-items-center"
                     href="#" 

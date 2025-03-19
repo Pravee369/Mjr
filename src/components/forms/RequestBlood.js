@@ -2,7 +2,6 @@ import React, { useContext, useEffect, useState } from 'react'
 import { useForm } from 'react-hook-form';
 import axios, { formToJSON } from 'axios';
 import { loginContext } from '../contexts/loginContext';
-import BloodBanksApproval from '../organisations/bloodBanks/bloodBanksApproval/BloodBanksApproval';
 import './Form.css'
 
 function RequestBlood() {
@@ -187,7 +186,7 @@ function RequestBlood() {
 
    {myRequests.length !==0 ?
    (
-   <div>
+   <div className="mt-5">
    <h3 className="lead mt-3">  Check whether required blood found or not </h3>
    <div className="row row-cols-1 row-cols-md-3 g-4">
      {myRequests.map((obj, index) => (
@@ -236,17 +235,7 @@ function RequestBlood() {
 
 </div>) :
 (<h3>You did not make any blood requests</h3>)}
-
-
-{  user.category==="Organization" && user.organizationType==="Blood Bank" &&
-
-  <div> 
-    <BloodBanksApproval/>
-  </div>
-
-}
-
-      </div>
+</div>
    
   )}
 

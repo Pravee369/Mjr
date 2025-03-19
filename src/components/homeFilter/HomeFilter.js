@@ -28,7 +28,6 @@ const HomeFilter = () => {
    const fetchData = async () => {
      try {
          const response = await axios.get("http://localhost:3000/user-api/alldoctorsandhospitals");
-         console.log(response)
          setDoctors(response.data.doctors || [] );
          setHospitals(response.data.hospitals || [])
          } catch (err) {

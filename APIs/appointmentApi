@@ -12,11 +12,62 @@ const upload = multer();
 console.log("aptment api file")
 
 
+aptment.get("/getAptsOfPatient", async(req,res) => 
+  {
+  const appointmentCollection = req.app.get("appointmentsCollection");
+  try {
+    const { userId} = req.query;  // Use query parameters for GET request
+
+    if (!userId ) {
+      return res.status(400).json({ error: "Missing doctorId or date" });
+    }
+    const apts = await appointmentCollection.find({ userId: userId}).toArray();  // Convert cursor to array
+    res.status(200).json(apts);
+  } catch (error) {
+    console.error("Error getting appointments:", error);
+    res.status(500).json({ error: "Internal server error" });
+  }
+});
+
+
+aptment.delete("/deleteAppointment/:appointmentId", async (req, res) => {
+  const appointmentCollection = req.app.get("appointmentsCollection");
+  const bookedSlotsCollection = req.app.get("bookedSlotsCollection");
+
+  try {
+    const { appointmentId } = req.params;
+
+    // Find the appointment
+    const apt = await appointmentCollection.findOne({ _id: new ObjectId(appointmentId) });
+    if (!apt) {
+      return res.status(404).json({ message: "Appointment not found" });
+    }
+
+    const { doctorId, date, slot } = apt;
+
+    // Find the booked slot entry
+    const aptToDelete = await bookedSlotsCollection.findOne({ doctorId, date, slot });
+    if (!aptToDelete) {
+      return res.status(404).json({ message: "Booked slot not found" });
+    }
+
+    // Delete appointment and booked slot
+    await appointmentCollection.deleteOne({ _id: new ObjectId(appointmentId) });
+    await bookedSlotsCollection.deleteOne({ _id: new ObjectId(aptToDelete._id) });
+
+    res.status(200).json({ message: "Appointment deleted" });
+  } catch (error) {
+    console.error("Error deleting appointment:", error);
+    res.status(500).json({ error: "Internal server error" });
+  }
+});
+
+
 aptment.post("/check", async (req, res) => {
   console.log("Received request for availability check");
 
-  const userCollection = req.app.get("userCollection");
   const appointmentCollection = req.app.get("appointmentsCollection");
+  const leavesCollection = req.app.get("leavesCollection");
 
   try {
     const { doctorId, date } = req.body;
@@ -26,36 +77,15 @@ aptment.post("/check", async (req, res) => {
       return res.status(400).json({ error: "Missing doctorId or date" });
     }
 
-    // Ensure doctorId is valid
-    const objectIdDoctor = new ObjectId(doctorId);
+    // Check if the doctor is on leave
+    const leave = await leavesCollection.findOne({ doctorId, date });
+    if (leave) {
 
-    // Fetch doctor's maxPatients from users collection
-    const doctor = await userCollection.findOne({ _id: objectIdDoctor });
-    console.log(doctor.category)
-
-    console.log("Fetched doctor:", doctor);
-
-    if (!doctor || doctor.category.toLowerCase() !== "doctor") {
-      return res.status(404).json({ error: "Doctor not found" });
-    }
-
-    let maxPatients = 50;
-
-    // Count existing appointments for this doctor on the selected date
-    const bookedAppointments = await appointmentCollection.countDocuments({ doctorId, date });
-
-    if (bookedAppointments >= maxPatients) {
       return res.json({ available: false });
     }
 
-    // Generate token number
-    const token = bookedAppointments + 1;
-    const reportTime = `Expected at ${9 + token}:00 AM`;
-
-    // Save appointment in DB
-   // await appointmentCollection.insertOne({ doctorId, date, token });
-
-    res.json({ available: true, token, reportTime });
+    // If doctor is not on leave, return available = true
+    res.json({ available: true });
 
   } catch (error) {
     console.error("Error checking availability:", error);
@@ -63,19 +93,21 @@ aptment.post("/check", async (req, res) => {
   }
 });
 
+
 aptment.post("/book", async (req, res) => {
   const appointmentCollection = req.app.get("appointmentsCollection");
+  const bookedSlotsCollection =req.app.get("bookedSlotsCollection")
   try {
-    const { doctorId, date ,token,userName,expectedReportTime} = req.body;
-    console.log(expectedReportTime)
-     await appointmentCollection.insertOne({ doctorId, date, token,userName,expectedReportTime });
+    const { doctorId,doctorName, date ,time,userName,userId} = req.body;
+     await appointmentCollection.insertOne({ doctorId,doctorName, date ,time,userName,userId});
+     await bookedSlotsCollection.insertOne({doctorId,date,time});
      res.status(200).json({message:"okay appointment confirmed"})
    }
    catch (error) {
     console.error("Error confirming appointment:", error);
     res.status(500).json({ error: "Internal server error" });
   }
-})
+});
   
 
 aptment.get("/getApts", async(req,res) => 
@@ -93,5 +125,28 @@ aptment.get("/getApts", async(req,res) =>
     console.error("Error getting appointments:", error);
     res.status(500).json({ error: "Internal server error" });
   }
-})
-  module.exports =aptment;
+});
+
+aptment.get("/allApts", async (req, res) => {
+ 
+  const bookedSlotsCollection = req.app.get("bookedSlotsCollection");
+  console.log("booked apts fetch")
+  try {
+    const { doctorId, date } = req.query; // Extract query parameters
+
+    if (!doctorId || !date) {
+      return res.status(400).json({ error: "doctorId and date are required" });
+    }
+
+    const appointments = await bookedSlotsCollection.find({ doctorId, date }).toArray();
+    console.log(appointments)
+    let bookedSlots = appointments.map(apt => apt.time); 
+    console.log(bookedSlots)
+    res.json(bookedSlots);
+  } catch (error) {
+    console.error("Error fetching appointments:", error);
+    res.status(500).json({ error: "Internal Server Error" });
+  }
+});
+
+module.exports =aptment;
