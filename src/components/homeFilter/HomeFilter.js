@@ -31,9 +31,7 @@ const HomeFilter = () => {
    const fetchData = async () => {
      try {
          const response = await axios.get("http://localhost:3000/user-api/alldoctorsandhospitals");
-<<<<<<< HEAD
          setDoctors(response.data.doctors || [] );
-=======
         let doctorsData = response.data.doctors || [];
 
           const doctorsWithVerification = await Promise.all(
@@ -59,7 +57,6 @@ const HomeFilter = () => {
           
           setDoctors(doctorsWithVerification);
           console.log("Doctors Data with Verification:", doctorsWithVerification);
->>>>>>> 432538183f3c8b7158be4c628d02a1d6582b1798
          setHospitals(response.data.hospitals || [])
          } catch (err) {
          setError("Error fetching data");
@@ -298,7 +295,7 @@ for (let i = 0; i < hospitals.length; i += 3) {
           <div className="card-body text-center mt-2">
             <p className="text-gray-600 font-medium">{item.specialization}</p>
             <p className="text-gray-500 text-sm">{item.experience} years of experience</p>
-            <a href="" onClick={() => navigate(`/doctor/${item._id}`)}> click here to know more </a>
+            <a href="" onClick={() => navigate(`/${userName}/searchFilter/doctor/${item._id}`)}> click here to know more </a>
           </div>
         )}
         

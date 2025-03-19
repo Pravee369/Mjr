@@ -261,6 +261,13 @@ import DoctorDetails from "./components/doctorDetails/DoctorDetails.js"
 import { loginContext } from './components/contexts/loginContext.js';
 import Verifications from "./components/verifications/Verifications.js";
 import GetAppointment from './components/appointment/GetAppointment.js';
+import HospitalDetails from './components/hospitalDetails/HospitalDetails.js';
+import BloodBanksApproval from './components/organisations/bloodBanks/bloodBanksApproval/BloodBanksApproval.js';
+import BloodBanksPending from './components/organisations/bloodBanks/bloodBanksApproval/BloodBanksPending.js';
+import OrganBanksApproval from './components/organisations/organBanks/organBanksApproval/OrganBanksApproval.js';
+import OrganBanksPending from './components/organisations/organBanks/organBanksApproval/OrganBanksPending.js';
+import EquipRentersApproval from './components/organisations/equipRenters/equipRentersApproval/equipRentersApproval.js';
+import EquipRentersPending from './components/organisations/equipRenters/equipRentersApproval/equipRentersPending.js';
 
 function App() {
 

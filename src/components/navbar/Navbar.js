@@ -78,7 +78,6 @@ function Navbar() {
                <span className="navbar-toggler-icon"></span>
             </button>
 
-<<<<<<< HEAD
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
 
             <ul className="navbar-nav ms-auto mb-0 mb-lg-0">
@@ -239,7 +238,6 @@ function Navbar() {
                 {modalContent === 'profile' && <Profile />}
                 {modalContent === 'getVerified' && <GetVerified />}
               </div>
-=======
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
                <ul className="navbar-nav ms-auto mb-0 mb-lg-0">
                   {userLoginStatus === false ? (
@@ -324,9 +322,10 @@ function Navbar() {
                      </>
                   )}
                </ul>
->>>>>>> 432538183f3c8b7158be4c628d02a1d6582b1798
             </div>
-         </nav>
+         </div>
+         </div>)
+        }
 
          {showModal && (
             <div className="modal-container" onClick={() => toggleModal(null)}>
@@ -349,8 +348,9 @@ function Navbar() {
                </div>
             </div>
          )}
-      </div>
-   );
-}
+    
+      </div>  )
+  } 
+
 
 export default Navbar;
