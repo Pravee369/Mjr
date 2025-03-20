@@ -90,29 +90,29 @@ function Login() {
   };
 
   return userLoginStatus === true ? (
-    otpSent ? (
-      <div className="otp-bg">
-      <div className="otp-verification">
-        <h3 className="text-white">Enter OTP</h3>
-        <label htmlFor="otp" className="text-white p-1" >OTP</label>
-        <input
-          type="text"
-          id="otp"
-          value={otp}
-          onChange={(e) => setOtp(e.target.value)}
-          required
-          
-        />
-        <button className="btn text-white bg-danger m-2" onClick={handleVerifyOtp}>
-          Confirm
-        </button>
-        <p className="text-white lead">OTP expires in: {timer} seconds</p>
-        <button className="btn text-white bg-danger border border-danger" onClick={() => {sendOtp(mobile, localStorage.getItem("token")); setOtp("")}} disabled={resendDisabled}>
-          Resend OTP
-        </button>
-      </div>
-      </div>
-    ) : (
+    otpSent ? <div className="overlay">
+    <div className="otp-verification">
+      <h3 className="text-white">Enter OTP</h3>
+      <input
+        type="text"
+        id="otp"
+        value={otp}
+        onChange={(e) => setOtp(e.target.value)}
+        required
+      />
+      <button className="btn text-white bg-danger m-2" onClick={handleVerifyOtp}>
+        Confirm
+      </button>
+      <p className="text-white lead">OTP expires in: {timer} seconds</p>
+      <button
+        className="btn text-white bg-danger border border-danger"
+        onClick={() => { sendOtp(mobile, localStorage.getItem("token")); setOtp(""); }}
+        disabled={resendDisabled}
+      >
+        Resend OTP
+      </button>
+    </div>
+  </div>: (
       <p>Sending OTP...</p>
     )
   ) : (
