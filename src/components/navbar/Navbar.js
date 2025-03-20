@@ -217,9 +217,9 @@ function Navbar() {
                       </li>
                     }
                     <li>
-                    <NavLink className="dropdown-item" to="/login" onClick={logoutUser}>
-                      Logout
-                    </NavLink>
+                        <button className="dropdown-item" onClick={() => toggleModal('logoutConfirm')}>
+                           Logout
+                        </button>
                     </li>
                   </ul>
                 </li>
@@ -229,103 +229,6 @@ function Navbar() {
             </ul>
           </div>
         </nav>
-
-        {showModal && (
-          <div className="modal-container" onClick={() => toggleModal(null)}>
-            <div className="modal-box" onClick={(e) => e.stopPropagation()}>
-              <button className="close-button" onClick={() => toggleModal(null)}>✖</button>
-              <div className="modal-content">
-                {modalContent === 'profile' && <Profile />}
-                {modalContent === 'getVerified' && <GetVerified />}
-              </div>
-            <div className="collapse navbar-collapse" id="navbarSupportedContent">
-               <ul className="navbar-nav ms-auto mb-0 mb-lg-0">
-                  {userLoginStatus === false ? (
-                     <>
-                        <li className="nav-item">
-                           <NavLink className="nav-link active chakra-petch-regular"
-                              to="/"
-                              style={({ isActive }) => (isActive ? activeLink : inactiveLink)}>
-                              Home
-                           </NavLink>
-                        </li>
-                        <li className="nav-item">
-                           <NavLink className="nav-link chakra-petch-regular"
-                              to="/register"
-                              style={({ isActive }) => (isActive ? activeLink : inactiveLink)}>
-                              SignUp
-                           </NavLink>
-                        </li>
-                        <li className="nav-item">
-                           <NavLink className="nav-link chakra-petch-regular"
-                              to="/login"
-                              style={({ isActive }) => (isActive ? activeLink : inactiveLink)}>
-                              Login
-                           </NavLink>
-                        </li>
-                     </>
-                  ) : (
-                     <>
-                        <li className="nav-item">
-                           <NavLink className="nav-link active chakra-petch-regular nav-bar-button"
-                              to="/" 
-                              style={({ isActive }) => (isActive ? activeLink : inactiveLink)}>
-                              Home
-                           </NavLink>
-                        </li>
-                        {currentUser.category === "Doctor" &&
-                           <li>
-                              <NavLink className="nav-link chakra-petch-regular nav-bar-button"
-                                 to="/appointments"
-                                 style={({ isActive }) => (isActive ? activeLink : inactiveLink)}>
-                                 Appointments
-                              </NavLink>
-                           </li>
-                        }
-                        <li className="nav-item dropdown">
-                           <a className="nav-link dropdown-toggle d-flex align-items-center"
-                              href="#" 
-                              id="navbarDropdown" 
-                              role="button"
-                              data-bs-toggle="dropdown"
-                              aria-expanded="false">
-                              <img src={preview} alt="Profile" className="profile-photo rounded-circle"
-                                 style={{ width: "40px", height: "40px", objectFit: "cover" }} />
-                           </a>
-                           <ul className="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                              <li>
-                                 <button className="dropdown-item" onClick={() => toggleModal('profile')}>
-                                    Profile
-                                 </button>
-                              </li>
-                              {currentUser.category === "Doctor" &&
-                                 <li>
-                                    <button className="dropdown-item" onClick={() => toggleModal('getVerified')}>
-                                       Get Verified
-                                    </button>
-                                 </li>
-                              }
-                              {currentUser.category === "Organization" && currentUser.organizationType === "Hospital" &&
-                                 <li>
-                                    <NavLink className="dropdown-item" to={`Organization/Hospital/${userName}/verifications`}>
-                                       Verifications
-                                    </NavLink>
-                                 </li>
-                              }
-                              <li>
-                                 <button className="dropdown-item" onClick={() => toggleModal('logoutConfirm')}>
-                                    Logout
-                                 </button>
-                              </li>
-                           </ul>
-                        </li>
-                     </>
-                  )}
-               </ul>
-            </div>
-         </div>
-         </div>)
-        }
 
          {showModal && (
             <div className="modal-container" onClick={() => toggleModal(null)}>
