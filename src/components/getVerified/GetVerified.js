@@ -12,19 +12,20 @@ function GetVerified(){
   const [verificationRequest, setVerificationRequest] = useState(null);
   let doctorEmail = currentUser.username;
   
-  useEffect(() => {
-    async function fetchVerificationStatus() {
-      try {
-        const response = await axios.get(`/verifications-api/user-verification/${doctorEmail}`);
-        if (response.data.message) {
-          setVerificationRequest(null);
-        } else {
-          setVerificationRequest(response.data);
-        }
-      } catch (error) {
-        console.error("Error fetching verification status:", error);
+  const fetchVerificationStatus = async () => {
+    try {
+      const response = await axios.get(`/verifications-api/user-verification/${doctorEmail}`);
+      if (response.data.message) {
+        setVerificationRequest(null);
+      } else {
+        setVerificationRequest(response.data);
       }
+    } catch (error) {
+      console.error("Error fetching verification status:", error);
     }
+  };
+
+  useEffect(() => {
     fetchVerificationStatus();
   }, [doctorEmail]);
 
@@ -46,7 +47,7 @@ function GetVerified(){
   
         if (response.status === 201 || response.status === 200) {
           setMessage(response.data.message);
-          setVerificationRequest({ hospitalEmailId, status: "pending" });
+          fetchVerificationStatus();
         } else {
           setMessage("Failed to send request. Please try again.");
         }

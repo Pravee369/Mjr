@@ -30,22 +30,24 @@
   .status-message {
     font-size: 16px;
     color: #555;
-    margin-bottom: 15px;
   }
-  
+
   .message {
     font-size: 14px;
     font-weight: bold;
-    margin-bottom: 15px;
-  }
-  
-  .success-message {
+    margin: 0px auto;
+    display: block; 
+    text-align: center;
+    max-width: 80%;
+}
+
+.success-message {
     color: green;
-  }
-  
-  .error-message {
+}
+
+.error-message {
     color: red;
-  }
+}
   
   .form-group {
     display: flex;
