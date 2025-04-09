@@ -233,7 +233,7 @@ function Navbar() {
          {showModal && (
             <div className="modal-container" onClick={() => toggleModal(null)}>
                <div className="modal-box" onClick={(e) => e.stopPropagation()}>
-                  <button className="close-button" onClick={() => toggleModal(null)}>✖</button>
+                  <button className="close-button-modal" onClick={() => toggleModal(null)}>✖</button>
                   <div className="modal-content">
                      {modalContent === 'profile' && <Profile />}
                      {modalContent === 'getVerified' && <GetVerified />}

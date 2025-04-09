@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { loginContext } from "../contexts/loginContext";
 import "./Login.css";
+import ForgotPassword from "../forgotPassword/ForgotPassword";
 
 function Login() {
   let [currentUser, error, userLoginStatus, loginUser] = useContext(loginContext);
@@ -14,6 +15,7 @@ function Login() {
   const [mobile, setMobile] = useState("");
   const [timer, setTimer] = useState(60);
   const [resendDisabled, setResendDisabled] = useState(true);
+  const [showForgotPassword, setShowForgotPassword] = useState(false);
 
   let { register, handleSubmit, formState: { errors } } = useForm();
 
@@ -147,6 +149,17 @@ function Login() {
                 />
               </div>
               {errors.password && <p className="text-danger fw-bold fs-5">* Password is required</p>}
+              <a
+                href="#"
+                className="forgot-password"
+                onClick={(e) => {
+                  e.preventDefault(); // Prevent default link behavior
+                  console.log("Forgot Password clicked");
+                  setShowForgotPassword(true);
+                }}
+              >
+                Forgot Password?
+              </a>
               <div className="field btn">
                 <div className="btn-layer"></div>
                 <input type="submit" value="Login" />
@@ -155,6 +168,14 @@ function Login() {
           </div>
         </div>
       </div>
+      {showForgotPassword && (
+        <div className="modal-overlay-fp" onClick={() => setShowForgotPassword(false)}>
+          <div className="modal-fp" onClick={(e) => e.stopPropagation()}>
+            <button className="close-btn-fp" onClick={() => setShowForgotPassword(false)}>✖</button>
+            <ForgotPassword />
+          </div>
+        </div>
+      )}
     </div>
   );
 }

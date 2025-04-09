@@ -3,6 +3,7 @@ const exp=require("express");
 const bcryptjs = require("bcryptjs")
 const jwt = require("jsonwebtoken")
 const userApp = exp.Router();
+const nodemailer = require("nodemailer");
 const verifyToken=require("./middlewares/verifyToken")
 const { ObjectId } = require("mongodb");
 const expressAsyncHandler = require('express-async-handler')
@@ -15,7 +16,7 @@ const multerObj=require("./middlewares/CloudinaryConfig");
 userApp.use(exp.json())
 
 //CREATE USER API
-
+ 
 //register user PUBLIC ROUTE
 console.log("user api file")
 
@@ -194,5 +195,91 @@ userApp.get("/get-doctor-id/:doctorEmail", async(req, res) => {
     res.status(500).json({ message: "Error fetching doctor details", error });
   }
 });
+
+// Nodemailer Transporter Setup
+const transporter = nodemailer.createTransport({
+  service: "gmail",
+  auth: {
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASS,
+  },
+});
+
+// Store OTPs temporarily
+const otpStore = new Map();
+
+// Check if email is registered
+userApp.post("/check-email", async (req, res) => {
+  const userCollectionObj = req.app.get("userCollection");
+  const { email } = req.body;
+
+  const user = await userCollectionObj.findOne({ username: email });
+  if (!user) {
+    return res.status(200).send({ success: false, message: "The entered email is not registered." });
+  }
+
+  // Generate OTP
+  const otp = Math.floor(100000 + Math.random() * 900000).toString();
+  otpStore.set(email, otp);
+
+  // Send OTP via email
+  try {
+    await transporter.sendMail({
+      from: process.env.EMAIL_USER,
+      to: email,
+      subject: "Password Reset OTP",
+      text: `Your OTP for password reset is: ${otp}`,
+    });
+    console.log(`OTP Sent Successfully to ${email}: ${otp}`);
+    res.status(200).send({ success: true, message: "OTP sent to your email." });
+  } catch (error) {
+    console.error("Error sending OTP:", error);  // Log the full error details
+    res.status(500).send({ success: false, message: "Error sending OTP.", error: error.message });
+  }
+});
+
+//Resend  OTP
+userApp.post("/send-otp", expressAsyncHandler(async(req, res) => {
+  const userCollectionObj = req.app.get("userCollection");
+  const { email } = req.body;
+
+  // Generate OTP
+  const otp = Math.floor(100000 + Math.random() * 900000).toString();
+  otpStore.set(email, otp);
+
+  // Send OTP via email
+  try {
+    await transporter.sendMail({
+      from: process.env.EMAIL_USER,
+      to: email,
+      subject: "Password Reset OTP",
+      text: `Your OTP for password reset is: ${otp}`,
+    });
+    console.log(`OTP Sent Successfully to ${email}: ${otp}`);
+    res.status(200).send({ success: true, message: "OTP sent to your email." });
+  } catch (error) {
+    console.error("Error sending OTP:", error);  // Log the full error details
+    res.status(500).send({ success: false, message: "Error sending OTP.", error: error.message });
+  }
+}));
+
+// Reset Password
+userApp.post("/reset-password", async (req, res) => {
+  const userCollectionObj = req.app.get("userCollection");
+  const { email, newPassword, confirmNewPassword } = req.body;
+
+  const hashedPassword = await bcryptjs.hash(newPassword, 6);
+  const result = await userCollectionObj.updateOne(
+    { username: email },
+    { $set: { password: hashedPassword, confirmPassword: confirmNewPassword } }
+  );
+
+  if (result.modifiedCount > 0) {
+    res.status(200).send({ success: true, message: "Password reset successfully." });
+  } else {
+    res.status(500).send({ success: false, message: "Error resetting password." });
+  }
+});
+ 
 
 module.exports = userApp;
