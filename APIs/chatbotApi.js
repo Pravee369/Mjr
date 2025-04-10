@@ -1,51 +1,39 @@
 const express = require("express");
-const fetch = require("node-fetch");
-
 const router = express.Router();
+const stringSimilarity = require('string-similarity');
+const fs = require('fs');
+const path = require('path');
 
-require('dotenv').config();
+// Load Dataset
+const chatbotData = JSON.parse(
+  fs.readFileSync(path.join(__dirname, "../data/chatbot_training_data.json"))
+);
 
-async function getChatbotResponse(userMessage) {
-    try {
-        const response = await fetch(
-            "https://router.huggingface.co/hf-inference/models/facebook/blenderbot-400M-distill",
-            {
-                method: "POST",
-                headers: {
-                    "Authorization": `Bearer ${process.env.HF_API_KEY}`,
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({ inputs: userMessage })
-            });
-
-        if (!response.ok) {
-            console.error("API Error:", response.statusText);
-            return { error: `API Error: ${response.statusText}` };
-        }
-
-        const data = await response.json();
-        return data;
-    } catch (error) {
-        console.error("Chatbot API error:", error);
-        return "Sorry, I'm facing an issue right now.";
-    }
-}
-
-// Define the chatbot route here
 router.post("/message", async (req, res) => {
-    const userMessage = req.body.message;
+  const userMessage = req.body.message;
 
-    if (!userMessage) {
-        return res.status(400).json({ error: "Message is required" });
-    }
+  if (!userMessage) {
+    return res.status(400).json({ error: "Message is required" });
+  }
 
-    try {
-        const botResponse = await getChatbotResponse(userMessage);
-        res.json({ response: botResponse });
-    } catch (error) {
-        console.error("Chatbot API error:", error);
-        res.status(500).json({ error: "Something went wrong" });
-    }
+  // Extract prompts
+  const prompts = chatbotData.map(item => item.prompt);
+
+  // Find best match
+  const match = stringSimilarity.findBestMatch(userMessage, prompts);
+  const bestMatch = match.bestMatch;
+
+  console.log("User Query:", userMessage);
+  console.log("Best Matched Prompt:", bestMatch.target);
+  console.log("Match Accuracy:", bestMatch.rating);
+
+  if (bestMatch.rating > 0.4) {   // Confidence Threshold
+    const matchedResponse = chatbotData[match.bestMatchIndex].response;
+    return res.json({ response: [{ generated_text: matchedResponse }] });
+  } else {
+    // Optional: Fallback Response
+    return res.json({ response: [{ generated_text: "Sorry, I couldn't find an answer for that." }] });
+  }
 });
 
 module.exports = router;

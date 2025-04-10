@@ -1,0 +1,582 @@
+[
+  {
+    "prompt": "How can I book a doctor appointment?",
+    "response": "To book a doctor appointment, go to the 'Appointment Booking' section, search for a doctor or hospital, and select a suitable time slot."
+  },
+  {
+    "prompt": "How do I log my health data?",
+    "response": "To log your health data, navigate to the 'Health Log' section, enter your details like blood pressure, sugar levels, etc., and save the information."
+  },
+  {
+    "prompt": "How can I rent medical equipment?",
+    "response": "You can rent medical equipment by visiting the 'Equipment Renters' section. Browse the available equipment, select what you need, and proceed with the rental process."
+  },
+  {
+    "prompt": "How do I apply for leave?",
+    "response": "To apply for leave, go to the 'Leaves' section, fill out the leave application form, and submit it for approval."
+  },
+  {
+    "prompt": "What should I do if I forget my password?",
+    "response": "If you forget your password, use the 'Forgot Password' option on the login page. Enter your registered email or phone number to receive a password reset link or OTP."
+  },
+  {
+    "prompt": "How do I update my profile information?",
+    "response": "To update your profile information, go to the 'Profile' section, edit the fields you want to update, and save the changes."
+  },
+  {
+    "prompt": "How can I contact support?",
+    "response": "You can contact support by visiting the 'Help & Support' section in the app. You can either chat with a representative or send an email."
+  },
+  {
+    "prompt": "What is the purpose of this application?",
+    "response": "This application is designed to assist users with healthcare-related tasks such as booking appointments, finding blood banks, logging health data, and more."
+  },
+  {
+    "prompt": "Can I set reminders for my medications?",
+    "response": "Yes, you can set reminders for your medications in the 'Reminders' section to ensure you never miss a dose."
+  },
+  {
+    "prompt": "How do I upload my medical prescriptions?",
+    "response": "To upload your medical prescriptions, go to the 'Prescriptions' section, click 'Upload', and select the file from your device."
+  },
+  {
+    "prompt": "How do I request an organ donation?",
+    "response": "To request an organ donation, go to the 'Organ Banks' section and submit a request with the required details."
+  },
+  {
+    "prompt": "Can I delete my account permanently?",
+    "response": "Yes, you can request account deletion through the 'Settings' page."
+  },
+  {
+    "prompt": "How do I track my health logs?",
+    "response": "You can track your health logs by visiting the 'Health Logging' section and reviewing your uploaded health attributes."
+  },
+  {
+    "prompt": "How do I reset my password?",
+    "response": "To reset your password, click on 'Forgot Password' on the login page and follow the instructions to reset it."
+  },
+  {
+    "prompt": "How do I find blood donors?",
+    "response": "You can find blood donors by visiting the 'Blood Banks' section and submitting a request for the required blood group."
+  },
+  {
+    "prompt": "How do I update my profile picture?",
+    "response": "To update your profile picture, go to the 'Profile' section, click on your current picture, and upload a new one."
+  },
+  {
+    "prompt": "How do I contact customer support?",
+    "response": "You can contact customer support through the 'Help & Support' section in the app."
+  },
+  {
+    "prompt": "What should I do if I encounter a technical issue?",
+    "response": "If you encounter a technical issue, report it through the 'Help & Support' section or contact customer support for assistance."
+  },
+  {
+    "prompt": "How do I check my appointment history?",
+    "response": "To check your appointment history, go to the 'Appointments' section and select 'History' to view past appointments."
+  },
+  {
+    "prompt": "Can I cancel an appointment?",
+    "response": "Yes, you can cancel an appointment by going to the 'Appointments' section, selecting the appointment, and clicking 'Cancel'."
+  },
+  {
+    "prompt": "How do I enable notifications?",
+    "response": "To enable notifications, go to the 'Settings' section and toggle the notification settings to 'On'."
+  },
+  {
+    "prompt": "How do I change my email address?",
+    "response": "To change your email address, go to the 'Profile' section, update your email, and save the changes."
+  },
+  {
+    "prompt": "Can I share my health data with my doctor?",
+    "response": "Yes, you can share your health data with your doctor by exporting it from the 'Health Log' section and sending it to them."
+  },
+  {
+    "prompt": "How do I find nearby hospitals?",
+    "response": "You can find nearby hospitals in the 'Hospitals' section of the app. It will show you a list of hospitals based on your location."
+  },
+  {
+    "prompt": "How do I report a bug in the app?",
+    "response": "To report a bug, go to the 'Help & Support' section and submit a bug report with a description of the issue."
+  },
+  {
+    "prompt": "Can I view my prescription history?",
+    "response": "Yes, you can view your prescription history in the 'Prescriptions' section under 'History'."
+  },
+  {
+    "prompt": "Hello",
+    "response": "Hi there! How can I assist you today?"
+  },
+  {
+    "prompt": "Hi",
+    "response": "Hello! How can I help you?"
+  },
+  {
+    "prompt": "Good morning",
+    "response": "Good morning! How can I assist you today?"
+  },
+  {
+    "prompt": "Good afternoon",
+    "response": "Good afternoon! What can I do for you?"
+  },
+  {
+    "prompt": "Good evening",
+    "response": "Good evening! How can I help you?"
+  },
+  {
+    "prompt": "Thank you",
+    "response": "You're welcome! Let me know if you need anything else."
+  },
+  {
+    "prompt": "Thanks",
+    "response": "No problem! Happy to help."
+  },
+  {
+    "prompt": "Bye",
+    "response": "Goodbye! Have a great day!"
+  },
+  {
+    "prompt": "See you later",
+    "response": "See you later! Take care."
+  },
+  {
+    "prompt": "What can you do?",
+    "response": "I can assist you with booking appointments, finding blood banks, logging health data, and much more. How can I help you today?"
+  },
+  {
+    "prompt": "Who are you?",
+    "response": "I am your virtual assistant, here to help you with your queries and tasks."
+  },
+  {
+    "prompt": "How are you?",
+    "response": "I'm just a bot, but I'm here and ready to assist you!"
+  },
+  {
+    "prompt": "What is your name?",
+    "response": "I am your assistant. You can call me your virtual helper!"
+  },
+  {
+    "prompt": "Can you help me?",
+    "response": "Of course! Let me know what you need help with."
+  },
+  {
+    "prompt": "How do I book an appointment?",
+    "response": "To book an appointment, go to the 'Appointments' section, select a date and time, and confirm your booking."
+  },
+  {
+    "prompt": "How do I cancel an appointment?",
+    "response": "To cancel an appointment, go to the 'Appointments' section, select the appointment, and click 'Cancel'."
+  },
+  {
+    "prompt": "How do I find nearby pharmacies?",
+    "response": "You can find nearby pharmacies in the 'Pharmacies' section of the app. It will show you a list based on your location."
+  },
+  {
+    "prompt": "How do I enable dark mode?",
+    "response": "To enable dark mode, go to 'Settings', select 'Appearance', and choose 'Dark Mode'."
+  },
+  {
+    "prompt": "Can you tell me a joke?",
+    "response": "Sure! Why don't scientists trust atoms? Because they make up everything!"
+  },
+  {
+    "prompt": "What is the weather today?",
+    "response": "I'm sorry, I can't provide weather updates, but you can check a weather app for accurate information."
+  },
+  {
+    "prompt": "How do I update my phone number?",
+    "response": "To update your phone number, go to 'Profile Settings', edit your phone number, and save the changes."
+  },
+  {
+    "prompt": "How do I reset my password?",
+    "response": "To reset your password, click on 'Forgot Password' on the login page and follow the instructions."
+  },
+  {
+    "prompt": "How do I contact support?",
+    "response": "You can contact support by visiting the 'Help & Support' section in the app."
+  },
+  {
+    "prompt": "What should I do if I encounter an error?",
+    "response": "If you encounter an error, try restarting the app. If the issue persists, contact support with the error details."
+  },
+  {
+    "prompt": "Can you recommend a doctor?",
+    "response": "I can help you find doctors in your area. Please go to the 'Doctors' section and search based on your needs."
+  },
+  {
+    "prompt": "How do I log my health data?",
+    "response": "To log your health data, navigate to the 'Health Log' section, enter your details, and save the information."
+  },
+  {
+    "prompt": "How do I find blood donors?",
+    "response": "You can find blood donors by visiting the 'Blood Banks' section and submitting a request for the required blood group."
+  },
+  {
+    "prompt": "Can I share my health data with my doctor?",
+    "response": "Yes, you can share your health data with your doctor by exporting it from the 'Health Log' section and sending it to them."
+  },
+  {
+    "prompt": "How do I enable notifications?",
+    "response": "To enable notifications, go to the 'Settings' section and toggle the notification settings to 'On'."
+  },
+  {
+    "prompt": "How do I delete my account?",
+    "response": "To delete your account, go to 'Account Settings', select 'Delete Account', and confirm your choice."
+  },
+  {
+    "prompt": "How do I update my profile picture?",
+    "response": "To update your profile picture, go to the 'Profile' section, click on your current picture, and upload a new one."
+  },
+  {
+    "prompt": "How do I find nearby hospitals?",
+    "response": "You can find nearby hospitals in the 'Hospitals' section of the app. It will show you a list of hospitals based on your location."
+  },
+  {
+    "prompt": "How do I report a bug?",
+    "response": "To report a bug, go to the 'Help & Support' section and submit a bug report with a description of the issue."
+  },
+  {
+    "prompt": "Can I view my prescription history?",
+    "response": "Yes, you can view your prescription history in the 'Prescriptions' section under 'History'."
+  },
+  {
+    "prompt": "How do I set reminders for my medications?",
+    "response": "You can set reminders for your medications in the 'Reminders' section to ensure you never miss a dose."
+  },
+  {
+    "prompt": "How do I request an organ donation?",
+    "response": "To request an organ donation, go to the 'Organ Banks' section and submit a request with the required details."
+  },
+  {
+    "prompt": "Can you help me find a specialist?",
+    "response": "Yes, you can search for specialists in the 'Doctors' section by selecting the specialty you need."
+  },
+  {
+    "prompt": "How do I check my appointment history?",
+    "response": "To check your appointment history, go to the 'Appointments' section and select 'History' to view past appointments."
+  },
+  {
+    "prompt": "How do I cancel a subscription?",
+    "response": "To cancel a subscription, go to 'Subscriptions', select the subscription you want to cancel, and confirm the cancellation."
+  },
+  {
+    "prompt": "How do I export my data?",
+    "response": "To export your data, go to 'Account Settings' and select 'Export Data'."
+  },
+  {
+    "prompt": "How do I change the app's language?",
+    "response": "To change the app's language, go to 'Settings' and select 'Language Preferences'."
+  },
+  {
+    "prompt": "How do I enable biometric login?",
+    "response": "To enable biometric login, go to 'Security Settings' and enable the biometric authentication option."
+  }, 
+  {
+    "prompt": "What is your purpose?",
+    "response": "I am here to assist you with your queries and help you navigate the application."
+  },
+  {
+    "prompt": "Can you speak other languages?",
+    "response": "Currently, I can assist you in English. Support for other languages may be added in the future."
+  },
+  {
+    "prompt": "How do I check my subscription status?",
+    "response": "To check your subscription status, go to the 'Subscriptions' section in the app."
+  },
+  {
+    "prompt": "How do I update my address?",
+    "response": "To update your address, go to the 'Profile' section, edit your address details, and save the changes."
+  },
+  {
+    "prompt": "How do I turn off notifications?",
+    "response": "To turn off notifications, go to 'Settings', select 'Notifications', and toggle them off."
+  },
+  {
+    "prompt": "Can I recover deleted messages?",
+    "response": "Unfortunately, deleted messages cannot be recovered. Please ensure you save important information."
+  },
+  {
+    "prompt": "How do I change my username?",
+    "response": "To change your username, go to 'Profile Settings', edit your username, and save the changes."
+  },
+  {
+    "prompt": "How do I check my usage history?",
+    "response": "You can check your usage history in the 'History' section of the app."
+  },
+  {
+    "prompt": "Can I customize my dashboard?",
+    "response": "Yes, you can customize your dashboard by adding or removing widgets in the 'Dashboard Settings' section."
+  },
+  {
+    "prompt": "How do I reset app settings?",
+    "response": "To reset app settings, go to 'Settings', select 'Reset Settings', and confirm your choice."
+  },
+  {
+    "prompt": "How do I enable two-factor authentication?",
+    "response": "To enable two-factor authentication, go to 'Security Settings', enable 2FA, and follow the setup instructions."
+  },
+  {
+    "prompt": "What should I do if I lose my phone?",
+    "response": "If you lose your phone, contact support to secure your account and update your login credentials."
+  },
+  {
+    "prompt": "Can I schedule recurring tasks?",
+    "response": "Yes, you can schedule recurring tasks in the 'Tasks' section by selecting the recurrence option."
+  },
+  {
+    "prompt": "How do I sync my data across devices?",
+    "response": "To sync your data across devices, ensure you are logged into the same account on all devices."
+  },
+  {
+    "prompt": "How do I delete a saved payment method?",
+    "response": "To delete a saved payment method, go to 'Payments', select the payment method, and choose 'Delete'."
+  },
+  {
+    "prompt": "Can I set a profile picture?",
+    "response": "Yes, you can set a profile picture in the 'Profile' section by uploading an image."
+  },
+  {
+    "prompt": "How do I check my app version?",
+    "response": "To check your app version, go to 'Settings' and look for the 'About' section."
+  },
+  {
+    "prompt": "How do I provide feedback?",
+    "response": "You can provide feedback through the 'Feedback' section in the app or by emailing us at feedback@example.com."
+  },
+  {
+    "prompt": "Can I block a user?",
+    "response": "Yes, you can block a user by going to their profile and selecting the 'Block' option."
+  },
+  {
+    "prompt": "How do I unblock a user?",
+    "response": "To unblock a user, go to 'Blocked Users' in 'Settings' and select the user you want to unblock."
+  },
+  {
+    "prompt": "How do I change my password?",
+    "response": "To change your password, go to 'Account Settings', select 'Change Password', and follow the instructions."
+  },
+  {
+    "prompt": "How do I log out?",
+    "response": "To log out, go to the 'Profile' section and select 'Log Out'."
+  },
+  {
+    "prompt": "Can I use the app offline?",
+    "response": "Some features of the app are available offline, but you need an internet connection for full functionality."
+  },
+  {
+    "prompt": "How do I report inappropriate content?",
+    "response": "To report inappropriate content, click on the 'Report' option next to the content and provide details."
+  },
+  {
+    "prompt": "How do I update my emergency contact?",
+    "response": "To update your emergency contact, go to 'Profile Settings', edit the emergency contact details, and save."
+  },
+  {
+    "prompt": "How do I enable location services?",
+    "response": "To enable location services, go to your device's settings, find the app, and enable location permissions."
+  },
+  {
+    "prompt": "How do I check my notifications?",
+    "response": "You can check your notifications by clicking on the 'Notifications' icon in the app."
+  },
+  {
+    "prompt": "How do I reset my PIN?",
+    "response": "To reset your PIN, go to 'Security Settings', select 'Reset PIN', and follow the instructions."
+  },
+  {
+    "prompt": "Can I download my data?",
+    "response": "Yes, you can download your data by going to 'Account Settings' and selecting 'Download Data'."
+  },
+  {
+    "prompt": "How do I update my profile bio?",
+    "response": "To update your profile bio, go to the 'Profile' section, edit your bio, and save the changes."
+  },
+  {
+    "prompt": "How do I turn on auto-updates?",
+    "response": "To turn on auto-updates, go to your device's app store settings and enable auto-update for this app."
+  },
+  {
+    "prompt": "How do I check my internet connection?",
+    "response": "You can check your internet connection by opening your device's network settings or using a speed test app."
+  },
+  {
+    "prompt": "How do I contact emergency services?",
+    "response": "To contact emergency services, use the 'Emergency' button in the app or dial your local emergency number."
+  },
+  {
+    "prompt": "Can I customize app themes?",
+    "response": "Yes, you can customize app themes in the 'Appearance' section under 'Settings'."
+  },
+  {
+    "prompt": "How do I clear my app cache?",
+    "response": "To clear your app cache, go to your device's settings, find the app, and select 'Clear Cache'."
+  },
+  {
+    "prompt": "How do I enable voice commands?",
+    "response": "To enable voice commands, go to 'Settings', select 'Voice Assistant', and toggle it on."
+  },
+  {
+    "prompt": "How do I check my storage usage?",
+    "response": "You can check your storage usage in the 'Settings' section under 'Storage'."
+  },
+  {
+    "prompt": "How do I reset my account?",
+    "response": "To reset your account, go to 'Account Settings', select 'Reset Account', and confirm your choice."
+  },
+  {
+    "prompt": "How do I approve organ donation requests?",
+    "response": "To approve organ donation requests, go to the 'Organ Banks Approval' section, review the requests, and click 'Approve' for the ones you want to approve."
+  },
+  {
+    "prompt": "How do I approve blood donation requests?",
+    "response": "To approve blood donation requests, navigate to the 'Blood Banks Approval' section, review the requests, and approve them as needed."
+  },
+  {
+    "prompt": "How do I approve equipment rental requests?",
+    "response": "To approve equipment rental requests, visit the 'Equipment Renters Approval' section, review the requests, and approve or reject them."
+  },
+  {
+    "prompt": "How do I upload health logs?",
+    "response": "To upload health logs, go to the 'Health Logging' section, fill in the required details, and submit the form."
+  },
+  {
+    "prompt": "How do I set alarms for medications?",
+    "response": "To set alarms for medications, go to the 'Alarms' section, add a new alarm, and specify the time and label for the medication."
+  },
+  {
+    "prompt": "How do I check approved organ donation requests?",
+    "response": "To check approved organ donation requests, go to the 'Organ Banks Approval' section and filter the requests by 'Approved'."
+  },
+  {
+    "prompt": "How do I check approved blood donation requests?",
+    "response": "To check approved blood donation requests, navigate to the 'Blood Banks Approval' section and view the approved requests."
+  },
+  {
+    "prompt": "How do I check approved equipment rental requests?",
+    "response": "To check approved equipment rental requests, visit the 'Equipment Renters Approval' section and filter the requests by 'Approved'."
+  },
+  {
+    "prompt": "How do I register as a new user?",
+    "response": "To register as a new user, go to the 'Sign Up' page, fill in your details, and submit the registration form."
+  },
+  {
+    "prompt": "How do I log in to the application?",
+    "response": "To log in, go to the 'Login' page, enter your username and password, and click 'Submit'."
+  },
+  {
+    "prompt": "How do I reset my password if I forget it?",
+    "response": "If you forget your password, click on 'Forgot Password' on the login page, enter your email, and follow the instructions to reset it."
+  },
+  {
+    "prompt": "How do I update my emergency contact details?",
+    "response": "To update your emergency contact details, go to the 'Profile' section, edit the emergency contact field, and save the changes."
+  },
+  {
+    "prompt": "How do I view my health data history?",
+    "response": "To view your health data history, go to the 'Health Logging' section and select 'View Logs' to see your past entries."
+  },
+  {
+    "prompt": "How do I request blood donations?",
+    "response": "To request blood donations, go to the 'Blood Banks' section, fill in the required details, and submit your request."
+  },
+  {
+    "prompt": "How do I request organ donations?",
+    "response": "To request organ donations, navigate to the 'Organ Banks' section, provide the necessary details, and submit your request."
+  },
+  {
+    "prompt": "How do I book an appointment with a specialist?",
+    "response": "To book an appointment with a specialist, go to the 'Appointment Booking' section, search for the specialist, and select an available time slot."
+  },
+  {
+    "prompt": "How do I cancel an equipment rental request?",
+    "response": "To cancel an equipment rental request, go to the 'Equipment Renters' section, find your request, and click 'Cancel'."
+  },
+  {
+    "prompt": "How do I view my approved requests?",
+    "response": "To view your approved requests, go to the respective section (e.g., 'Organ Banks Approval', 'Blood Banks Approval') and filter by 'Approved'."
+  },
+  {
+    "prompt": "How do I contact the admin for support?",
+    "response": "To contact the admin for support, go to the 'Help & Support' section and submit a support ticket or use the provided contact details."
+  },
+  {
+    "prompt": "How do I upload a prescription?",
+    "response": "To upload a prescription, go to the 'Prescriptions' section, click 'Upload', and select the file from your device."
+  },
+  {
+    "prompt": "How do I view my uploaded prescriptions?",
+    "response": "To view your uploaded prescriptions, go to the 'Prescriptions' section and select 'View History'."
+  },
+  {
+    "prompt": "How do I enable two-factor authentication?",
+    "response": "To enable two-factor authentication, go to 'Security Settings', enable 2FA, and follow the setup instructions."
+  },
+  {
+    "prompt": "How do I check my notifications?",
+    "response": "You can check your notifications by clicking on the 'Notifications' icon in the app."
+  },
+  {
+    "prompt": "How do I delete a health log entry?",
+    "response": "To delete a health log entry, go to the 'Health Logging' section, find the entry you want to delete, and click 'Delete'."
+  },
+  {
+    "prompt": "How do I update my profile picture?",
+    "response": "To update your profile picture, go to the 'Profile' section, click on your current picture, and upload a new one."
+  },
+  {
+    "prompt": "How do I find nearby clinics?",
+    "response": "To find nearby clinics, go to the 'Clinics' section in the app. It will show you a list of clinics based on your location."
+  },
+  {
+    "prompt": "How do I report a technical issue?",
+    "response": "To report a technical issue, go to the 'Help & Support' section and submit a bug report with a description of the issue."
+  },
+  {
+    "prompt": "How do I view my subscription details?",
+    "response": "To view your subscription details, go to the 'Subscriptions' section in the app."
+  },
+  {
+    "prompt": "How do I cancel my subscription?",
+    "response": "To cancel your subscription, go to the 'Subscriptions' section, select the subscription, and click 'Cancel'."
+  },
+  {
+    "prompt": "How do I enable dark mode?",
+    "response": "To enable dark mode, go to 'Settings', select 'Appearance', and choose 'Dark Mode'."
+  },
+  {
+    "prompt": "How do I update my phone number?",
+    "response": "To update your phone number, go to 'Profile Settings', edit your phone number, and save the changes."
+  },
+  {
+    "prompt": "How do I check my app version?",
+    "response": "To check your app version, go to 'Settings' and look for the 'About' section."
+  },
+  {
+    "prompt": "How do I provide feedback?",
+    "response": "You can provide feedback through the 'Feedback' section in the app or by emailing us at feedback@example.com."
+  },
+  {
+    "prompt": "How do I reset my PIN?",
+    "response": "To reset your PIN, go to 'Security Settings', select 'Reset PIN', and follow the instructions."
+  },
+  {
+    "prompt": "How do I download my health data?",
+    "response": "To download your health data, go to 'Account Settings' and select 'Download Data'."
+  },
+  {
+    "prompt": "How do I customize my dashboard?",
+    "response": "To customize your dashboard, go to 'Dashboard Settings' and add or remove widgets as needed."
+  },
+  {
+    "prompt": "How do I sync my data across devices?",
+    "response": "To sync your data across devices, ensure you are logged into the same account on all devices."
+  },
+  {
+    "prompt": "How do I enable voice commands?",
+    "response": "To enable voice commands, go to 'Settings', select 'Voice Assistant', and toggle it on."
+  },
+  {
+    "prompt": "How do I clear my app cache?",
+    "response": "To clear your app cache, go to your device's settings, find the app, and select 'Clear Cache'."
+  }
+]
