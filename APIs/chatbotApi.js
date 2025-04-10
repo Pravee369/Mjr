@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const stringSimilarity = require('string-similarity');
+const fuzz = require('fuzzball');
 const fs = require('fs');
 const path = require('path');
 
@@ -16,22 +16,19 @@ router.post("/message", async (req, res) => {
     return res.status(400).json({ error: "Message is required" });
   }
 
-  // Extract prompts
   const prompts = chatbotData.map(item => item.prompt);
 
-  // Find best match
-  const match = stringSimilarity.findBestMatch(userMessage, prompts);
-  const bestMatch = match.bestMatch;
+  // Fuzzy Search for best match
+  const [bestMatch, bestScore, bestIndex] = fuzz.extract(userMessage, prompts, { scorer: fuzz.token_set_ratio })[0];
 
   console.log("User Query:", userMessage);
-  console.log("Best Matched Prompt:", bestMatch.target);
-  console.log("Match Accuracy:", bestMatch.rating);
+  console.log("Best Match:", bestMatch);
+  console.log("Matching Score:", bestScore);
 
-  if (bestMatch.rating > 0.4) {   // Confidence Threshold
-    const matchedResponse = chatbotData[match.bestMatchIndex].response;
+  if (bestScore > 60) { // Threshold can be adjusted
+    const matchedResponse = chatbotData[bestIndex].response;
     return res.json({ response: [{ generated_text: matchedResponse }] });
   } else {
-    // Optional: Fallback Response
     return res.json({ response: [{ generated_text: "Sorry, I couldn't find an answer for that." }] });
   }
 });
