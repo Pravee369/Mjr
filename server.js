@@ -137,6 +137,7 @@ const aptment = require("./APIs/appointmentApi");
 const verifications = require('./APIs/verificationApi');
 const leaveApp = require("./APIs/leavesApi")
 const chatbotApi = require("./APIs/chatbotApi");
+const labsApi = require("./APIs/labsApi");
 
 
 app.use("/user-api", userApp);
@@ -151,6 +152,7 @@ app.use("/appointment-api",aptment);
 app.use("/verifications-api", verifications);
 app.use("/leaves-api",leaveApp)
 app.use("/chatbot-api",chatbotApi);
+app.use("/labs-api", labsApi);
 
 
 // Page refresh handling

@@ -32,12 +32,18 @@ function Register() {
         "photo",
         "regNo",
         "organizationType",
+        "address",
+        "startTime",
+        "endTime",
       ]);
     } else if (category === "Doctor") {
       unregister([
         "regNo",
         "age",
         "organizationType",
+        "address",
+        "startTime",
+        "endTime",
       ]);
     } else if (category === "Organization") {
       unregister([
@@ -344,6 +350,33 @@ function Register() {
                       </option>
                     </select>
                   </div>
+                  <div className="field">
+                    <input
+                      type="text"
+                      placeholder="Address"
+                      {...register("address")}
+                      required
+                    />
+                  </div>
+                  <div className="field">
+                    <input
+                      type="text"
+                      placeholder="Start Time"
+                      onFocus={(e) => (e.target.type = 'time')}
+                      {...register("startTime")}
+                      required
+                    />
+                  </div>
+                  <div className="field">
+                    <input
+                      type="text"
+                      placeholder="End Time"
+                      onFocus={(e) => (e.target.type = 'time')}
+                      {...register("endTime")}
+                      required
+                    />
+                  </div>
+
                 </>
               )}
               

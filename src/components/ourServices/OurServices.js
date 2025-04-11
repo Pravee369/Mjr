@@ -5,7 +5,7 @@ import { RiHealthBookFill } from 'react-icons/ri';
 import { FaHandHoldingMedical } from "react-icons/fa";
 import { FaHandHoldingWater } from "react-icons/fa";
 import { FaCartPlus } from "react-icons/fa";
-import { FaCalendarAlt } from "react-icons/fa";
+import { FaCalendarAlt, FaMicroscope } from "react-icons/fa";
 import './OurServices.css';
 
 const OurServices = () => {
@@ -63,11 +63,16 @@ const services = [
   },
   {
     icon: <FaCalendarAlt /> , // Replace with the actual icon or image
-    title: "Appointment booking",
+    title: "Appointment Booking",
     description: "Looking for an appointment? Find and book a doctor hassle-free",
     path:(user)? `/${userName}/searchFilter`:"/login",
   },
-
+  {
+    icon: <FaMicroscope />, // Lab-related icon from react-icons (you can choose any)
+    title: "Lab Test Booking",
+    description: "Need a lab test? Search and book lab tests easily from trusted labs",
+    path: (user) ? `/${userName}/labs-filter` : "/login",
+  }
 ];
 
 
@@ -90,7 +95,10 @@ const services = [
           <div
             className="service-card"
             key={index}
-            onClick={() => handleServiceClick(service.path)}
+            onClick={() => {
+              handleServiceClick(service.path);
+              window.scrollTo(0, 0);
+            }}
           >
             <div className="service-icon">{service.icon}</div>
             <h3>{service.title}</h3>

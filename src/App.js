@@ -268,6 +268,8 @@ import OrganBanksApproval from './components/organisations/organBanks/organBanks
 import OrganBanksPending from './components/organisations/organBanks/organBanksApproval/OrganBanksPending.js';
 import EquipRentersApproval from './components/organisations/equipRenters/equipRentersApproval/equipRentersApproval.js';
 import EquipRentersPending from './components/organisations/equipRenters/equipRentersApproval/equipRentersPending.js';
+import LabsFilter from './components/labsFilter/LabsFilter.js';
+import LabDetails from './components/labDetails/LabDetails.js';
 
 function App() {
 
@@ -333,8 +335,10 @@ function App() {
         )}
          { user && ( <Route path={`${userName}/bookappointment`} element={< BookAppointment />} />) }
          { user && ( <Route path={`/${userName}/searchFilter`} element={< HomeFilter />} />) }
+         { user && ( <Route path={`/${userName}/labs-filter`} element={< LabsFilter />} />) }
          { user && ( <Route path={`/${userName}/searchFilter/doctor/:id`} element= {<DoctorDetails />}/>) }
          { user && ( <Route path={`/${userName}/searchFilter/hospital/:id`} element= {<HospitalDetails />}/>) }
+         { user && ( <Route path={`/${userName}/labs-filter/laboratory/:id`} element= {<LabDetails />}/>) }
         
       </Route>
     )
