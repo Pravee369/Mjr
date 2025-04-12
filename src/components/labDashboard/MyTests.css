@@ -1,0 +1,58 @@
+.mytests-container {
+    padding: 30px;
+    margin-top: 100px;
+    text-align: center;
+  }
+  
+  .mytests-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #1976d2;
+  }
+  
+  .tests-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .test-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+    text-align: left;
+    transition: 0.2s ease-in-out;
+  }
+  
+  .test-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+  }
+  
+  .test-card h3 {
+    color: #2c7be5;
+    margin-bottom: 8px;
+  }
+  
+  .test-card p {
+    margin: 6px 0;
+    color: #555;
+  }
+  
+  .test-card .description {
+    margin-top: 10px;
+    font-style: italic;
+    color: #666;
+  }
+  
+  .mytests-loading,
+  .no-tests-msg {
+    font-size: 1.1rem;
+    margin-top: 50px;
+    color: #888;
+  }
+  

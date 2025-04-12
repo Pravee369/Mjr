@@ -76,7 +76,8 @@ MongoClient.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true 
     const appointmentsCollection = db.collection("appointments")
     const verificationsCollection = db.collection("verificationsCollection");
     const leavesCollection=db.collection("leaves")
-    const bookedSlotsCollection= db.collection("bookedSlotsCollection")
+    const bookedSlotsCollection= db.collection("bookedSlotsCollection");
+    const labTestsCollection = db.collection("labTestsCollection");
     app.set("userCollection", userCollection);
     app.set("docCollection", docCollection);
     app.set("alarmCollection", alarmCollection);
@@ -87,7 +88,8 @@ MongoClient.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true 
     app.set("appointmentsCollection",appointmentsCollection);
     app.set("verificationsCollection", verificationsCollection);
     app.set("leavesCollection",leavesCollection)
-    app.set("bookedSlotsCollection",bookedSlotsCollection)
+    app.set("bookedSlotsCollection",bookedSlotsCollection);
+    app.set("labTestsCollection", labTestsCollection);
     console.log("db connection success");
 
     // Start checking alarms
@@ -138,6 +140,7 @@ const verifications = require('./APIs/verificationApi');
 const leaveApp = require("./APIs/leavesApi")
 const chatbotApi = require("./APIs/chatbotApi");
 const labsApi = require("./APIs/labsApi");
+const labTestsApi = require("./APIs/labTestsApi");
 
 
 app.use("/user-api", userApp);
@@ -153,6 +156,7 @@ app.use("/verifications-api", verifications);
 app.use("/leaves-api",leaveApp)
 app.use("/chatbot-api",chatbotApi);
 app.use("/labs-api", labsApi);
+app.use("/lab-tests", labTestsApi);
 
 
 // Page refresh handling

@@ -216,6 +216,13 @@ function Navbar() {
                         </NavLink>
                       </li>
                     }
+                    {currentUser.category==="Organization" && currentUser.organizationType==="Laboratory" &&
+                      <li>
+                        <NavLink className="dropdown-item" to={`Organization/Laboratory/${userName}/dashboard`}>
+                          Dashboard
+                        </NavLink>
+                      </li>
+                    }
                     <li>
                         <button className="dropdown-item" onClick={() => toggleModal('logoutConfirm')}>
                            Logout

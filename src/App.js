@@ -270,6 +270,10 @@ import EquipRentersApproval from './components/organisations/equipRenters/equipR
 import EquipRentersPending from './components/organisations/equipRenters/equipRentersApproval/equipRentersPending.js';
 import LabsFilter from './components/labsFilter/LabsFilter.js';
 import LabDetails from './components/labDetails/LabDetails.js';
+import LabDashboard from './components/labDashboard/LabDashboard.js';
+import MyTests from './components/labDashboard/MyTests.js';
+import AddTest from './components/labDashboard/AddTest.js';
+import TestAppointments from './components/labDashboard/TestAppointments.js';
 
 function App() {
 
@@ -296,7 +300,11 @@ function App() {
         )}
         {user && (
           <Route path='Organization' element={<RootLayoutOrg />}>
-            <Route path={`Laboratory/${userName}`} element={<LabsProfile/>}/>
+            <Route path={`Laboratory/${userName}/dashboard`} element={<LabDashboard />}>
+              <Route index element={<MyTests />} />
+              <Route path="add-test" element={<AddTest />} />
+              <Route path="test-appointments" element={<TestAppointments />} />
+            </Route>
             <Route path={`Blood Bank/approval/${userName}`} element={<BloodBanksApproval/>}/>
             <Route path={`Blood Bank/pending/${userName}`} element={<BloodBanksPending/>}/>
             <Route path={`Organ Bank/approval/${userName}`} element={<OrganBanksApproval/>}/>

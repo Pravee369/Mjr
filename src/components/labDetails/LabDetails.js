@@ -41,7 +41,7 @@ const LabDetails = () => {
       <div className="lab-details-card">
         <p><strong>Address :</strong> {lab.address}</p>
         <p><strong>Mobile :</strong> {lab.mobile}</p>
-        <p><strong>Email :</strong> {lab.username}</p>
+        <p><strong>Email ID :</strong> {lab.username}</p>
         <p><strong>Timings :</strong> {formatTime(lab.startTime)} - {formatTime(lab.endTime)}</p>
       </div>
     </div>

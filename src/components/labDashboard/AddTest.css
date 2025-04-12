@@ -1,0 +1,48 @@
+.add-test-container {
+    background-color: #f9fafb;
+    padding: 15px;
+    color: #1e293b;
+  }
+  
+  .add-test-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .add-test-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+  }
+  
+  .add-test-form input,
+  .add-test-form textarea {
+    padding: 10px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    resize: none;
+  }
+  
+  .add-test-form input:focus,
+  .add-test-form textarea:focus {
+    border-color: #2563eb;
+  }
+  
+  .add-test-form button {
+    padding: 12px;
+    background-color: #10b981;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .add-test-form button:hover {
+    background-color: #059669;
+  }
+  
