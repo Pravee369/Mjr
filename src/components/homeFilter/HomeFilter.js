@@ -14,13 +14,15 @@ const HomeFilter = () => {
   const [results, setResults] = useState([]);
   const [doctors, setDoctors] = useState([]);
   const [hospitals,setHospitals]=useState([])
+  const [clinics,setClinics]=useState([])
   const [indexd, setIndexd] = useState(0);
   const [indexh, setIndexh] = useState(0);
+  const [indexc,setIndexc] =useState(0)
   const [loading, setLoading] = useState(true)
 
   const categories = ["Doctor", "Clinic", "Hospital"];
   const specializations = ["Cardiology", "Dermatology", "Neurology", "Orthopedics",
-                           "Gynoecology","Pediatrics","Dentist","Psychiatry","Nephrology"];
+                           "Gynoecology","Pediatrics","Dentist","Psychiatry","Nephrology","General Practice","Ophthalmology","Physiotheraphy","Diabetology","ENT"];
 
    
    const [error, setError] = useState(null);
@@ -41,7 +43,7 @@ const HomeFilter = () => {
                   `http://localhost:3000/verifications-api/user-verification/${doctor.username}`
                 );
 
-                console.log(`Verification response for ${doctor.username}:`, verificationResponse.data);
+                //console.log(`Verification response for ${doctor.username}:`, verificationResponse.data);
 
                 return {
                   ...doctor,
@@ -58,6 +60,9 @@ const HomeFilter = () => {
           setDoctors(doctorsWithVerification);
           console.log("Doctors Data with Verification:", doctorsWithVerification);
          setHospitals(response.data.hospitals || [])
+         //console.log(response.data.clinics || [])
+         setClinics(response.data.clinics || [])
+         console.log(clinics)
          } catch (err) {
          setError("Error fetching data");
          } finally {
@@ -67,18 +72,22 @@ const HomeFilter = () => {
          fetchData();
        }, []);
  
-  useEffect(() => {
-    if (category || specialization) {
-      axios
-        .get("http://localhost:3000/user-api/filter", {
-          params: { category, specialization: specialization || ""},
-        })
-        .then((res) => setResults(res.data))
-        .catch((err) => console.error(err));
-    } else {
-      setResults([]); // Clear results when no filter is selected
-    }
-  }, [category, specialization]);
+       useEffect(() => {
+        if (category || specialization) {
+          axios
+            .get("http://localhost:3000/user-api/filter", {
+              params: { category, specialization: specialization || "" },
+            })
+            .then((res) => {
+              setResults(res.data);
+              console.log("Filtered results:", res.data); // log inside the .then
+            })
+            .catch((err) => console.error(err));
+        } else {
+          setResults([]);
+        }
+      }, [category, specialization]);
+      
 
 
                           
@@ -94,6 +103,11 @@ for (let i = 0; i < doctors.length; i += 3) {
 const groupedHospitals=[]
 for (let i = 0; i < hospitals.length; i += 3) {
  groupedHospitals.push(hospitals.slice(i, i + 3));
+}
+
+const groupedClinics=[]
+for (let i = 0; i < clinics.length; i += 3) {
+ groupedClinics.push(clinics.slice(i, i + 3));
 }
 
 
@@ -152,6 +166,8 @@ for (let i = 0; i < hospitals.length; i += 3) {
          Locate the best doctors and healthcare facilities quickly with customized search options
         </p>
 
+          <br></br>
+          <p className="text-center text-md md:text-base" style={{color:"#0D4715"}}>Find your doctor</p>
           {/* for doctors */}
            {/* Left Arrow */}
            {indexd > 0 && (
@@ -184,8 +200,8 @@ for (let i = 0; i < hospitals.length; i += 3) {
                           ✅ Verified doctor at {doctor.verifiedAt}
                         </p>
                       )}
-                     <p className="text-sm text-gray-600">{doctor.specialization}</p>
-                     <p className="text-sm font-medium text-gray-700">
+                     <p className="text-sm " style={{color:"#205781"}}>{doctor.specialization}</p>
+                     <p className="text-sm font-medium " style={{color:"#183B4E"}}>
                        {doctor.experience} years experience
                      </p>
                    </div>
@@ -204,7 +220,8 @@ for (let i = 0; i < hospitals.length; i += 3) {
            )}
            
           <br></br>
-          <p className="text-gray-500 text-center text-sm sm:text-base">Find your hospital</p>
+          <br></br>
+          <p className=" text-center text-md md:text-base" style={{color:"#0D4715"}}>Find your hospital</p>
 
            {/* for hospitals */}
            {indexh > 0 && (
@@ -228,8 +245,9 @@ for (let i = 0; i < hospitals.length; i += 3) {
                    >
                      
                      <h3 className="text-lg font-bold">{hospital.name}</h3>
-                     <p className="text-sm text-gray-600">{hospital.location}</p>
-                    
+                     <p className="text-sm " style={{color:"#0C0950"}}>{hospital.address}</p>
+                     <a href="" onClick={() => navigate(`/${userName}/searchFilter/hospital/${hospital._id}`)}> click here to know more </a>
+
                    </div>
                  ))}
              </div>
@@ -244,11 +262,50 @@ for (let i = 0; i < hospitals.length; i += 3) {
                <ChevronRight size={24} />
              </button>
            )}
+            
+            <br></br>
+            <br></br>
+          <p className="text-center text-md md:text-base" style={{color:"#0D4715"}}>Find your clinic</p>
 
+           {/* for hospitals */}
+           {indexc > 0 && (
+             <button
+               className="btn bg-grey"
+               onClick={() => setIndexc(indexc - 1)}
+             >
+               <ChevronLeft size={24} />
+             </button>
+           )}
+   
+           {/* Cards Wrapper */}
+           <div className="flex justify-center">
+             <div className="row row-cols-sm-1 row-cols-md-3">
+               {groupedClinics.length > 0 &&
+                 groupedClinics[indexc]?.map((clinic, i) => (
+                   <div
+                     key={i}
+                     className="p-4 border rounded-lg shadow-lg text-center bg-white"
+                   >
+                     <h3 className="text-lg font-bold">{clinic.name}</h3>
+                     <p className="text-sm " style={{ color: "#205781" }}>{clinic.specialization}</p>
+                     <p className="text-sm " style={{color:"#0C0950"}}>{clinic.address}</p>
+                     <a href="" onClick={() => navigate(`/${userName}/searchFilter/hospital/${clinic._id}`)}> click here to know more </a>
+                   </div>
+                 ))}
+             </div>
+           </div>
+   
+           {/* Right Arrow */}
+           {indexc < groupedClinics.length - 1 && (
+             <button
+               className="btn bg-gray"
+               onClick={() => setIndexc(indexc + 1)}
+             >
+               <ChevronRight size={24} />
+             </button>
+           )}
          </div>
        </div>
-        
-
       )}
 
       {/* Responsive Grid for Small Cards */}
@@ -293,15 +350,23 @@ for (let i = 0; i < hospitals.length; i += 3) {
         
         {item.category === "Doctor" && (
           <div className="card-body text-center mt-2">
-            <p className="text-gray-600 font-medium">{item.specialization}</p>
-            <p className="text-gray-500 text-sm">{item.experience} years of experience</p>
+            <img
+             src={item.photo && item.photo !== "" ? item.photo : defaultProfile}
+             alt="Doctor Profile"
+             className="rounded-full object-cover"
+           />
+            <p className=" font-medium" style={{color:"#205781"}}>{item.specialization}</p>
+            <p className=" text-sm" style={{color:"#183B4E"}}>{item.experience} years of experience</p>
             <a href="" onClick={() => navigate(`/${userName}/searchFilter/doctor/${item._id}`)}> click here to know more </a>
           </div>
         )}
         
         {item.category === "Organization" && (
           <div className="card-body text-center mt-2">
-            <p className="text-gray-700 font-medium">{item.organizationType}</p>
+          
+            <p className="font-medium" style={{color:"#205781;"}}>{item.specialization}</p>
+            <p className="font-medium" style={{color:"#0C0950;"}}>{item.address}</p>
+            <a href="" onClick={() => navigate(`/${userName}/searchFilter/hospital/${item._id}`)}> click here to know more </a>
           </div>
         )}
       </div>

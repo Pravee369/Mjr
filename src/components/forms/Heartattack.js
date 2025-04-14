@@ -60,7 +60,7 @@ function HeartAttack() {
             </div>
             <div className="form-input1">
               <div className="label">
-                <label htmlFor="bp-lower-number">BP (Blood Pressure)</label>
+                <label htmlFor="bp-lower-number">BP (Blood Pressure) in mmHg</label>
               </div>
               <div className="input">
                 <div className="input-group">

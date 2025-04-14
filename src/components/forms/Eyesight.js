@@ -50,7 +50,7 @@ function EyeSight() {
                 <input
                   id="refraction"
                   type="text"
-                  placeholder="Refraction"
+                  placeholder="in Diopter"
                   name="refraction"
                   {...register("refraction")}
                 />
@@ -65,7 +65,7 @@ function EyeSight() {
                 <input
                   id="eye-ball-size"
                   type="number"
-                  placeholder="Eye Ball Size"
+                  placeholder="in mm"
                   name="eye_ball_size"
                   {...register("eye-ball-size")}
                 />
@@ -79,7 +79,7 @@ function EyeSight() {
                 <input
                   id="left-eye-sight"
                   type="text"
-                  placeholder=""
+                  placeholder="in D"
                   name="left_eye_sight"
                   {...register("left-eye-sight")}
                 />
@@ -93,7 +93,7 @@ function EyeSight() {
                 <input
                   id="right-eye-sight"
                   type="text"
-                  placeholder=""
+                  placeholder="in D"
                   name="right_eye_sight"
                   {...register("right-eye-sight")}
                 />

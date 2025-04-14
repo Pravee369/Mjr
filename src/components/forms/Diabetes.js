@@ -50,7 +50,7 @@ function Diabetes() {
                 <input
                   id="blood-glucose-level"
                   type="number"
-                  placeholder="Blood Glucose Level"
+                  placeholder="in mg/dL"
                   name="blood_glucose_level"
                   {...register("blood_glucose_level")}
                 />
@@ -58,7 +58,7 @@ function Diabetes() {
             </div>
             <div className="form-input1">
               <div className="label">
-                <label htmlFor="bp">BP (Blood Pressure)</label>
+                <label htmlFor="bp">BP (Blood Pressure) in mmHg</label>
               </div>
               <div className="input">
                 <div className="input-group">
@@ -95,7 +95,7 @@ function Diabetes() {
                 <input
                   id="ketone"
                   type="number"
-                  placeholder="Ketone level"
+                  placeholder="mg/dL"
                   name="ketone"
                   {...register("ketone")}
                 />
@@ -109,7 +109,7 @@ function Diabetes() {
                 <input
                   id="hba1c"
                   type="text"
-                  placeholder=""
+                  placeholder="in %"
                   name="hba1c"
                   {...register("hba1c")}
                 />
@@ -123,7 +123,7 @@ function Diabetes() {
                 <input
                   id="weight"
                   type="number"
-                  placeholder=""
+                  placeholder="kg"
                   name="weight"
                   {...register("weight")}
                 />

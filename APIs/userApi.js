@@ -114,13 +114,10 @@ userApp.get("/filter", async (req, res) => {
        }
    } else if (category) {
        filter = { category: "Organization", organizationType: category };
-       if(category==="Clinic")
-       {
-         filter["specialization"] = specialization;
+      
+       if (specialization && category==="Clinic") {
+           filter["specialization"] = specialization; // Ensure organizations with specialization are filtered
        }
-      //  if (specialization) {
-      //      filter["specialization"] = specialization; // Ensure organizations with specialization are filtered
-      //  }
    }
 
    try {
@@ -142,9 +139,11 @@ userApp.get("/alldoctorsandhospitals", async (req, res) => {
 
     // Fetch hospitals
     const hospitals = await userCollection.find({ category: "Organization" , organizationType:"Hospital" }).toArray();
+    const clinics = await userCollection.find({ category: "Organization" , organizationType:"Clinic" }).toArray();
+    
 
     // Return both doctors and hospitals in separate arrays
-    res.status(200).json({ doctors, hospitals });
+    res.status(200).json({ doctors, hospitals ,clinics });
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: "Error fetching data" });

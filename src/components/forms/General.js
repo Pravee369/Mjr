@@ -45,7 +45,7 @@ function GeneralForm() {
           <form onSubmit={handleSubmit(submitForm)}>
             <div className="form-input1">
               <div className="label">
-                <label htmlFor="bp">BP (Blood Pressure)</label>
+                <label htmlFor="bp">BP (Blood Pressure) in mmHg</label>
               </div>
               <div className="input">
                 <div className="input-group">
@@ -93,20 +93,20 @@ function GeneralForm() {
                 <input
                   id="cholestrol"
                   type="text"
-                  placeholder="xxxxxxxx"
+                  placeholder="g of chol. in dL of blood"
                   {...register("cholestrol")}
                 />
               </div>
             </div>
             <div className="form-input1">
               <div className="label">
-                <label for="blood">Blood</label>
+                <label for="blood">RBC</label>
               </div>
               <div className="input">
                 <input
                   id="blood"
                   type="text"
-                  placeholder="999999999"
+                  placeholder="million/mm3"
                   {...register("blood")}
                 />
               </div>

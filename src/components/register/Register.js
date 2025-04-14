@@ -7,6 +7,14 @@ import axios from "axios";
 function Register() {
   const [error, setError] = useState("");
   const [category, setCategory] = useState("Patient");
+  const [orgType, setOrgType] = useState("");
+
+  const handleOrgChange = (e) => {
+    const selectedValue = e.target.value;
+    setOrgType(selectedValue);
+    e.target.style.color = selectedValue ? "#000" : "#999";
+  };
+
 
   const {
     register,
@@ -102,6 +110,8 @@ function Register() {
         setError(err.message);
       });
   };
+
+
 
   return (
     <div className="register">
@@ -327,14 +337,13 @@ function Register() {
                       required
                     />
                   </div>
+                 
                   <div className="field">
                     <select
                       {...register("organizationType", { required: true })}
                       defaultValue=""
-                      onChange={(e) => {
-                        e.target.style.color = e.target.value ? "#000" : "#999";
-                      }}
-                      style={{ color: "#999" }}
+                      onChange={handleOrgChange}
+                      style={{ color: orgType ? "#000" : "#999" }}
                     >
                       <option value="" disabled hidden>
                         Select Organization Type
@@ -345,10 +354,9 @@ function Register() {
                       <option value="Laboratory">Laboratory</option>
                       <option value="Blood Bank">Blood Bank</option>
                       <option value="Organ Bank">Organ Bank</option>
-                      <option value="Equipment Renter">
-                        Equipment Renter
-                      </option>
+                      <option value="Equipment Renter">Equipment Renter </option>
                     </select>
+
                   </div>
                   <div className="field">
                     <input
@@ -376,6 +384,28 @@ function Register() {
                       required
                     />
                   </div>
+                  {orgType === "Clinic" && (
+        <div className="field" style={{ marginTop: "1rem",marginBottom:'2rem' }}>
+          <select {...register("specialization", { required: true })} defaultValue="">
+            <option value="" disabled hidden className="text-secondary">
+              Select Specialization
+            </option>
+            <option value="Cardiology">Cardiology</option>
+            <option value="Dermatology">Dermatology</option>
+            <option value="Pediatrics">Pediatrics</option>
+            <option value="ENT">ENT</option>
+            <option value="Orthopedics">Orthopedics</option>
+            <option value="Physiotherapy">Physiotherapy</option>
+            <option value="Diabetology">Diabetology</option>
+            <option value="Psychiatry">Psychiatry</option>
+            <option value="General Medicine">General Medicine</option>
+            <option value="Gastroenterology">Gastroenterology</option>
+            <option value="Gynecology">Gynecology</option>
+            <option value="Neurology">Neurology</option>
+            <option value="Oncology">Oncology</option>
+          </select>
+        </div>
+      )}
 
                 </>
               )}

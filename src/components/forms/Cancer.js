@@ -96,7 +96,7 @@ function Cancer() {
                 <input
                   id="tumor-size"
                   type="number"
-                  placeholder=""
+                  placeholder="in cm"
                   name="tumor_size"
                   {...register("tumor-size")}
                 />
@@ -110,7 +110,7 @@ function Cancer() {
                 <input
                   id="haemoglobin"
                   type="text"
-                  placeholder=""
+                  placeholder="g/dL"
                   name="haemoglobin"
                   {...register("haemoglobin")}
                 />
