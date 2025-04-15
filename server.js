@@ -78,7 +78,8 @@ MongoClient.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true 
     const leavesCollection=db.collection("leaves")
     const bookedSlotsCollection= db.collection("bookedSlotsCollection");
     const labTestsCollection = db.collection("labTestsCollection");
-    const hcServicesCollection=db.collection("hcServicesCollection")
+    const hcServicesCollection=db.collection("hcServicesCollection");
+    const labTestBookingsCollection = db.collection("labTestBookingsCollection");
     app.set("userCollection", userCollection);
     app.set("docCollection", docCollection);
     app.set("alarmCollection", alarmCollection);
@@ -92,6 +93,7 @@ MongoClient.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true 
     app.set("bookedSlotsCollection",bookedSlotsCollection);
     app.set("labTestsCollection", labTestsCollection);
     app.set("hcServicesCollection",hcServicesCollection);
+    app.set("labTestBookingsCollection", labTestBookingsCollection);
 
     console.log("db connection success");
 

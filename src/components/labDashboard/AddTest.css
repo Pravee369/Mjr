@@ -46,3 +46,43 @@
     background-color: #059669;
   }
   
+  .slot-settings-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  
+  .slot-settings-group .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .slot-settings-group label {
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: #1e293b;
+  }
+  
+  .slot-settings-group select,
+  .slot-settings-group input {
+    padding: 10px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    width: 100%;
+    background-color: white;
+    transition: border-color 0.2s;
+  }
+  
+  .slot-settings-group select:focus,
+  .slot-settings-group input:focus {
+    border-color: #2563eb;
+  }
+  
+  .slot-section-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #334155;
+  }
+  

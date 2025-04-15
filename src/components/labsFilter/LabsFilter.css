@@ -69,4 +69,54 @@
     margin-bottom: 6px;
     word-wrap: break-word;
   }
+
+  .tabs-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .tab {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    background: #eee;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background 0.3s;
+  }
+  
+  .tab.active {
+    background: #007bff;
+    color: white;
+  }
+  
+  .appointments-table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    overflow-x: auto;
+    display: table;
+  }
+  
+  .appointments-table th,
+  .appointments-table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+  }
+  
+  .cancel-btn {
+    background-color: #ff4d4d;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .cancel-btn:hover {
+    background-color: #e60000;
+  }
   
