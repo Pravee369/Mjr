@@ -154,7 +154,7 @@ userApp.get("/alldoctorsandhospitals", async (req, res) => {
 
 userApp.get("/doctor/:id", async (req, res) => {
   const userCollection = req.app.get("userCollection")
-  console.log("Received ID:", req.params.id);
+  console.log("Received ID:", req.params.id,req.params);
   try {
     const doctor = await userCollection.findOne({ _id: new ObjectId(req.params.id) });
     if (!doctor) {
@@ -169,7 +169,7 @@ userApp.get("/doctor/:id", async (req, res) => {
 
 userApp.get("/hospital/:id", async (req, res) => {
   const userCollection = req.app.get("userCollection")
-  console.log("Received ID:", req.params.id);
+  console.log("Received ID:", req.params.id,req.params);
   try {
     const hospital = await userCollection.findOne({ _id: new ObjectId(req.params.id) });
     if (!hospital) {
@@ -205,7 +205,7 @@ const transporter = nodemailer.createTransport({
 });
 
 // Store OTPs temporarily
-const otpStore = new Map();
+const otpStore = {};
 
 // Check if email is registered
 userApp.post("/check-email", async (req, res) => {
@@ -219,7 +219,7 @@ userApp.post("/check-email", async (req, res) => {
 
   // Generate OTP
   const otp = Math.floor(100000 + Math.random() * 900000).toString();
-  otpStore.set(email, otp);
+  otpStore[email]=otp;
 
   // Send OTP via email
   try {
@@ -244,7 +244,7 @@ userApp.post("/send-otp", expressAsyncHandler(async(req, res) => {
 
   // Generate OTP
   const otp = Math.floor(100000 + Math.random() * 900000).toString();
-  otpStore.set(email, otp);
+  otpStore[email]=otp
 
   // Send OTP via email
   try {
@@ -260,6 +260,25 @@ userApp.post("/send-otp", expressAsyncHandler(async(req, res) => {
     console.error("Error sending OTP:", error);  // Log the full error details
     res.status(500).send({ success: false, message: "Error sending OTP.", error: error.message });
   }
+}));
+const verifyOTP = (email, otp) => {
+  console.log("Verifying OTP for email:", email, "with OTP:", otp,otpStore);
+  console.log('Otp store is',otpStore,otpStore[email])
+  if (otpStore[email] && otpStore[email] === otp) {
+      delete otpStore[email]; // OTP is one-time use.
+      return { success: true, message: 'OTP verified successfully' };
+  }
+  return { success: false, message: 'Invalid OTP' };
+};
+userApp.post('/verify-otp', expressAsyncHandler(async(req, res) => {
+  const userCollectionObj = req.app.get("userCollection");
+  const { email,otp } = req.body;
+  
+  console.log("its otp verify route for email")
+  if (!email || !otp) return res.status(400).json({ success: false, message: 'Phone and OTP are required' });
+
+  const response = verifyOTP(email, otp);
+  res.json(response);
 }));
 
 // Reset Password

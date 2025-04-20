@@ -121,7 +121,7 @@ function GetVerified(){
         />
 
         <div className="button-group">
-          <button onClick={handleVerificationRequest} className="submit-button">
+          <button onClick={handleVerificationRequest} className="submit-button-verified">
             Send Verification Request
           </button>
 

@@ -84,7 +84,7 @@ function LabsFilter() {
           onClick={() => setActiveTab("appointments")}
           className={activeTab === "appointments" ? "tab active" : "tab"}
         >
-          📅 My Appointments
+          📅 My Bookings
         </button>
       </div>
 
@@ -114,7 +114,7 @@ function LabsFilter() {
         </>
       ) : (
         <>
-          <h2 className="labs-filter-title">My Appointments</h2>
+          <h2 className="labs-filter-title">My Bookings</h2>
           {appointments.length > 0 && (
             <input
               type="text"

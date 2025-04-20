@@ -69,8 +69,10 @@ const ForgotPassword = () => {
   const handleOtpSubmit = async () => {
     try {
       const response = await axios.post("http://localhost:3000/user-api/verify-otp", { email, otp });
+      console.log('resp in verify-otp',response)
       if (response.data.success) {
         setStep(3);
+        console.log(response)
         setMessage(response.data.message);
         setError("");
       } else {
@@ -88,8 +90,10 @@ const ForgotPassword = () => {
     }
     try {
       const response = await axios.post("http://localhost:3000/user-api/reset-password", { email, newPassword, confirmNewPassword });
+      console.log('Response is',response)
       if (response.data.success) {
         setStep(4);
+        console.log(response.data.message);
         setMessage(response.data.message);
         setError("");
       } else {

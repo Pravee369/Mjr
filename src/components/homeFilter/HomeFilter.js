@@ -114,7 +114,7 @@ for (let i = 0; i < clinics.length; i += 3) {
   return (
 
     <div className="m-4 p-4 bg-gray-100 rounded-lg shadow-lg text-center">
-      <h2 className="text-xl sm:text-2xl font-bold text-gray-700 mb-4">Filter Health Services</h2>
+      <h2 className="text-xl sm:text-2xl font-bold text-gray-700 mb-4 mt-3">Filter Health Services</h2>
 
       {/* Filters */}
       <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mb-6">

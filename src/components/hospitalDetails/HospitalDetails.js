@@ -118,7 +118,7 @@ function HospitalDetails() {
     ) : (
       <div className="row row-cols-sm-1 row-cols-md-2 row-cols-lg-3 ">
         {list.map((item, index) => (
-          <div key={index} className="col card m-1">
+          <div key={index} className="col card-hosp m-1">
             <div className="w-full">
               {isEditable ? (
                 <input

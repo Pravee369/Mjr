@@ -49,7 +49,7 @@ router.post('/send-otp',verifyToken, async (req, res) => {
 
 router.post('/verify-otp', (req, res) => {
     const { phone, otp } = req.body;
-    console.log("its otp verify route")
+    console.log("its otp verify route",req)
     if (!phone || !otp) return res.status(400).json({ success: false, message: 'Phone and OTP are required' });
 
     const response = verifyOTP(phone, otp);

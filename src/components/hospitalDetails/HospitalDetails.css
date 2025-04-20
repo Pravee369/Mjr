@@ -68,7 +68,7 @@
     background-color: #f2f2f2;
   }
 
-  .card {
+  .card-hosp {
     width: 400px;
     border: 1px solid #f2f2f2;
     box-shadow: 3px 8px 5px #f2f2f2;
@@ -77,8 +77,8 @@
     box-sizing: border-box;
   }
   
-  .card input,
-  .card textarea {
+  .card-hosp input,
+  .card-hosp textarea {
     width: 100%;
     box-sizing: border-box;
     margin-top: 10px;
