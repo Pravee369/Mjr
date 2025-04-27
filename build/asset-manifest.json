@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.766a7a52.css",
-    "main.js": "/static/js/main.2d5b2534.js",
+    "main.css": "/static/css/main.4e9ec52a.css",
+    "main.js": "/static/js/main.f491de9b.js",
     "static/js/453.fdf53576.chunk.js": "/static/js/453.fdf53576.chunk.js",
     "static/media/having_regular_health_checkups.jpg": "/static/media/having_regular_health_checkups.cdcb605fa58b699c8811.jpg",
     "static/media/manage_stress.jpg": "/static/media/manage_stress.2a98602c8f6adc1ffecb.jpg",
@@ -14,13 +14,19 @@
     "static/media/default-profile.png": "/static/media/default-profile.beca10a3cc09db40d6a8.png",
     "static/media/stay_hydrated.jpg": "/static/media/stay_hydrated.1357e0ecd07d507b70b6.jpg",
     "static/media/eat_balanced_diet.jpg": "/static/media/eat_balanced_diet.4b5fc01a82d6e5259de3.jpg",
+    "static/media/pharmacy5.jpeg": "/static/media/pharmacy5.6e4c22d4df61ba7b55cd.jpeg",
+    "static/media/pharmacy2.jpeg": "/static/media/pharmacy2.5844ec7086501be2c4bc.jpeg",
+    "static/media/pharmacyDefault.jpeg": "/static/media/pharmacyDefault.45e2a42d66f684568e64.jpeg",
+    "static/media/pharmacy6.jpeg": "/static/media/pharmacy6.a4f029bb093d59dd5366.jpeg",
+    "static/media/pharmacy1.jpeg": "/static/media/pharmacy1.e977b5b0b823d64a252a.jpeg",
+    "static/media/pharmacy4.jpeg": "/static/media/pharmacy4.8c4edf4cb0d42e4eeb30.jpeg",
     "index.html": "/index.html",
-    "main.766a7a52.css.map": "/static/css/main.766a7a52.css.map",
-    "main.2d5b2534.js.map": "/static/js/main.2d5b2534.js.map",
+    "main.4e9ec52a.css.map": "/static/css/main.4e9ec52a.css.map",
+    "main.f491de9b.js.map": "/static/js/main.f491de9b.js.map",
     "453.fdf53576.chunk.js.map": "/static/js/453.fdf53576.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.766a7a52.css",
-    "static/js/main.2d5b2534.js"
+    "static/css/main.4e9ec52a.css",
+    "static/js/main.f491de9b.js"
   ]
 }

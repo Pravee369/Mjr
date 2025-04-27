@@ -1,0 +1,25 @@
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.table {
+    margin-top: 20px;
+}
+
+.table th,
+.table td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.text-muted {
+    font-size: 1.2rem;
+    color: #666;
+}

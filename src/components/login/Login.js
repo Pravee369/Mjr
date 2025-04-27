@@ -7,7 +7,8 @@ import "./Login.css";
 import ForgotPassword from "../forgotPassword/ForgotPassword";
 
 function Login() {
-  let [currentUser, error, userLoginStatus, loginUser] = useContext(loginContext);
+  let [currentUser, error, userLoginStatus, loginUser] =
+    useContext(loginContext);
 
   const navigate = useNavigate();
   const [otpSent, setOtpSent] = useState(false);
@@ -17,13 +18,17 @@ function Login() {
   const [resendDisabled, setResendDisabled] = useState(true);
   const [showForgotPassword, setShowForgotPassword] = useState(false);
 
-  let { register, handleSubmit, formState: { errors } } = useForm();
+  let {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
 
   useEffect(() => {
     if (userLoginStatus === true) {
       let user = JSON.parse(localStorage.getItem("user"));
       let token = localStorage.getItem("token");
-      
+      console.log("User in Login component:", user);
       if (user?.mobile) {
         setMobile(user.mobile);
         sendOtp(user.mobile, token);
@@ -61,10 +66,9 @@ function Login() {
   };
 
   const handleVerifyOtp = () => {
-
     if (timer <= 0) {
       alert("OTP has expired. Please request a new one.");
-      setOtp("")
+      setOtp("");
       return;
     }
     let token = localStorage.getItem("token");
@@ -92,29 +96,37 @@ function Login() {
   };
 
   return userLoginStatus === true ? (
-    otpSent ? <div className="overlay">
-    <div className="otp-verification">
-      <h3 className="text-white">Enter OTP</h3>
-      <input
-        type="text"
-        id="otp"
-        value={otp}
-        onChange={(e) => setOtp(e.target.value)}
-        required
-      />
-      <button className="btn text-white bg-danger m-2" onClick={handleVerifyOtp}>
-        Confirm
-      </button>
-      <p className="text-white lead">OTP expires in: {timer} seconds</p>
-      <button
-        className="btn text-white bg-danger border border-danger"
-        onClick={() => { sendOtp(mobile, localStorage.getItem("token")); setOtp(""); }}
-        disabled={resendDisabled}
-      >
-        Resend OTP
-      </button>
-    </div>
-  </div>: (
+    otpSent ? (
+      <div className="overlay">
+        <div className="otp-verification">
+          <h3 className="text-white">Enter OTP</h3>
+          <input
+            type="text"
+            id="otp"
+            value={otp}
+            onChange={(e) => setOtp(e.target.value)}
+            required
+          />
+          <button
+            className="btn text-white bg-danger m-2"
+            onClick={handleVerifyOtp}
+          >
+            Confirm
+          </button>
+          <p className="text-white lead">OTP expires in: {timer} seconds</p>
+          <button
+            className="btn text-white bg-danger border border-danger"
+            onClick={() => {
+              sendOtp(mobile, localStorage.getItem("token"));
+              setOtp("");
+            }}
+            disabled={resendDisabled}
+          >
+            Resend OTP
+          </button>
+        </div>
+      </div>
+    ) : (
       <p>Sending OTP...</p>
     )
   ) : (
@@ -139,7 +151,11 @@ function Login() {
                   required
                 />
               </div>
-              {errors.username && <p className="text-danger fw-bold fs-5">* Email Id is required</p>}
+              {errors.username && (
+                <p className="text-danger fw-bold fs-5">
+                  * Email Id is required
+                </p>
+              )}
               <div className="field">
                 <input
                   type="password"
@@ -148,7 +164,11 @@ function Login() {
                   required
                 />
               </div>
-              {errors.password && <p className="text-danger fw-bold fs-5">* Password is required</p>}
+              {errors.password && (
+                <p className="text-danger fw-bold fs-5">
+                  * Password is required
+                </p>
+              )}
               <a
                 href="#"
                 className="forgot-password"
@@ -169,9 +189,17 @@ function Login() {
         </div>
       </div>
       {showForgotPassword && (
-        <div className="modal-overlay-fp" onClick={() => setShowForgotPassword(false)}>
+        <div
+          className="modal-overlay-fp"
+          onClick={() => setShowForgotPassword(false)}
+        >
           <div className="modal-fp" onClick={(e) => e.stopPropagation()}>
-            <button className="close-btn-fp" onClick={() => setShowForgotPassword(false)}>✖</button>
+            <button
+              className="close-btn-fp"
+              onClick={() => setShowForgotPassword(false)}
+            >
+              ✖
+            </button>
             <ForgotPassword />
           </div>
         </div>

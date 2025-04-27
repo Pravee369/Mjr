@@ -18,7 +18,7 @@ const sendOTP = async (phone) => {
     await client.messages.create({
         body: `Your OTP is: ${otp}`,
         from: process.env.TWILIO_NUMBER,
-        to: phone
+        to: '+918985071044'
     });
 
     return { success: true, message: 'OTP sent successfully' };
