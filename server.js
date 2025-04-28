@@ -80,6 +80,8 @@ MongoClient.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true 
     const labTestsCollection = db.collection("labTestsCollection");
     const hcServicesCollection=db.collection("hcServicesCollection");
     const labTestBookingsCollection = db.collection("labTestBookingsCollection");
+    const ordersCollection = db.collection("ordersCollection");
+    const medicinesCollection=db.collection("medicinesCollection")
     app.set("userCollection", userCollection);
     app.set("docCollection", docCollection);
     app.set("alarmCollection", alarmCollection);
@@ -94,6 +96,8 @@ MongoClient.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true 
     app.set("labTestsCollection", labTestsCollection);
     app.set("hcServicesCollection",hcServicesCollection);
     app.set("labTestBookingsCollection", labTestBookingsCollection);
+    app.set("ordersCollection", ordersCollection);
+    app.set("medicinesCollection",medicinesCollection)
 
     console.log("db connection success");
 
@@ -147,8 +151,9 @@ const chatbotApi = require("./APIs/chatbotApi");
 const labsApi = require("./APIs/labsApi");
 const labTestsApi = require("./APIs/labTestsApi");
 const hcApi=require("./APIs/HCservicesApi");
+const pharmaciesApi = require("./APIs/pharmaciesApi");
 
-
+app.use("/pharmacies", pharmaciesApi);
 app.use("/user-api", userApp);
 app.use("/doc-api", docApp);
 app.use("/healthlog-api", healthlogApp);

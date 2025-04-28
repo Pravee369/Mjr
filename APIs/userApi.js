@@ -299,5 +299,24 @@ userApp.post("/reset-password", async (req, res) => {
   }
 });
  
+userApp.get(
+  "/get-all-users",
+  verifyToken, // Ensure the user is authenticated
+  expressAsyncHandler(async (req, res) => {
+    try {
+      const userCollection = req.app.get("userCollection");
+
+      // Fetch all users from the database
+      const users = await userCollection.find().toArray();
+
+      res
+        .status(200)
+        .json({ message: "Users fetched successfully", payload: users });
+    } catch (error) {
+      console.error("Error fetching users:", error);
+      res.status(500).json({ message: "Failed to fetch users" });
+    }
+  })
+);
 
 module.exports = userApp;
