@@ -1,0 +1,754 @@
+[{
+  "_id": {
+    "$oid": "680e8b9f6fc7d406710b8665"
+  },
+  "name": "Augmentin 625 Duo Tablet",
+  "composition": "Amoxycillin  (500mg) +  Clavulanic Acid (125mg)",
+  "uses": "Treatment of Bacterial infections",
+  "sideEffects": "Vomiting Nausea Diarrhea Mucocutaneous candidiasis",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/wy2y9bdipmh6rgkrj0zm.jpg",
+  "price": 151,
+  "pharmacyId": "healthfirst@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e8b9f6fc7d406710b8666"
+  },
+  "name": "Azithral 500 Tablet",
+  "composition": "Azithromycin (500mg)",
+  "uses": "Treatment of Bacterial infections",
+  "sideEffects": "Nausea Abdominal pain Diarrhea",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/cropped/kqkouvaqejbyk47dvjfu.jpg",
+  "price": 76,
+  "pharmacyId": "healthfirst@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e8b9f6fc7d406710b8667"
+  },
+  "name": "Ascoril LS Syrup",
+  "composition": "Ambroxol (30mg/5ml) + Levosalbutamol (1mg/5ml) + Guaifenesin (50mg/5ml)",
+  "uses": "Treatment of Cough with mucus",
+  "sideEffects": "Nausea Vomiting Diarrhea Upset stomach Stomach pain Allergic reaction Dizziness Headache Rash Hives Tremors Palpitations Muscle cramp Increased heart rate",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/3205599cc49d4073ae66cbb0dbfded86.jpg",
+  "price": 260,
+  "pharmacyId": "healthfirst@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e8b9f6fc7d406710b8668"
+  },
+  "name": "Amoxyclav 625 Tablet",
+  "composition": "Amoxycillin  (500mg) +  Clavulanic Acid (125mg)",
+  "uses": "Treatment of Bacterial infections",
+  "sideEffects": "Vomiting Nausea Diarrhea Mucocutaneous candidiasis",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/acaa6608e016456f9cafcca2156ad3de.jpg",
+  "price": 334,
+  "pharmacyId": "healthfirst@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e8b9f6fc7d406710b8669"
+  },
+  "name": "Atarax 25mg Tablet",
+  "composition": "Hydroxyzine (25mg)",
+  "uses": "Treatment of AnxietyTreatment of Skin conditions with inflammation & itching",
+  "sideEffects": "Sedation Nausea Vomiting Upset stomach Constipation",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/cropped/v9py58kciridvbi7bqls.jpg",
+  "price": 186,
+  "pharmacyId": "healthfirst@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e8b9f6fc7d406710b866a"
+  },
+  "name": "Azee 500 Tablet",
+  "composition": "Azithromycin (500mg)",
+  "uses": "Treatment of Bacterial infections",
+  "sideEffects": "Nausea Abdominal pain Diarrhea",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/cropped/jbpnjvst3ph0xnrq199o.jpg",
+  "price": 418,
+  "pharmacyId": "healthfirst@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e8b9f6fc7d406710b866b"
+  },
+  "name": "Anovate Cream",
+  "composition": "Phenylephrine (0.10% w/w) + Beclometasone (0.025% w/w) + Lidocaine (2.50% w/w)",
+  "uses": "Treatment of Piles",
+  "sideEffects": "Application site reactions burning irritation itching and redness",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/cropped/gnsem6ircqxmwmjkprkw.jpg",
+  "price": 201,
+  "pharmacyId": "healthfirst@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e8b9f6fc7d406710b866c"
+  },
+  "name": "Allegra-M Tablet",
+  "composition": "Montelukast (10mg) + Fexofenadine (120mg)",
+  "uses": "Treatment of Sneezing and runny nose due to allergies",
+  "sideEffects": "Nausea Diarrhea Vomiting Skin rash Flu like symptoms Headache Drowsiness Dizziness",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/cropped/eh4vt8l9fuo4nvx3qwif.jpg",
+  "price": 479,
+  "pharmacyId": "healthfirst@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e8b9f6fc7d406710b866d"
+  },
+  "name": "Ascoril D Plus Syrup Sugar Free",
+  "composition": "Phenylephrine (5mg) + Chlorpheniramine Maleate (2mg) + Dextromethorphan Hydrobromide (10mg)",
+  "uses": "Treatment of Dry cough",
+  "sideEffects": "Nausea Vomiting Loss of appetite Headache",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/9fe5ed4f4fce4eaea6588d2ce60115ec.jpg",
+  "price": 320,
+  "pharmacyId": "healthfirst@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e8b9f6fc7d406710b866e"
+  },
+  "name": "Alex Syrup",
+  "composition": "Phenylephrine (5mg/5ml) + Chlorpheniramine Maleate (2mg/5ml) + Dextromethorphan Hydrobromide (10mg/5ml)",
+  "uses": "Treatment of Dry cough",
+  "sideEffects": "Nausea Vomiting Loss of appetite Headache",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/mqdfwomjrjv3lvlq08ae.jpg",
+  "price": 51,
+  "pharmacyId": "healthfirst@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e8b9f6fc7d406710b866f"
+  },
+  "name": "Armotraz Tablet",
+  "composition": "Anastrozole (1mg)",
+  "uses": "Breast cancer",
+  "sideEffects": "Hot flashes Nausea Osteoporosis Skin rash Weakness",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/cropped/sytnbc3dtkhxddk5smxs.jpg",
+  "price": 473,
+  "pharmacyId": "healthfirst@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e8b9f6fc7d406710b8670"
+  },
+  "name": "Albendazole 400mg Tablet",
+  "composition": "Albendazole (400mg)",
+  "uses": "Treatment of Parasitic infections",
+  "sideEffects": "Vomiting Dizziness Increased liver enzymes Nausea Loss of appetite",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/c3f704ec89504863915d4433a19d0014.jpg",
+  "price": 483,
+  "pharmacyId": "healthfirst@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e8b9f6fc7d406710b8671"
+  },
+  "name": "Arkamin Tablet",
+  "composition": "Clonidine (100mcg)",
+  "uses": "Treatment of Hypertension (high blood pressure)",
+  "sideEffects": "Dryness in mouth Fatigue Dizziness Headache Nausea Sleepiness Insomnia difficulty in sleeping",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/cropped/kvdgswy8eyzkwmulwlyf.jpg",
+  "price": 249,
+  "pharmacyId": "healthfirst@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e8b9f6fc7d406710b8672"
+  },
+  "name": "Allegra 180mg Tablet",
+  "composition": "Fexofenadine (180mg)",
+  "uses": "Treatment of Sneezing and runny nose due to allergiesTreatment of Allergic conditions",
+  "sideEffects": "Headache Drowsiness Dizziness Nausea",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/9d38b9285045459e96c7d2ff7464ecad.jpg",
+  "price": 345,
+  "pharmacyId": "healthfirst@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e8c416fc7d406710b868c"
+  },
+  "name": "Augmentin 625 Duo Tablet",
+  "composition": "Amoxycillin  (500mg) +  Clavulanic Acid (125mg)",
+  "uses": "Treatment of Bacterial infections",
+  "sideEffects": "Vomiting Nausea Diarrhea Mucocutaneous candidiasis",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/wy2y9bdipmh6rgkrj0zm.jpg",
+  "price": 151,
+  "pharmacyId": "sanjivanihealth@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e8c416fc7d406710b868d"
+  },
+  "name": "Azithral 500 Tablet",
+  "composition": "Azithromycin (500mg)",
+  "uses": "Treatment of Bacterial infections",
+  "sideEffects": "Nausea Abdominal pain Diarrhea",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/cropped/kqkouvaqejbyk47dvjfu.jpg",
+  "price": 76,
+  "pharmacyId": "sanjivanihealth@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e8c416fc7d406710b868e"
+  },
+  "name": "Ascoril LS Syrup",
+  "composition": "Ambroxol (30mg/5ml) + Levosalbutamol (1mg/5ml) + Guaifenesin (50mg/5ml)",
+  "uses": "Treatment of Cough with mucus",
+  "sideEffects": "Nausea Vomiting Diarrhea Upset stomach Stomach pain Allergic reaction Dizziness Headache Rash Hives Tremors Palpitations Muscle cramp Increased heart rate",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/3205599cc49d4073ae66cbb0dbfded86.jpg",
+  "price": 260,
+  "pharmacyId": "sanjivanihealth@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e8c416fc7d406710b868f"
+  },
+  "name": "Amoxyclav 625 Tablet",
+  "composition": "Amoxycillin  (500mg) +  Clavulanic Acid (125mg)",
+  "uses": "Treatment of Bacterial infections",
+  "sideEffects": "Vomiting Nausea Diarrhea Mucocutaneous candidiasis",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/acaa6608e016456f9cafcca2156ad3de.jpg",
+  "price": 334,
+  "pharmacyId": "sanjivanihealth@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e8c416fc7d406710b8690"
+  },
+  "name": "Atarax 25mg Tablet",
+  "composition": "Hydroxyzine (25mg)",
+  "uses": "Treatment of AnxietyTreatment of Skin conditions with inflammation & itching",
+  "sideEffects": "Sedation Nausea Vomiting Upset stomach Constipation",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/cropped/v9py58kciridvbi7bqls.jpg",
+  "price": 186,
+  "pharmacyId": "sanjivanihealth@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e8c416fc7d406710b8691"
+  },
+  "name": "Azee 500 Tablet",
+  "composition": "Azithromycin (500mg)",
+  "uses": "Treatment of Bacterial infections",
+  "sideEffects": "Nausea Abdominal pain Diarrhea",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/cropped/jbpnjvst3ph0xnrq199o.jpg",
+  "price": 418,
+  "pharmacyId": "sanjivanihealth@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e8c416fc7d406710b8692"
+  },
+  "name": "Anovate Cream",
+  "composition": "Phenylephrine (0.10% w/w) + Beclometasone (0.025% w/w) + Lidocaine (2.50% w/w)",
+  "uses": "Treatment of Piles",
+  "sideEffects": "Application site reactions burning irritation itching and redness",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/cropped/gnsem6ircqxmwmjkprkw.jpg",
+  "price": 201,
+  "pharmacyId": "sanjivanihealth@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e8c416fc7d406710b8693"
+  },
+  "name": "Allegra-M Tablet",
+  "composition": "Montelukast (10mg) + Fexofenadine (120mg)",
+  "uses": "Treatment of Sneezing and runny nose due to allergies",
+  "sideEffects": "Nausea Diarrhea Vomiting Skin rash Flu like symptoms Headache Drowsiness Dizziness",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/cropped/eh4vt8l9fuo4nvx3qwif.jpg",
+  "price": 479,
+  "pharmacyId": "sanjivanihealth@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e8c416fc7d406710b8694"
+  },
+  "name": "Ascoril D Plus Syrup Sugar Free",
+  "composition": "Phenylephrine (5mg) + Chlorpheniramine Maleate (2mg) + Dextromethorphan Hydrobromide (10mg)",
+  "uses": "Treatment of Dry cough",
+  "sideEffects": "Nausea Vomiting Loss of appetite Headache",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/9fe5ed4f4fce4eaea6588d2ce60115ec.jpg",
+  "price": 320,
+  "pharmacyId": "sanjivanihealth@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e8c416fc7d406710b8695"
+  },
+  "name": "Alex Syrup",
+  "composition": "Phenylephrine (5mg/5ml) + Chlorpheniramine Maleate (2mg/5ml) + Dextromethorphan Hydrobromide (10mg/5ml)",
+  "uses": "Treatment of Dry cough",
+  "sideEffects": "Nausea Vomiting Loss of appetite Headache",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/mqdfwomjrjv3lvlq08ae.jpg",
+  "price": 51,
+  "pharmacyId": "sanjivanihealth@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e8c416fc7d406710b8696"
+  },
+  "name": "Armotraz Tablet",
+  "composition": "Anastrozole (1mg)",
+  "uses": "Breast cancer",
+  "sideEffects": "Hot flashes Nausea Osteoporosis Skin rash Weakness",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/cropped/sytnbc3dtkhxddk5smxs.jpg",
+  "price": 473,
+  "pharmacyId": "sanjivanihealth@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e8c416fc7d406710b8697"
+  },
+  "name": "Albendazole 400mg Tablet",
+  "composition": "Albendazole (400mg)",
+  "uses": "Treatment of Parasitic infections",
+  "sideEffects": "Vomiting Dizziness Increased liver enzymes Nausea Loss of appetite",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/c3f704ec89504863915d4433a19d0014.jpg",
+  "price": 483,
+  "pharmacyId": "sanjivanihealth@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e8c416fc7d406710b8698"
+  },
+  "name": "Arkamin Tablet",
+  "composition": "Clonidine (100mcg)",
+  "uses": "Treatment of Hypertension (high blood pressure)",
+  "sideEffects": "Dryness in mouth Fatigue Dizziness Headache Nausea Sleepiness Insomnia difficulty in sleeping",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/cropped/kvdgswy8eyzkwmulwlyf.jpg",
+  "price": 249,
+  "pharmacyId": "sanjivanihealth@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e8c416fc7d406710b8699"
+  },
+  "name": "Allegra 180mg Tablet",
+  "composition": "Fexofenadine (180mg)",
+  "uses": "Treatment of Sneezing and runny nose due to allergiesTreatment of Allergic conditions",
+  "sideEffects": "Headache Drowsiness Dizziness Nausea",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/6103f02e6df148fda2a8fd6e87008179.jpg",
+  "price": 245,
+  "pharmacyId": "sanjivanihealth@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e8c416fc7d406710b869a"
+  },
+  "name": "Altraday Capsule SR",
+  "composition": "Aceclofenac (200mg) + Rabeprazole (20mg)",
+  "uses": "Pain relief",
+  "sideEffects": "Nausea Flatulence Indigestion Diarrhea Constipation",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/cropped/ahmbxmi2bd1wiojpxqld.jpg",
+  "price": 326,
+  "pharmacyId": "sanjivanihealth@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e8c416fc7d406710b869b"
+  },
+  "name": "Atarax 10mg Tablet",
+  "composition": "Hydroxyzine (10mg)",
+  "uses": "Treatment of AnxietyTreatment of Skin conditions with inflammation & itching",
+  "sideEffects": "Sedation Nausea Vomiting Upset stomach Constipation",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/78d80a6bca96417f83c6d38c5c140c0b.jpg",
+  "price": 158,
+  "pharmacyId": "sanjivanihealth@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e8c416fc7d406710b869c"
+  },
+  "name": "Aldigesic-SP Tablet",
+  "composition": "Aceclofenac (100mg) + Paracetamol (325mg) + Serratiopeptidase (10mg)",
+  "uses": "Pain relief",
+  "sideEffects": "Nausea Vomiting Stomach pain Indigestion Heartburn Loss of appetite Diarrhea",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/86cc6259fcc8462f876cdeb85d9aa87d.jpg",
+  "price": 195,
+  "pharmacyId": "sanjivanihealth@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e8c416fc7d406710b869d"
+  },
+  "name": "Aldactone Tablet",
+  "composition": "Spironolactone (25mg)",
+  "uses": "Hypertension (high blood pressure) Edema Low potassium Heart failure",
+  "sideEffects": "Nausea Vomiting Leg cramps Dizziness Drowsiness Confusion Breast enlargement in male Increased creatinine level in blood",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/cropped/thkgrdicoq6adxgpwu2e.jpg",
+  "price": 267,
+  "pharmacyId": "sanjivanihealth@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e8c416fc7d406710b869e"
+  },
+  "name": "Aricep 10 Tablet",
+  "composition": "Donepezil (10mg)",
+  "uses": "Alzheimer's disease",
+  "sideEffects": "Common cold Urinary incontinence Rash Nausea Diarrhea Insomnia difficulty in sleeping Weight loss Accidental injury",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/fgnxl4znhmpzu2r0mals.jpg",
+  "price": 233,
+  "pharmacyId": "sanjivanihealth@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e8c416fc7d406710b869f"
+  },
+  "name": "Aricep-M  Tablet",
+  "composition": "Donepezil (5mg) + Memantine (5mg)",
+  "uses": "Alzheimer's disease",
+  "sideEffects": "Nausea Vomiting Loss of appetite Diarrhea Headache Dizziness Bleeding under the skin",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/a458dc3089a64183962fe107b20f3481.jpg",
+  "price": 80,
+  "pharmacyId": "sanjivanihealth@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e8c416fc7d406710b86a0"
+  },
+  "name": "Andre I-Kul Eye Drop",
+  "composition": "Camphor (0.01% w/v) + Menthol (0.005% w/v) + Naphazoline (0.05% w/v) + Phenylephrine (0.12% w/v)",
+  "uses": "Treatment of Allergic eye disease",
+  "sideEffects": "Eye pain Eye irritation Stinging in the eyes Blurred vision Photophobia",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/0d82813d035349cea0c99da3fd52469d.jpg",
+  "price": 446,
+  "pharmacyId": "sanjivanihealth@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e8c416fc7d406710b86a1"
+  },
+  "name": "Anafortan 25 mg/300 mg Tablet",
+  "composition": "Camylofin (25mg) + Paracetamol (300mg)",
+  "uses": "Treatment of Abdominal pain",
+  "sideEffects": "Dryness in mouth Constipation Blurred vision Increased heart rate",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/4424607f37424d51b2aac2c9d8b18ecd.jpg",
+  "price": 108,
+  "pharmacyId": "sanjivanihealth@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e91426fc7d406710b86b9"
+  },
+  "name": "Augmentin 625 Duo Tablet",
+  "composition": "Amoxycillin  (500mg) +  Clavulanic Acid (125mg)",
+  "uses": "Treatment of Bacterial infections",
+  "sideEffects": "Vomiting Nausea Diarrhea Mucocutaneous candidiasis",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/wy2y9bdipmh6rgkrj0zm.jpg",
+  "price": 151,
+  "pharmacyId": "pharmamahitha@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e91426fc7d406710b86ba"
+  },
+  "name": "Azithral 500 Tablet",
+  "composition": "Azithromycin (500mg)",
+  "uses": "Treatment of Bacterial infections",
+  "sideEffects": "Nausea Abdominal pain Diarrhea",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/cropped/kqkouvaqejbyk47dvjfu.jpg",
+  "price": 76,
+  "pharmacyId": "pharmamahitha@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e91426fc7d406710b86bb"
+  },
+  "name": "Ascoril LS Syrup",
+  "composition": "Ambroxol (30mg/5ml) + Levosalbutamol (1mg/5ml) + Guaifenesin (50mg/5ml)",
+  "uses": "Treatment of Cough with mucus",
+  "sideEffects": "Nausea Vomiting Diarrhea Upset stomach Stomach pain Allergic reaction Dizziness Headache Rash Hives Tremors Palpitations Muscle cramp Increased heart rate",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/3205599cc49d4073ae66cbb0dbfded86.jpg",
+  "price": 260,
+  "pharmacyId": "pharmamahitha@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e91426fc7d406710b86bc"
+  },
+  "name": "Amoxyclav 625 Tablet",
+  "composition": "Amoxycillin  (500mg) +  Clavulanic Acid (125mg)",
+  "uses": "Treatment of Bacterial infections",
+  "sideEffects": "Vomiting Nausea Diarrhea Mucocutaneous candidiasis",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/acaa6608e016456f9cafcca2156ad3de.jpg",
+  "price": 334,
+  "pharmacyId": "pharmamahitha@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e91426fc7d406710b86bd"
+  },
+  "name": "Atarax 25mg Tablet",
+  "composition": "Hydroxyzine (25mg)",
+  "uses": "Treatment of AnxietyTreatment of Skin conditions with inflammation & itching",
+  "sideEffects": "Sedation Nausea Vomiting Upset stomach Constipation",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/cropped/v9py58kciridvbi7bqls.jpg",
+  "price": 186,
+  "pharmacyId": "pharmamahitha@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e91426fc7d406710b86be"
+  },
+  "name": "Azee 500 Tablet",
+  "composition": "Azithromycin (500mg)",
+  "uses": "Treatment of Bacterial infections",
+  "sideEffects": "Nausea Abdominal pain Diarrhea",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/cropped/jbpnjvst3ph0xnrq199o.jpg",
+  "price": 418,
+  "pharmacyId": "pharmamahitha@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e91426fc7d406710b86bf"
+  },
+  "name": "Anovate Cream",
+  "composition": "Phenylephrine (0.10% w/w) + Beclometasone (0.025% w/w) + Lidocaine (2.50% w/w)",
+  "uses": "Treatment of Piles",
+  "sideEffects": "Application site reactions burning irritation itching and redness",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/cropped/gnsem6ircqxmwmjkprkw.jpg",
+  "price": 201,
+  "pharmacyId": "pharmamahitha@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e91426fc7d406710b86c0"
+  },
+  "name": "Allegra-M Tablet",
+  "composition": "Montelukast (10mg) + Fexofenadine (120mg)",
+  "uses": "Treatment of Sneezing and runny nose due to allergies",
+  "sideEffects": "Nausea Diarrhea Vomiting Skin rash Flu like symptoms Headache Drowsiness Dizziness",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/cropped/eh4vt8l9fuo4nvx3qwif.jpg",
+  "price": 479,
+  "pharmacyId": "pharmamahitha@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e91426fc7d406710b86c1"
+  },
+  "name": "Ascoril D Plus Syrup Sugar Free",
+  "composition": "Phenylephrine (5mg) + Chlorpheniramine Maleate (2mg) + Dextromethorphan Hydrobromide (10mg)",
+  "uses": "Treatment of Dry cough",
+  "sideEffects": "Nausea Vomiting Loss of appetite Headache",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/9fe5ed4f4fce4eaea6588d2ce60115ec.jpg",
+  "price": 320,
+  "pharmacyId": "pharmamahitha@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e91426fc7d406710b86c2"
+  },
+  "name": "Alex Syrup",
+  "composition": "Phenylephrine (5mg/5ml) + Chlorpheniramine Maleate (2mg/5ml) + Dextromethorphan Hydrobromide (10mg/5ml)",
+  "uses": "Treatment of Dry cough",
+  "sideEffects": "Nausea Vomiting Loss of appetite Headache",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/mqdfwomjrjv3lvlq08ae.jpg",
+  "price": 51,
+  "pharmacyId": "pharmamahitha@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e91426fc7d406710b86c3"
+  },
+  "name": "Armotraz Tablet",
+  "composition": "Anastrozole (1mg)",
+  "uses": "Breast cancer",
+  "sideEffects": "Hot flashes Nausea Osteoporosis Skin rash Weakness",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/cropped/sytnbc3dtkhxddk5smxs.jpg",
+  "price": 473,
+  "pharmacyId": "pharmamahitha@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e91426fc7d406710b86c4"
+  },
+  "name": "Albendazole 400mg Tablet",
+  "composition": "Albendazole (400mg)",
+  "uses": "Treatment of Parasitic infections",
+  "sideEffects": "Vomiting Dizziness Increased liver enzymes Nausea Loss of appetite",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/c3f704ec89504863915d4433a19d0014.jpg",
+  "price": 483,
+  "pharmacyId": "pharmamahitha@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e91426fc7d406710b86c5"
+  },
+  "name": "Arkamin Tablet",
+  "composition": "Clonidine (100mcg)",
+  "uses": "Treatment of Hypertension (high blood pressure)",
+  "sideEffects": "Dryness in mouth Fatigue Dizziness Headache Nausea Sleepiness Insomnia difficulty in sleeping",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/cropped/kvdgswy8eyzkwmulwlyf.jpg",
+  "price": 249,
+  "pharmacyId": "pharmamahitha@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e91426fc7d406710b86c6"
+  },
+  "name": "Allegra 180mg Tablet",
+  "composition": "Fexofenadine (180mg)",
+  "uses": "Treatment of Sneezing and runny nose due to allergiesTreatment of Allergic conditions",
+  "sideEffects": "Headache Drowsiness Dizziness Nausea",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/6103f02e6df148fda2a8fd6e87008179.jpg",
+  "price": 245,
+  "pharmacyId": "pharmamahitha@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e91426fc7d406710b86c7"
+  },
+  "name": "Altraday Capsule SR",
+  "composition": "Aceclofenac (200mg) + Rabeprazole (20mg)",
+  "uses": "Pain relief",
+  "sideEffects": "Nausea Flatulence Indigestion Diarrhea Constipation",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/cropped/ahmbxmi2bd1wiojpxqld.jpg",
+  "price": 326,
+  "pharmacyId": "pharmamahitha@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e91426fc7d406710b86c8"
+  },
+  "name": "Atarax 10mg Tablet",
+  "composition": "Hydroxyzine (10mg)",
+  "uses": "Treatment of AnxietyTreatment of Skin conditions with inflammation & itching",
+  "sideEffects": "Sedation Nausea Vomiting Upset stomach Constipation",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/78d80a6bca96417f83c6d38c5c140c0b.jpg",
+  "price": 158,
+  "pharmacyId": "pharmamahitha@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e91426fc7d406710b86c9"
+  },
+  "name": "Aldigesic-SP Tablet",
+  "composition": "Aceclofenac (100mg) + Paracetamol (325mg) + Serratiopeptidase (10mg)",
+  "uses": "Pain relief",
+  "sideEffects": "Nausea Vomiting Stomach pain Indigestion Heartburn Loss of appetite Diarrhea",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/86cc6259fcc8462f876cdeb85d9aa87d.jpg",
+  "price": 195,
+  "pharmacyId": "pharmamahitha@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e91426fc7d406710b86ca"
+  },
+  "name": "Aldactone Tablet",
+  "composition": "Spironolactone (25mg)",
+  "uses": "Hypertension (high blood pressure) Edema Low potassium Heart failure",
+  "sideEffects": "Nausea Vomiting Leg cramps Dizziness Drowsiness Confusion Breast enlargement in male Increased creatinine level in blood",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/cropped/thkgrdicoq6adxgpwu2e.jpg",
+  "price": 267,
+  "pharmacyId": "pharmamahitha@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e91426fc7d406710b86cb"
+  },
+  "name": "Aricep 10 Tablet",
+  "composition": "Donepezil (10mg)",
+  "uses": "Alzheimer's disease",
+  "sideEffects": "Common cold Urinary incontinence Rash Nausea Diarrhea Insomnia difficulty in sleeping Weight loss Accidental injury",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/fgnxl4znhmpzu2r0mals.jpg",
+  "price": 233,
+  "pharmacyId": "pharmamahitha@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e91426fc7d406710b86cc"
+  },
+  "name": "Aricep-M  Tablet",
+  "composition": "Donepezil (5mg) + Memantine (5mg)",
+  "uses": "Alzheimer's disease",
+  "sideEffects": "Nausea Vomiting Loss of appetite Diarrhea Headache Dizziness Bleeding under the skin",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/a458dc3089a64183962fe107b20f3481.jpg",
+  "price": 80,
+  "pharmacyId": "pharmamahitha@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e91426fc7d406710b86cd"
+  },
+  "name": "Andre I-Kul Eye Drop",
+  "composition": "Camphor (0.01% w/v) + Menthol (0.005% w/v) + Naphazoline (0.05% w/v) + Phenylephrine (0.12% w/v)",
+  "uses": "Treatment of Allergic eye disease",
+  "sideEffects": "Eye pain Eye irritation Stinging in the eyes Blurred vision Photophobia",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/0d82813d035349cea0c99da3fd52469d.jpg",
+  "price": 446,
+  "pharmacyId": "pharmamahitha@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e91426fc7d406710b86ce"
+  },
+  "name": "Anafortan 25 mg/300 mg Tablet",
+  "composition": "Camylofin (25mg) + Paracetamol (300mg)",
+  "uses": "Treatment of Abdominal pain",
+  "sideEffects": "Dryness in mouth Constipation Blurred vision Increased heart rate",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/4424607f37424d51b2aac2c9d8b18ecd.jpg",
+  "price": 108,
+  "pharmacyId": "pharmamahitha@gmail.com",
+  "available": true
+}]

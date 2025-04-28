@@ -1,0 +1,791 @@
+[{
+  "_id": {
+    "$oid": "671de95e9d1e7d5430c0e2be"
+  },
+  "username": "mahithareddy2306@gmail.com",
+  "password": "$2a$06$CEuwjnRXfFLdSvEfz2xhNeSBtr0s/lxuGPTq0GsyYxPNb1nfenFM2",
+  "name": "Sai Mahitha Reddy Challa Reddy",
+  "mobile": "09392341864",
+  "gender": "Female",
+  "age": "20",
+  "specialization": "",
+  "experience": "",
+  "license-number": "",
+  "hospital-name": "",
+  "location": "",
+  "photo": {},
+  "category": "Patient"
+},
+{
+  "_id": {
+    "$oid": "671dee799d1e7d5430c0e2bf"
+  },
+  "username": "mahit@gmail.com",
+  "password": "$2a$06$5vCl8iNaomIVdkhEl5M/GOw7LjgkzE8pjLlGEHizpv5bVFDYxy78a",
+  "name": "mahitha",
+  "mobile": "09392341864",
+  "gender": "Female",
+  "age": "22",
+  "specialization": "ortho",
+  "experience": "8",
+  "license-number": "122",
+  "hospital-name": "mallika",
+  "location": "Hyderabad",
+  "photo": {
+    "0": {}
+  },
+  "category": "Doctor"
+},
+{
+  "_id": {
+    "$oid": "671df1be9d1e7d5430c0e2c0"
+  },
+  "username": "kml@gmail.com",
+  "password": "$2a$06$XVmqoG/gBhypg9MKF1qHA.I/iifCe9nuPOnL1QnlT4VSFUyuPKJpS",
+  "name": "job2",
+  "mobile": "09392341864",
+  "gender": "",
+  "age": "",
+  "reg-no": "123",
+  "organization-type": "Oragn Bank",
+  "category": "Organization"
+},
+{
+  "_id": {
+    "$oid": "671e00e89d1e7d5430c0e2c1"
+  },
+  "username": "mjk@gmail.com",
+  "password": "$2a$06$ox0mjCiNklQjz1duoShY0ev95JvRBH.yZHb.ywC8aU3R4lCXq9qx.",
+  "name": "job2",
+  "mobile": "09392341864",
+  "gender": "",
+  "age": "",
+  "reg-no": "123",
+  "organizationType": "Blood Bank",
+  "category": "Organization"
+},
+{
+  "_id": {
+    "$oid": "671e317a9d1e7d5430c0e2c2"
+  },
+  "username": "mahi@gmail.com",
+  "password": "$2a$06$/PtRzgMntV7oS7rzDGPfU.cdgZ0gGWfTkgqGmzj59TNxseyc.PunG",
+  "name": "job2",
+  "mobile": "09392341864",
+  "gender": "",
+  "age": "",
+  "regNo": "123",
+  "organizationType": "Blood Bank",
+  "category": "Organization"
+},
+{
+  "_id": {
+    "$oid": "6720a504a015dba8f213471c"
+  },
+  "username": "kil@gmail.com",
+  "password": "$2a$06$EhlgycNGRlMqhw6ttGOTue3MdQ2fzcLCM6VipplpWCyV1tMf9N78y",
+  "name": "kil",
+  "mobile": "123",
+  "gender": "Female",
+  "age": "20",
+  "category": "Patient"
+},
+{
+  "_id": {
+    "$oid": "67cd437416e444f6560b4b33"
+  },
+  "username": "sai@gmail.com",
+  "password": "$2a$06$KS300Rmph9qT6tFb/w9szu7ykgyWyB3o/bpf.qoFuE2ozAe0NCxiW",
+  "confirmPassword": "sai",
+  "name": "sai",
+  "mobile": "+919392341864",
+  "gender": "Female",
+  "age": "20",
+  "category": "Patient",
+  "photo": ""
+},
+{
+  "_id": {
+    "$oid": "6807c4c37cde9636a8342f8d"
+  },
+  "username": "mahitha@gmail.com",
+  "password": "$2a$06$ybcnU.UxRiGxpdQDEV3O5.Zsug0nI/kWI.4OZd4ehSwpkHPvcyeT.",
+  "confirmPassword": "mahitha",
+  "name": "mahitha",
+  "mobile": "+918985071044",
+  "gender": "Female",
+  "age": "20",
+  "category": "Patient",
+  "photo": ""
+},
+{
+  "_id": {
+    "$oid": "6807c51d338b16cffe6256ac"
+  },
+  "username": "kussu@gmail.com",
+  "password": "$2a$06$uAehli.Rz385jJ8C2h2gne6QbttvtcW953iWoHuR17s9WVufQEEAG",
+  "confirmPassword": "kussu",
+  "name": "kussu",
+  "mobile": "+918985071044",
+  "gender": "Female",
+  "age": "20",
+  "category": "Patient",
+  "photo": ""
+},
+{
+  "_id": {
+    "$oid": "680e5227368dbd8f02f3c7c9"
+  },
+  "username": "saimahithareddy21@gmail.com",
+  "password": "$2a$06$QmI/1bE7vNqaEFRsM8DiJO2qxvopeFCbR.xg/fNGAFArHr3krywwW",
+  "confirmPassword": "mahitha",
+  "name": "Sai Mahitha Reddy Mahitha Challa",
+  "mobile": "+919392341864",
+  "gender": "Female",
+  "age": "20",
+  "category": "Patient",
+  "photo": ""
+},
+{
+  "_id": {
+    "$oid": "680e52612ed141190a8431c1"
+  },
+  "username": "saimahithareddy22@gmail.com",
+  "password": "$2a$06$V/MtXwkmT4N2EcrUA8I3mukTeuEKFjrxXSegvqv/dXm/23vAg8sMG",
+  "confirmPassword": "mahitha",
+  "name": "Sai Mahitha Reddy Mahitha Challa",
+  "mobile": "+918985071044",
+  "gender": "Female",
+  "age": "20",
+  "category": "Patient",
+  "photo": ""
+},
+{
+  "_id": {
+    "$oid": "680e6cbbaefa368041447a1e"
+  },
+  "username": "pharmamahitha@gmail.com",
+  "password": "$2a$06$zDMyZk.j.rGLWE0q794hFegcAtShOlsduuIxgPR/9YpcV47c8TgBO",
+  "confirmPassword": "pharmamahitha",
+  "name": "pharmamahitha",
+  "mobile": "+918985071044",
+  "regNo": "123",
+  "organizationType": "Pharmacy",
+  "address": "jntu",
+  "startTime": "10:00",
+  "endTime": "10:00",
+  "category": "Organization",
+  "photo": ""
+},
+{
+  "_id": {
+    "$oid": "680e87806fc7d406710b8633"
+  },
+  "username": "sanjivanihealth@gmail.com",
+  "password": "sanjivanihealth@gmail.com",
+  "confirmPassword": "sanjivanihealth@gmail.com",
+  "name": "Sanjivani Health Care",
+  "mobile": "+918985071044",
+  "regNo": "129",
+  "organizationType": "Pharmacy",
+  "address": "Dilsukhnagar",
+  "startTime": "10:00",
+  "endTime": "10:00",
+  "category": "Organization",
+  "photo": ""
+},
+{
+  "_id": {
+    "$oid": "680e87806fc7d406710b8634"
+  },
+  "username": "apolloedge@gmail.com",
+  "password": "apolloedge@gmail.com",
+  "confirmPassword": "apolloedge@gmail.com",
+  "name": "Apollo Edge Pharmacy",
+  "mobile": "+918985071044",
+  "regNo": "130",
+  "organizationType": "Pharmacy",
+  "address": "Mehdipatnam",
+  "startTime": "10:00",
+  "endTime": "10:00",
+  "category": "Organization",
+  "photo": ""
+},
+{
+  "_id": {
+    "$oid": "680e87806fc7d406710b8635"
+  },
+  "username": "lifepluspharma@gmail.com",
+  "password": "lifepluspharma@gmail.com",
+  "confirmPassword": "lifepluspharma@gmail.com",
+  "name": "Life Plus Pharma",
+  "mobile": "+918985071044",
+  "regNo": "131",
+  "organizationType": "Pharmacy",
+  "address": "Begumpet",
+  "startTime": "10:00",
+  "endTime": "10:00",
+  "category": "Organization",
+  "photo": ""
+},
+{
+  "_id": {
+    "$oid": "680e87806fc7d406710b8636"
+  },
+  "username": "maxwellmeds@gmail.com",
+  "password": "maxwellmeds@gmail.com",
+  "confirmPassword": "maxwellmeds@gmail.com",
+  "name": "Maxwell Meds",
+  "mobile": "+918985071044",
+  "regNo": "132",
+  "organizationType": "Pharmacy",
+  "address": "Kompally",
+  "startTime": "10:00",
+  "endTime": "10:00",
+  "category": "Organization",
+  "photo": ""
+},
+{
+  "_id": {
+    "$oid": "680e87806fc7d406710b8637"
+  },
+  "username": "trustcarepharma@gmail.com",
+  "password": "trustcarepharma@gmail.com",
+  "confirmPassword": "trustcarepharma@gmail.com",
+  "name": "Trust Care Pharma",
+  "mobile": "+918985071044",
+  "regNo": "133",
+  "organizationType": "Pharmacy",
+  "address": "LB Nagar",
+  "startTime": "10:00",
+  "endTime": "10:00",
+  "category": "Organization",
+  "photo": ""
+},
+{
+  "_id": {
+    "$oid": "680e87806fc7d406710b8638"
+  },
+  "username": "rahulpharma@gmail.com",
+  "password": "rahulpharma@gmail.com",
+  "confirmPassword": "rahulpharma@gmail.com",
+  "name": "Rahul Pharmacy",
+  "mobile": "+918985071044",
+  "regNo": "124",
+  "organizationType": "Pharmacy",
+  "address": "Ameerpet",
+  "startTime": "10:00",
+  "endTime": "10:00",
+  "category": "Organization",
+  "photo": ""
+},
+{
+  "_id": {
+    "$oid": "680e87806fc7d406710b8639"
+  },
+  "username": "sridevipharmacy@gmail.com",
+  "password": "sridevipharmacy@gmail.com",
+  "confirmPassword": "sridevipharmacy@gmail.com",
+  "name": "Sridevi Pharmacy",
+  "mobile": "+918985071044",
+  "regNo": "125",
+  "organizationType": "Pharmacy",
+  "address": "Madhapur",
+  "startTime": "10:00",
+  "endTime": "10:00",
+  "category": "Organization",
+  "photo": ""
+},
+{
+  "_id": {
+    "$oid": "680e87806fc7d406710b863a"
+  },
+  "username": "citymeds@gmail.com",
+  "password": "citymeds@gmail.com",
+  "confirmPassword": "citymeds@gmail.com",
+  "name": "City Meds",
+  "mobile": "+918985071044",
+  "regNo": "126",
+  "organizationType": "Pharmacy",
+  "address": "Kukatpally",
+  "startTime": "10:00",
+  "endTime": "10:00",
+  "category": "Organization",
+  "photo": ""
+},
+{
+  "_id": {
+    "$oid": "680e87806fc7d406710b863b"
+  },
+  "username": "greenlifepharma@gmail.com",
+  "password": "greenlifepharma@gmail.com",
+  "confirmPassword": "greenlifepharma@gmail.com",
+  "name": "Green Life Pharma",
+  "mobile": "+918985071044",
+  "regNo": "127",
+  "organizationType": "Pharmacy",
+  "address": "Banjara Hills",
+  "startTime": "10:00",
+  "endTime": "10:00",
+  "category": "Organization",
+  "photo": ""
+},
+{
+  "_id": {
+    "$oid": "680e87806fc7d406710b863c"
+  },
+  "username": "healthfirst@gmail.com",
+  "password": "healthfirst@gmail.com",
+  "confirmPassword": "healthfirst@gmail.com",
+  "name": "Health First Pharmacy",
+  "mobile": "+918985071044",
+  "regNo": "128",
+  "organizationType": "Pharmacy",
+  "address": "Secunderabad",
+  "startTime": "10:00",
+  "endTime": "10:00",
+  "category": "Organization",
+  "photo": ""
+},
+{
+  "_id": {
+    "$oid": "680e8c166fc7d406710b8674"
+  },
+  "name": "Augmentin 625 Duo Tablet",
+  "composition": "Amoxycillin  (500mg) +  Clavulanic Acid (125mg)",
+  "uses": "Treatment of Bacterial infections",
+  "sideEffects": "Vomiting Nausea Diarrhea Mucocutaneous candidiasis",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/wy2y9bdipmh6rgkrj0zm.jpg",
+  "price": 151,
+  "pharmacyId": "sanjivanihealth@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e8c166fc7d406710b8675"
+  },
+  "name": "Azithral 500 Tablet",
+  "composition": "Azithromycin (500mg)",
+  "uses": "Treatment of Bacterial infections",
+  "sideEffects": "Nausea Abdominal pain Diarrhea",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/cropped/kqkouvaqejbyk47dvjfu.jpg",
+  "price": 76,
+  "pharmacyId": "sanjivanihealth@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e8c166fc7d406710b8676"
+  },
+  "name": "Ascoril LS Syrup",
+  "composition": "Ambroxol (30mg/5ml) + Levosalbutamol (1mg/5ml) + Guaifenesin (50mg/5ml)",
+  "uses": "Treatment of Cough with mucus",
+  "sideEffects": "Nausea Vomiting Diarrhea Upset stomach Stomach pain Allergic reaction Dizziness Headache Rash Hives Tremors Palpitations Muscle cramp Increased heart rate",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/3205599cc49d4073ae66cbb0dbfded86.jpg",
+  "price": 260,
+  "pharmacyId": "sanjivanihealth@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e8c166fc7d406710b8677"
+  },
+  "name": "Amoxyclav 625 Tablet",
+  "composition": "Amoxycillin  (500mg) +  Clavulanic Acid (125mg)",
+  "uses": "Treatment of Bacterial infections",
+  "sideEffects": "Vomiting Nausea Diarrhea Mucocutaneous candidiasis",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/acaa6608e016456f9cafcca2156ad3de.jpg",
+  "price": 334,
+  "pharmacyId": "sanjivanihealth@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e8c166fc7d406710b8678"
+  },
+  "name": "Atarax 25mg Tablet",
+  "composition": "Hydroxyzine (25mg)",
+  "uses": "Treatment of AnxietyTreatment of Skin conditions with inflammation & itching",
+  "sideEffects": "Sedation Nausea Vomiting Upset stomach Constipation",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/cropped/v9py58kciridvbi7bqls.jpg",
+  "price": 186,
+  "pharmacyId": "sanjivanihealth@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e8c166fc7d406710b8679"
+  },
+  "name": "Azee 500 Tablet",
+  "composition": "Azithromycin (500mg)",
+  "uses": "Treatment of Bacterial infections",
+  "sideEffects": "Nausea Abdominal pain Diarrhea",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/cropped/jbpnjvst3ph0xnrq199o.jpg",
+  "price": 418,
+  "pharmacyId": "sanjivanihealth@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e8c166fc7d406710b867a"
+  },
+  "name": "Anovate Cream",
+  "composition": "Phenylephrine (0.10% w/w) + Beclometasone (0.025% w/w) + Lidocaine (2.50% w/w)",
+  "uses": "Treatment of Piles",
+  "sideEffects": "Application site reactions burning irritation itching and redness",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/cropped/gnsem6ircqxmwmjkprkw.jpg",
+  "price": 201,
+  "pharmacyId": "sanjivanihealth@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e8c166fc7d406710b867b"
+  },
+  "name": "Allegra-M Tablet",
+  "composition": "Montelukast (10mg) + Fexofenadine (120mg)",
+  "uses": "Treatment of Sneezing and runny nose due to allergies",
+  "sideEffects": "Nausea Diarrhea Vomiting Skin rash Flu like symptoms Headache Drowsiness Dizziness",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/cropped/eh4vt8l9fuo4nvx3qwif.jpg",
+  "price": 479,
+  "pharmacyId": "sanjivanihealth@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e8c166fc7d406710b867c"
+  },
+  "name": "Ascoril D Plus Syrup Sugar Free",
+  "composition": "Phenylephrine (5mg) + Chlorpheniramine Maleate (2mg) + Dextromethorphan Hydrobromide (10mg)",
+  "uses": "Treatment of Dry cough",
+  "sideEffects": "Nausea Vomiting Loss of appetite Headache",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/9fe5ed4f4fce4eaea6588d2ce60115ec.jpg",
+  "price": 320,
+  "pharmacyId": "sanjivanihealth@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e8c166fc7d406710b867d"
+  },
+  "name": "Alex Syrup",
+  "composition": "Phenylephrine (5mg/5ml) + Chlorpheniramine Maleate (2mg/5ml) + Dextromethorphan Hydrobromide (10mg/5ml)",
+  "uses": "Treatment of Dry cough",
+  "sideEffects": "Nausea Vomiting Loss of appetite Headache",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/mqdfwomjrjv3lvlq08ae.jpg",
+  "price": 51,
+  "pharmacyId": "sanjivanihealth@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e8c166fc7d406710b867e"
+  },
+  "name": "Armotraz Tablet",
+  "composition": "Anastrozole (1mg)",
+  "uses": "Breast cancer",
+  "sideEffects": "Hot flashes Nausea Osteoporosis Skin rash Weakness",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/cropped/sytnbc3dtkhxddk5smxs.jpg",
+  "price": 473,
+  "pharmacyId": "sanjivanihealth@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e8c166fc7d406710b867f"
+  },
+  "name": "Albendazole 400mg Tablet",
+  "composition": "Albendazole (400mg)",
+  "uses": "Treatment of Parasitic infections",
+  "sideEffects": "Vomiting Dizziness Increased liver enzymes Nausea Loss of appetite",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/c3f704ec89504863915d4433a19d0014.jpg",
+  "price": 483,
+  "pharmacyId": "sanjivanihealth@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e91346fc7d406710b86a3"
+  },
+  "name": "Augmentin 625 Duo Tablet",
+  "composition": "Amoxycillin  (500mg) +  Clavulanic Acid (125mg)",
+  "uses": "Treatment of Bacterial infections",
+  "sideEffects": "Vomiting Nausea Diarrhea Mucocutaneous candidiasis",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/wy2y9bdipmh6rgkrj0zm.jpg",
+  "price": 151,
+  "pharmacyId": "pharmamahitha@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e91346fc7d406710b86a4"
+  },
+  "name": "Azithral 500 Tablet",
+  "composition": "Azithromycin (500mg)",
+  "uses": "Treatment of Bacterial infections",
+  "sideEffects": "Nausea Abdominal pain Diarrhea",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/cropped/kqkouvaqejbyk47dvjfu.jpg",
+  "price": 76,
+  "pharmacyId": "pharmamahitha@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e91346fc7d406710b86a5"
+  },
+  "name": "Ascoril LS Syrup",
+  "composition": "Ambroxol (30mg/5ml) + Levosalbutamol (1mg/5ml) + Guaifenesin (50mg/5ml)",
+  "uses": "Treatment of Cough with mucus",
+  "sideEffects": "Nausea Vomiting Diarrhea Upset stomach Stomach pain Allergic reaction Dizziness Headache Rash Hives Tremors Palpitations Muscle cramp Increased heart rate",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/3205599cc49d4073ae66cbb0dbfded86.jpg",
+  "price": 260,
+  "pharmacyId": "pharmamahitha@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e91346fc7d406710b86a6"
+  },
+  "name": "Amoxyclav 625 Tablet",
+  "composition": "Amoxycillin  (500mg) +  Clavulanic Acid (125mg)",
+  "uses": "Treatment of Bacterial infections",
+  "sideEffects": "Vomiting Nausea Diarrhea Mucocutaneous candidiasis",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/acaa6608e016456f9cafcca2156ad3de.jpg",
+  "price": 334,
+  "pharmacyId": "pharmamahitha@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e91346fc7d406710b86a7"
+  },
+  "name": "Atarax 25mg Tablet",
+  "composition": "Hydroxyzine (25mg)",
+  "uses": "Treatment of AnxietyTreatment of Skin conditions with inflammation & itching",
+  "sideEffects": "Sedation Nausea Vomiting Upset stomach Constipation",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/cropped/v9py58kciridvbi7bqls.jpg",
+  "price": 186,
+  "pharmacyId": "pharmamahitha@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e91346fc7d406710b86a8"
+  },
+  "name": "Azee 500 Tablet",
+  "composition": "Azithromycin (500mg)",
+  "uses": "Treatment of Bacterial infections",
+  "sideEffects": "Nausea Abdominal pain Diarrhea",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/cropped/jbpnjvst3ph0xnrq199o.jpg",
+  "price": 418,
+  "pharmacyId": "pharmamahitha@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e91346fc7d406710b86a9"
+  },
+  "name": "Anovate Cream",
+  "composition": "Phenylephrine (0.10% w/w) + Beclometasone (0.025% w/w) + Lidocaine (2.50% w/w)",
+  "uses": "Treatment of Piles",
+  "sideEffects": "Application site reactions burning irritation itching and redness",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/cropped/gnsem6ircqxmwmjkprkw.jpg",
+  "price": 201,
+  "pharmacyId": "pharmamahitha@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e91346fc7d406710b86aa"
+  },
+  "name": "Allegra-M Tablet",
+  "composition": "Montelukast (10mg) + Fexofenadine (120mg)",
+  "uses": "Treatment of Sneezing and runny nose due to allergies",
+  "sideEffects": "Nausea Diarrhea Vomiting Skin rash Flu like symptoms Headache Drowsiness Dizziness",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/cropped/eh4vt8l9fuo4nvx3qwif.jpg",
+  "price": 479,
+  "pharmacyId": "pharmamahitha@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e91346fc7d406710b86ab"
+  },
+  "name": "Ascoril D Plus Syrup Sugar Free",
+  "composition": "Phenylephrine (5mg) + Chlorpheniramine Maleate (2mg) + Dextromethorphan Hydrobromide (10mg)",
+  "uses": "Treatment of Dry cough",
+  "sideEffects": "Nausea Vomiting Loss of appetite Headache",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/9fe5ed4f4fce4eaea6588d2ce60115ec.jpg",
+  "price": 320,
+  "pharmacyId": "pharmamahitha@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e91346fc7d406710b86ac"
+  },
+  "name": "Alex Syrup",
+  "composition": "Phenylephrine (5mg/5ml) + Chlorpheniramine Maleate (2mg/5ml) + Dextromethorphan Hydrobromide (10mg/5ml)",
+  "uses": "Treatment of Dry cough",
+  "sideEffects": "Nausea Vomiting Loss of appetite Headache",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/mqdfwomjrjv3lvlq08ae.jpg",
+  "price": 51,
+  "pharmacyId": "pharmamahitha@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e91346fc7d406710b86ad"
+  },
+  "name": "Armotraz Tablet",
+  "composition": "Anastrozole (1mg)",
+  "uses": "Breast cancer",
+  "sideEffects": "Hot flashes Nausea Osteoporosis Skin rash Weakness",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/cropped/sytnbc3dtkhxddk5smxs.jpg",
+  "price": 473,
+  "pharmacyId": "pharmamahitha@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e91346fc7d406710b86ae"
+  },
+  "name": "Albendazole 400mg Tablet",
+  "composition": "Albendazole (400mg)",
+  "uses": "Treatment of Parasitic infections",
+  "sideEffects": "Vomiting Dizziness Increased liver enzymes Nausea Loss of appetite",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/c3f704ec89504863915d4433a19d0014.jpg",
+  "price": 483,
+  "pharmacyId": "pharmamahitha@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e91346fc7d406710b86af"
+  },
+  "name": "Arkamin Tablet",
+  "composition": "Clonidine (100mcg)",
+  "uses": "Treatment of Hypertension (high blood pressure)",
+  "sideEffects": "Dryness in mouth Fatigue Dizziness Headache Nausea Sleepiness Insomnia difficulty in sleeping",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/cropped/kvdgswy8eyzkwmulwlyf.jpg",
+  "price": 249,
+  "pharmacyId": "pharmamahitha@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e91346fc7d406710b86b0"
+  },
+  "name": "Allegra 180mg Tablet",
+  "composition": "Fexofenadine (180mg)",
+  "uses": "Treatment of Sneezing and runny nose due to allergiesTreatment of Allergic conditions",
+  "sideEffects": "Headache Drowsiness Dizziness Nausea",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/6103f02e6df148fda2a8fd6e87008179.jpg",
+  "price": 245,
+  "pharmacyId": "pharmamahitha@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e91346fc7d406710b86b1"
+  },
+  "name": "Altraday Capsule SR",
+  "composition": "Aceclofenac (200mg) + Rabeprazole (20mg)",
+  "uses": "Pain relief",
+  "sideEffects": "Nausea Flatulence Indigestion Diarrhea Constipation",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/cropped/ahmbxmi2bd1wiojpxqld.jpg",
+  "price": 326,
+  "pharmacyId": "pharmamahitha@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e91346fc7d406710b86b2"
+  },
+  "name": "Atarax 10mg Tablet",
+  "composition": "Hydroxyzine (10mg)",
+  "uses": "Treatment of AnxietyTreatment of Skin conditions with inflammation & itching",
+  "sideEffects": "Sedation Nausea Vomiting Upset stomach Constipation",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/78d80a6bca96417f83c6d38c5c140c0b.jpg",
+  "price": 158,
+  "pharmacyId": "pharmamahitha@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e91346fc7d406710b86b3"
+  },
+  "name": "Aldigesic-SP Tablet",
+  "composition": "Aceclofenac (100mg) + Paracetamol (325mg) + Serratiopeptidase (10mg)",
+  "uses": "Pain relief",
+  "sideEffects": "Nausea Vomiting Stomach pain Indigestion Heartburn Loss of appetite Diarrhea",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/86cc6259fcc8462f876cdeb85d9aa87d.jpg",
+  "price": 195,
+  "pharmacyId": "pharmamahitha@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e91346fc7d406710b86b4"
+  },
+  "name": "Aldactone Tablet",
+  "composition": "Spironolactone (25mg)",
+  "uses": "Hypertension (high blood pressure) Edema Low potassium Heart failure",
+  "sideEffects": "Nausea Vomiting Leg cramps Dizziness Drowsiness Confusion Breast enlargement in male Increased creatinine level in blood",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/cropped/thkgrdicoq6adxgpwu2e.jpg",
+  "price": 267,
+  "pharmacyId": "pharmamahitha@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e91346fc7d406710b86b5"
+  },
+  "name": "Aricep 10 Tablet",
+  "composition": "Donepezil (10mg)",
+  "uses": "Alzheimer's disease",
+  "sideEffects": "Common cold Urinary incontinence Rash Nausea Diarrhea Insomnia difficulty in sleeping Weight loss Accidental injury",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/fgnxl4znhmpzu2r0mals.jpg",
+  "price": 233,
+  "pharmacyId": "pharmamahitha@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e91346fc7d406710b86b6"
+  },
+  "name": "Aricep-M  Tablet",
+  "composition": "Donepezil (5mg) + Memantine (5mg)",
+  "uses": "Alzheimer's disease",
+  "sideEffects": "Nausea Vomiting Loss of appetite Diarrhea Headache Dizziness Bleeding under the skin",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/a458dc3089a64183962fe107b20f3481.jpg",
+  "price": 80,
+  "pharmacyId": "pharmamahitha@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e91346fc7d406710b86b7"
+  },
+  "name": "Andre I-Kul Eye Drop",
+  "composition": "Camphor (0.01% w/v) + Menthol (0.005% w/v) + Naphazoline (0.05% w/v) + Phenylephrine (0.12% w/v)",
+  "uses": "Treatment of Allergic eye disease",
+  "sideEffects": "Eye pain Eye irritation Stinging in the eyes Blurred vision Photophobia",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/0d82813d035349cea0c99da3fd52469d.jpg",
+  "price": 446,
+  "pharmacyId": "pharmamahitha@gmail.com",
+  "available": true
+},
+{
+  "_id": {
+    "$oid": "680e91346fc7d406710b86b8"
+  },
+  "name": "Anafortan 25 mg/300 mg Tablet",
+  "composition": "Camylofin (25mg) + Paracetamol (300mg)",
+  "uses": "Treatment of Abdominal pain",
+  "sideEffects": "Dryness in mouth Constipation Blurred vision Increased heart rate",
+  "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/4424607f37424d51b2aac2c9d8b18ecd.jpg",
+  "price": 108,
+  "pharmacyId": "pharmamahitha@gmail.com",
+  "available": true
+}]

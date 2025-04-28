@@ -1,0 +1,292 @@
+[{
+  "_id": {
+    "$oid": "680e9ca331b41daf6c1aa667"
+  },
+  "userName": "pharmamahitha",
+  "email": "pharmamahitha@gmail.com",
+  "phone": "7894561230",
+  "address": "jntu",
+  "cart": [
+    {
+      "_id": "680e8c416fc7d406710b868d",
+      "name": "Azithral 500 Tablet",
+      "composition": "Azithromycin (500mg)",
+      "uses": "Treatment of Bacterial infections",
+      "sideEffects": "Nausea Abdominal pain Diarrhea",
+      "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/cropped/kqkouvaqejbyk47dvjfu.jpg",
+      "price": 76,
+      "pharmacyId": "sanjivanihealth@gmail.com",
+      "available": true,
+      "quantity": 1
+    }
+  ],
+  "pharmacyId": "sanjivanihealth@gmail.com",
+  "createdAt": {
+    "$date": "2025-04-27T21:07:47.191Z"
+  },
+  "status": "Accepted"
+},
+{
+  "_id": {
+    "$oid": "680e9cb731b41daf6c1aa668"
+  },
+  "userName": "pharmamahitha",
+  "email": "pharmamahitha@gmail.com",
+  "phone": "7894561230",
+  "address": "jntu",
+  "cart": [
+    {
+      "_id": "680e8c416fc7d406710b868d",
+      "name": "Azithral 500 Tablet",
+      "composition": "Azithromycin (500mg)",
+      "uses": "Treatment of Bacterial infections",
+      "sideEffects": "Nausea Abdominal pain Diarrhea",
+      "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/cropped/kqkouvaqejbyk47dvjfu.jpg",
+      "price": 76,
+      "pharmacyId": "sanjivanihealth@gmail.com",
+      "available": true,
+      "quantity": 1
+    }
+  ],
+  "pharmacyId": "sanjivanihealth@gmail.com",
+  "createdAt": {
+    "$date": "2025-04-27T21:08:07.794Z"
+  },
+  "status": "Accepted"
+},
+{
+  "_id": {
+    "$oid": "680e9ce031b41daf6c1aa669"
+  },
+  "userName": "pharmamahitha",
+  "email": "pharmamahitha@gmail.com",
+  "phone": "7894561230",
+  "address": "jntu",
+  "cart": [
+    {
+      "_id": "680e91426fc7d406710b86ba",
+      "name": "Azithral 500 Tablet",
+      "composition": "Azithromycin (500mg)",
+      "uses": "Treatment of Bacterial infections",
+      "sideEffects": "Nausea Abdominal pain Diarrhea",
+      "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/cropped/kqkouvaqejbyk47dvjfu.jpg",
+      "price": 76,
+      "pharmacyId": "pharmamahitha@gmail.com",
+      "available": true,
+      "quantity": 1
+    }
+  ],
+  "pharmacyId": "pharmamahitha@gmail.com",
+  "createdAt": {
+    "$date": "2025-04-27T21:08:48.110Z"
+  },
+  "status": "Accepted"
+},
+{
+  "_id": {
+    "$oid": "680e9e5c31b41daf6c1aa66a"
+  },
+  "userName": "pharmamahitha",
+  "email": "pharmamahitha@gmail.com",
+  "phone": "7894561230",
+  "address": "sri sai saroja heaven,Road No 10A, Vasanth Nagar Colony,Nizampet,Hyderabad,500085",
+  "cart": [
+    {
+      "_id": "680e91426fc7d406710b86be",
+      "name": "Azee 500 Tablet",
+      "composition": "Azithromycin (500mg)",
+      "uses": "Treatment of Bacterial infections",
+      "sideEffects": "Nausea Abdominal pain Diarrhea",
+      "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/cropped/jbpnjvst3ph0xnrq199o.jpg",
+      "price": 418,
+      "pharmacyId": "pharmamahitha@gmail.com",
+      "available": true,
+      "quantity": 1
+    }
+  ],
+  "pharmacyId": "pharmamahitha@gmail.com",
+  "createdAt": {
+    "$date": "2025-04-27T21:15:08.810Z"
+  },
+  "status": "Pending"
+},
+{
+  "_id": {
+    "$oid": "680e9ecd31b41daf6c1aa66b"
+  },
+  "userName": "pharmamahitha",
+  "email": "pharmamahitha@gmail.com",
+  "phone": "7894561230",
+  "address": "kukatpally,Hyderabad",
+  "cart": [
+    {
+      "_id": "680e91426fc7d406710b86be",
+      "name": "Azee 500 Tablet",
+      "composition": "Azithromycin (500mg)",
+      "uses": "Treatment of Bacterial infections",
+      "sideEffects": "Nausea Abdominal pain Diarrhea",
+      "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/cropped/jbpnjvst3ph0xnrq199o.jpg",
+      "price": 418,
+      "pharmacyId": "pharmamahitha@gmail.com",
+      "available": true,
+      "quantity": 1
+    },
+    {
+      "_id": "680e91426fc7d406710b86bc",
+      "name": "Amoxyclav 625 Tablet",
+      "composition": "Amoxycillin  (500mg) +  Clavulanic Acid (125mg)",
+      "uses": "Treatment of Bacterial infections",
+      "sideEffects": "Vomiting Nausea Diarrhea Mucocutaneous candidiasis",
+      "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/acaa6608e016456f9cafcca2156ad3de.jpg",
+      "price": 334,
+      "pharmacyId": "pharmamahitha@gmail.com",
+      "available": true,
+      "quantity": 1
+    },
+    {
+      "_id": "680e91426fc7d406710b86bb",
+      "name": "Ascoril LS Syrup",
+      "composition": "Ambroxol (30mg/5ml) + Levosalbutamol (1mg/5ml) + Guaifenesin (50mg/5ml)",
+      "uses": "Treatment of Cough with mucus",
+      "sideEffects": "Nausea Vomiting Diarrhea Upset stomach Stomach pain Allergic reaction Dizziness Headache Rash Hives Tremors Palpitations Muscle cramp Increased heart rate",
+      "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/3205599cc49d4073ae66cbb0dbfded86.jpg",
+      "price": 260,
+      "pharmacyId": "pharmamahitha@gmail.com",
+      "available": true,
+      "quantity": 1
+    },
+    {
+      "_id": "680e91426fc7d406710b86c2",
+      "name": "Alex Syrup",
+      "composition": "Phenylephrine (5mg/5ml) + Chlorpheniramine Maleate (2mg/5ml) + Dextromethorphan Hydrobromide (10mg/5ml)",
+      "uses": "Treatment of Dry cough",
+      "sideEffects": "Nausea Vomiting Loss of appetite Headache",
+      "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/mqdfwomjrjv3lvlq08ae.jpg",
+      "price": 51,
+      "pharmacyId": "pharmamahitha@gmail.com",
+      "available": true,
+      "quantity": 1
+    }
+  ],
+  "pharmacyId": "pharmamahitha@gmail.com",
+  "createdAt": {
+    "$date": "2025-04-27T21:17:01.880Z"
+  },
+  "status": "Pending"
+},
+{
+  "_id": {
+    "$oid": "680e9fcb31b41daf6c1aa66c"
+  },
+  "userName": "pharmamahitha",
+  "email": "pharmamahitha@gmail.com",
+  "phone": "7894561230",
+  "address": "jntu,Hyderabad",
+  "cart": [
+    {
+      "_id": "680e8c416fc7d406710b868d",
+      "name": "Azithral 500 Tablet",
+      "composition": "Azithromycin (500mg)",
+      "uses": "Treatment of Bacterial infections",
+      "sideEffects": "Nausea Abdominal pain Diarrhea",
+      "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/cropped/kqkouvaqejbyk47dvjfu.jpg",
+      "price": 76,
+      "pharmacyId": "sanjivanihealth@gmail.com",
+      "available": true,
+      "quantity": 1
+    },
+    {
+      "_id": "680e8c416fc7d406710b868e",
+      "name": "Ascoril LS Syrup",
+      "composition": "Ambroxol (30mg/5ml) + Levosalbutamol (1mg/5ml) + Guaifenesin (50mg/5ml)",
+      "uses": "Treatment of Cough with mucus",
+      "sideEffects": "Nausea Vomiting Diarrhea Upset stomach Stomach pain Allergic reaction Dizziness Headache Rash Hives Tremors Palpitations Muscle cramp Increased heart rate",
+      "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/3205599cc49d4073ae66cbb0dbfded86.jpg",
+      "price": 260,
+      "pharmacyId": "sanjivanihealth@gmail.com",
+      "available": true,
+      "quantity": 1
+    },
+    {
+      "_id": "680e8c416fc7d406710b868c",
+      "name": "Augmentin 625 Duo Tablet",
+      "composition": "Amoxycillin  (500mg) +  Clavulanic Acid (125mg)",
+      "uses": "Treatment of Bacterial infections",
+      "sideEffects": "Vomiting Nausea Diarrhea Mucocutaneous candidiasis",
+      "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/wy2y9bdipmh6rgkrj0zm.jpg",
+      "price": 151,
+      "pharmacyId": "sanjivanihealth@gmail.com",
+      "available": true,
+      "quantity": 1
+    },
+    {
+      "_id": "680e8c416fc7d406710b8690",
+      "name": "Atarax 25mg Tablet",
+      "composition": "Hydroxyzine (25mg)",
+      "uses": "Treatment of AnxietyTreatment of Skin conditions with inflammation & itching",
+      "sideEffects": "Sedation Nausea Vomiting Upset stomach Constipation",
+      "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/cropped/v9py58kciridvbi7bqls.jpg",
+      "price": 186,
+      "pharmacyId": "sanjivanihealth@gmail.com",
+      "available": true,
+      "quantity": 1
+    }
+  ],
+  "pharmacyId": "sanjivanihealth@gmail.com",
+  "createdAt": {
+    "$date": "2025-04-27T21:21:15.539Z"
+  },
+  "status": "Pending"
+},
+{
+  "_id": {
+    "$oid": "680eaaa012c7a8442681986d"
+  },
+  "userName": "pharmamahitha",
+  "email": "pharmamahitha@gmail.com",
+  "phone": "9392341864",
+  "address": "Kamala Girls Hostel, JNTU Hyderabad, Kukatpally, Hyderabad",
+  "cart": [
+    {
+      "_id": "680e8c416fc7d406710b868e",
+      "name": "Ascoril LS Syrup",
+      "composition": "Ambroxol (30mg/5ml) + Levosalbutamol (1mg/5ml) + Guaifenesin (50mg/5ml)",
+      "uses": "Treatment of Cough with mucus",
+      "sideEffects": "Nausea Vomiting Diarrhea Upset stomach Stomach pain Allergic reaction Dizziness Headache Rash Hives Tremors Palpitations Muscle cramp Increased heart rate",
+      "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/3205599cc49d4073ae66cbb0dbfded86.jpg",
+      "price": 260,
+      "pharmacyId": "sanjivanihealth@gmail.com",
+      "available": true,
+      "quantity": 1
+    },
+    {
+      "_id": "680e8c416fc7d406710b868d",
+      "name": "Azithral 500 Tablet",
+      "composition": "Azithromycin (500mg)",
+      "uses": "Treatment of Bacterial infections",
+      "sideEffects": "Nausea Abdominal pain Diarrhea",
+      "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/cropped/kqkouvaqejbyk47dvjfu.jpg",
+      "price": 76,
+      "pharmacyId": "sanjivanihealth@gmail.com",
+      "available": true,
+      "quantity": 1
+    },
+    {
+      "_id": "680e8c416fc7d406710b868c",
+      "name": "Augmentin 625 Duo Tablet",
+      "composition": "Amoxycillin  (500mg) +  Clavulanic Acid (125mg)",
+      "uses": "Treatment of Bacterial infections",
+      "sideEffects": "Vomiting Nausea Diarrhea Mucocutaneous candidiasis",
+      "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/wy2y9bdipmh6rgkrj0zm.jpg",
+      "price": 151,
+      "pharmacyId": "sanjivanihealth@gmail.com",
+      "available": true,
+      "quantity": 1
+    }
+  ],
+  "pharmacyId": "sanjivanihealth@gmail.com",
+  "createdAt": {
+    "$date": "2025-04-27T22:07:28.777Z"
+  },
+  "status": "Pending"
+}]

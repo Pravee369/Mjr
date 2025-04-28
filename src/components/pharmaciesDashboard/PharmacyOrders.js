@@ -24,8 +24,14 @@ const PharmacyOrders = () => {
             },
           }
         );
-        setOrders(response.data);
-        setFilteredOrders(response.data);
+        setOrders(response.data.filter((order)=>{
+          return order.status=="Pending"
+        }));
+        setFilteredOrders(
+          response.data.filter((order) => {
+            return order.status == "Pending";
+          })
+        );
         setLoading(false);
       } catch (err) {
         console.error("Error fetching orders:", err);
@@ -60,9 +66,10 @@ const PharmacyOrders = () => {
       );
       alert("Order accepted successfully!");
       setOrders((prevOrders) =>
-        prevOrders.map((order) =>
-          order._id === orderId ? { ...order, status: "Accepted" } : order
-        )
+        prevOrders.filter((order) => order._id !== orderId)
+      );
+      setFilteredOrders((prevOrders) =>
+        prevOrders.filter((order) => order._id !== orderId)
       );
     } catch (err) {
       console.error("Error accepting order:", err);

@@ -42,6 +42,7 @@ const Checkout = observer(() => {
         address,
         cart: pharmaStore.cart,
         pharmacyId: pharmaStore.selectedPharmacyId,
+        status:"Pending"
       };
       let token = localStorage.getItem("token"); // Ensure this is correct
       if (!token) {
