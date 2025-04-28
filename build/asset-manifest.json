@@ -1,7 +1,16 @@
 {
   "files": {
+<<<<<<< HEAD
+    "main.css": "/static/css/main.b343789c.css",
+    "main.js": "/static/js/main.6ab53477.js",
+=======
     "main.css": "/static/css/main.4e9ec52a.css",
+<<<<<<< HEAD
     "main.js": "/static/js/main.42b3e29b.js",
+=======
+    "main.js": "/static/js/main.f491de9b.js",
+>>>>>>> e92c52e8e1d898bb7aad252d2a5d958f0f528821
+>>>>>>> f76edfd4db29b9fa974807e756d79d2d0a67eb73
     "static/js/453.fdf53576.chunk.js": "/static/js/453.fdf53576.chunk.js",
     "static/media/having_regular_health_checkups.jpg": "/static/media/having_regular_health_checkups.cdcb605fa58b699c8811.jpg",
     "static/media/manage_stress.jpg": "/static/media/manage_stress.2a98602c8f6adc1ffecb.jpg",
@@ -21,12 +30,26 @@
     "static/media/pharmacy1.jpeg": "/static/media/pharmacy1.e977b5b0b823d64a252a.jpeg",
     "static/media/pharmacy4.jpeg": "/static/media/pharmacy4.8c4edf4cb0d42e4eeb30.jpeg",
     "index.html": "/index.html",
+<<<<<<< HEAD
+    "main.b343789c.css.map": "/static/css/main.b343789c.css.map",
+    "main.6ab53477.js.map": "/static/js/main.6ab53477.js.map",
+    "453.fdf53576.chunk.js.map": "/static/js/453.fdf53576.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b343789c.css",
+    "static/js/main.6ab53477.js"
+=======
     "main.4e9ec52a.css.map": "/static/css/main.4e9ec52a.css.map",
     "main.42b3e29b.js.map": "/static/js/main.42b3e29b.js.map",
     "453.fdf53576.chunk.js.map": "/static/js/453.fdf53576.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4e9ec52a.css",
+<<<<<<< HEAD
     "static/js/main.42b3e29b.js"
+=======
+    "static/js/main.f491de9b.js"
+>>>>>>> e92c52e8e1d898bb7aad252d2a5d958f0f528821
+>>>>>>> f76edfd4db29b9fa974807e756d79d2d0a67eb73
   ]
 }
